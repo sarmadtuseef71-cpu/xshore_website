@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
+import { WhatsAppFab } from "@/components/WhatsAppFab";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -15,28 +18,28 @@ export const Route = createFileRoute("/")({
 });
 
 const equipment = [
-  { title: "Air Compressors", desc: "185 to 1600 CFM. Diesel and electric variants for all site conditions.", badge: "Diesel / Electric", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=300&fit=crop&q=80" },
-  { title: "Hydro Testing Equipment", desc: "High-pressure hydrostatic test units for pipelines, vessels, and structural testing.", badge: "High Pressure", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=300&fit=crop&q=80" },
-  { title: "Electric Welding Machines", desc: "MMA, MIG, TIG and submerged arc welding machines for industrial works.", badge: "MMA / MIG / TIG", img: "https://images.unsplash.com/photo-1564182998979-9dcf42ff37fa?w=600&h=300&fit=crop&q=80" },
-  { title: "High Pressure Washers", desc: "Cold and hot water pressure washers for industrial cleaning and surface prep.", badge: "Cold & Hot Water", img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&h=300&fit=crop&q=80" },
-  { title: "Mobile Gantry & Lifting Gear", desc: "Gantry cranes, chain blocks, lever hoists, slings, and rigging accessories — SWL certified.", badge: "SWL Certified", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=300&fit=crop&q=80&sat=-30" },
-  { title: "Pneumatic Equipment", desc: "Air-powered tools for drilling, grinding, scaling, and impact applications.", badge: "Air-Powered", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=300&fit=crop&q=80" },
-  { title: "Electric Equipment & Tools", desc: "Angle grinders, drills, power tools, and portable electrical equipment for site use.", badge: "110V / 220V", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=300&fit=crop&q=80&sat=-20" },
-  { title: "Other Equipment", desc: "Generators, dehumidifiers, lighting towers, and specialist equipment on request.", badge: "On Request", img: "https://images.unsplash.com/photo-1680970422424-f63d2355adb3?w=600&h=300&fit=crop&q=80" },
+  { title: "Hydro Testing Equipment", to: "/equipment-rental/hydro-testing-equipment", desc: "High-pressure hydrostatic test units for pipelines, vessels, and structural testing.", badge: "High Pressure", img: "/images/rental/xshore-hydro-testing-equipment-rental-uae-04.jpg" },
+  { title: "Air Compressors", to: "/equipment-rental/air-compressors", desc: "185 to 1600 CFM. Diesel and electric variants for all site conditions.", badge: "Diesel / Electric", img: "/images/rental/xshore-air-compressor-rental-uae-01.jpg" },
+  { title: "Electric Welding Machines", to: "/equipment-rental/electric-welding-machines", desc: "MMA, MIG, TIG and submerged arc welding machines for industrial works.", badge: "MMA / MIG / TIG", img: "/images/rental/xshore-welding-machine-rental-uae-05.jpg" },
+  { title: "High Pressure Washers", to: "/equipment-rental/high-pressure-washers", desc: "Cold and hot water pressure washers for industrial cleaning and surface prep.", badge: "Cold & Hot Water", img: "/images/rental/xshore-high-pressure-washer-rental-uae-03.jpg" },
+  { title: "Mobile Gantry & Lifting Gear", to: "/equipment-rental/mobile-gantry-lifting-gear", desc: "Gantry cranes, chain blocks, lever hoists, slings, and rigging accessories — SWL certified.", badge: "SWL Certified", img: "/images/rental/xshore-mobile-gantry-lifting-gear-uae-01.jpg" },
+  { title: "Pneumatic Equipment", to: "/equipment-rental/pneumatic-equipment", desc: "Air-powered tools for drilling, grinding, scaling, and impact applications.", badge: "Air-Powered", img: "/images/rental/xshore-pneumatic-equipment-rental-uae-16.jpg" },
+  { title: "Electric Equipment & Tools", to: "/equipment-rental/electric-equipment-tools", desc: "Angle grinders, drills, power tools, and portable electrical equipment for site use.", badge: "110V / 220V", img: "/images/rental/xshore-electric-equipment-rental-uae-10.jpg" },
+  { title: "Other Equipment", to: "/equipment-rental/other-equipment", desc: "Generators, dehumidifiers, lighting towers, and specialist equipment on request.", badge: "On Request", img: "/images/rental/xshore-other-equipment-rental-uae-03.jpg" },
 ];
 
 const fabrication = [
-  { num: "01", title: "DNV 2.7-1 Offshore Containers", desc: "Cargo-carrying units designed to DNV 2.7-1 / EN12079 standards for offshore lifting. Fully certified with third-party verification." },
-  { num: "02", title: "Zone-2 / ATEX Enclosures", desc: "Explosion-protected containers certified for Zone-2 hazardous areas. Ideal for offshore and petrochemical plant environments." },
-  { num: "03", title: "Workshop Containers", desc: "Custom-fitted workshop units with workbenches, storage, tooling, and ventilation for remote site deployment." },
-  { num: "04", title: "Accommodation & Office Units", desc: "Modular containerised accommodation and site office units built for rapid deployment in remote locations." },
-  { num: "05", title: "Custom Fabrication", desc: "Bespoke structural steel fabrication, skid units, and custom builds to client drawings and specifications." },
+  { num: "01", title: "DNV 2.7-1 Offshore Containers", to: "/fabrication/dnv-2-7-1-offshore-containers", desc: "Cargo-carrying units designed to DNV 2.7-1 / EN12079 standards for offshore lifting. Fully certified with third-party verification." },
+  { num: "02", title: "Zone-2 / ATEX Enclosures", to: "/fabrication/zone-2-atex-enclosures", desc: "Explosion-protected containers certified for Zone-2 hazardous areas. Ideal for offshore and petrochemical plant environments." },
+  { num: "03", title: "Workshop Containers", to: "/fabrication/workshop-containers", desc: "Custom-fitted workshop units with workbenches, storage, tooling, and ventilation for remote site deployment." },
+  { num: "04", title: "Accommodation & Office Units", to: "/fabrication/accommodation-office-units", desc: "Modular containerised accommodation and site office units built for rapid deployment in remote locations." },
+  { num: "05", title: "Custom Fabrication", to: "/fabrication/custom-fabrication", desc: "Bespoke structural steel fabrication, skid units, and custom builds to client drawings and specifications." },
 ];
 
 const trading = [
-  { title: "PPE & Safety Equipment", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=300&fit=crop&q=80", p: "Comprehensive range of personal protective equipment for oil & gas, construction, and industrial environments.", items: ["Safety helmets & head protection","Harnesses & fall arrest systems","Breathing apparatus & respiratory PPE","Safety footwear & body protection","Gas detection equipment"] },
-  { title: "Welding Consumables", img: "https://images.unsplash.com/photo-1730584476141-232435a40c32?w=600&h=300&fit=crop&q=80", p: "Full range of welding consumables for all processes. Stocked for fast delivery to project sites across UAE.", items: ["Electrodes — MMA / SMAW","MIG / MAG wires & flux-cored wire","TIG rods & filler metals","Stainless, duplex & exotic alloys","Shielding gas & welding fluxes"] },
-  { title: "Welding Accessories & Tools", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=300&fit=crop&q=80", p: "All the supporting accessories and tools needed for welding operations, surface prep, and quality control.", items: ["Grinders, brushes & cutting discs","Welding helmets & gloves","Clamps, jigs & positioners","Anti-spatter & cleaning products","NDT accessories & inspection tools"] },
+  { title: "Welding Consumables", to: "/trading/welding-consumables", img: "https://images.unsplash.com/photo-1730584476141-232435a40c32?w=600&h=300&fit=crop&q=80", p: "Full range of welding consumables for all processes. Stocked for fast delivery to project sites across UAE.", items: ["Electrodes — MMA / SMAW","MIG / MAG wires & flux-cored wire","TIG rods & filler metals","Stainless, duplex & exotic alloys","Shielding gas & welding fluxes"] },
+  { title: "Welding Accessories & Tools", to: "/trading/welding-accessories-tools", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=300&fit=crop&q=80", p: "All the supporting accessories and tools needed for welding operations, surface prep, and quality control.", items: ["Grinders, brushes & cutting discs","Welding helmets & gloves","Clamps, jigs & positioners","Anti-spatter & cleaning products","NDT accessories & inspection tools"] },
+  { title: "PPE & Safety Equipment", to: "/trading/ppe-safety-equipment", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=300&fit=crop&q=80", p: "Personal protective equipment for oil & gas, construction, and industrial environments — available on request.", items: ["Safety helmets & head protection","Harnesses & fall arrest systems","Breathing apparatus & respiratory PPE","Safety footwear & body protection","Gas detection equipment"] },
 ];
 
 const why = [
@@ -63,8 +66,8 @@ function Index() {
           <h1>Industrial<br />Equipment<br /><em>Solutions</em></h1>
           <p className="hero-sub">Rental. Fabrication. Trading. Certified equipment and specialist services for the oil & gas, construction, and industrial sectors across the UAE.</p>
           <div className="hero-actions">
-            <a href="#rental" className="btn-primary">Explore Equipment</a>
-            <a href="#contact" className="btn-outline">Request a Quote</a>
+            <Link to="/equipment-rental" className="btn-primary">Explore Equipment</Link>
+            <Link to="/contact" className="btn-outline">Request a Quote</Link>
           </div>
           <div className="hero-stats">
             <div className="hero-stat"><span className="hero-stat-num">15+</span><span className="hero-stat-label">Years Experience</span></div>
@@ -78,9 +81,9 @@ function Index() {
       <section className="divisions" id="divisions" aria-label="Our divisions">
         <div className="div-grid">
           {[
-            { n: "01 — Rental", t: "Equipment Rental", p: "A comprehensive fleet of certified industrial equipment for short and long-term hire. Mobilised within 24 hours from our Mussafah yard.", l: "View Equipment", h: "#rental", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80" },
-            { n: "02 — Fabrication", t: "Fabrication & Containers", p: "Custom DNV-certified offshore containers, Zone-2 / ATEX enclosures, and workshop units built to client specification.", l: "View Capabilities", h: "#fabrication", img: "https://images.unsplash.com/photo-1564182998979-9dcf42ff37fa?w=800&h=600&fit=crop&q=80" },
-            { n: "03 — Trading", t: "Industrial Trading", p: "Supply of PPE & safety equipment, welding consumables, and accessories. Fast sourcing for major contractors across the UAE.", l: "View Products", h: "#trading", img: "https://images.unsplash.com/photo-1730584476141-232435a40c32?w=800&h=600&fit=crop&q=80" },
+            { n: "01 — Rental", t: "Equipment Rental", p: "A comprehensive fleet of certified industrial equipment for short and long-term hire. Mobilised within 24 hours from our Mussafah yard.", l: "View Equipment", h: "/equipment-rental", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80" },
+            { n: "02 — Fabrication", t: "Fabrication & Containers", p: "Custom DNV-certified offshore containers, Zone-2 / ATEX enclosures, and workshop units built to client specification.", l: "View Capabilities", h: "/fabrication", img: "https://images.unsplash.com/photo-1564182998979-9dcf42ff37fa?w=800&h=600&fit=crop&q=80" },
+            { n: "03 — Trading", t: "Industrial Trading", p: "Supply of PPE & safety equipment, welding consumables, and accessories. Fast sourcing for major contractors across the UAE.", l: "View Products", h: "/trading", img: "https://images.unsplash.com/photo-1730584476141-232435a40c32?w=800&h=600&fit=crop&q=80" },
           ].map((c) => (
             <div className="div-card" key={c.n}>
               <div className="div-card-img" style={{ backgroundImage: `url('${c.img}')` }} />
@@ -89,7 +92,7 @@ function Index() {
                 <span className="div-num">{c.n}</span>
                 <h3>{c.t}</h3>
                 <p>{c.p}</p>
-                <a href={c.h} className="div-link">{c.l}</a>
+                <Link to={c.h} className="div-link">{c.l}</Link>
               </div>
             </div>
           ))}
@@ -103,7 +106,7 @@ function Index() {
         <p className="section-sub">Well-maintained, certified equipment ready for mobilisation. Available for daily, weekly, and long-term hire across Abu Dhabi and the wider UAE.</p>
         <div className="eq-grid">
           {equipment.map((e) => (
-            <article className="eq-card" key={e.title}>
+            <Link to={e.to} className="eq-card" key={e.title}>
               <img className="eq-card-img" src={e.img} alt={e.title} loading="lazy" />
               <div className="eq-card-body">
                 <div className="eq-dot" />
@@ -111,7 +114,7 @@ function Index() {
                 <p>{e.desc}</p>
                 <span className="eq-badge">{e.badge}</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
@@ -124,13 +127,13 @@ function Index() {
         <div className="fab-layout">
           <div className="fab-items">
             {fabrication.map((f, i) => (
-              <div className={`fab-item${i === 0 ? " active" : ""}`} key={f.num}>
+              <Link to={f.to} className={`fab-item${i === 0 ? " active" : ""}`} key={f.num}>
                 <span className="fab-item-num">{f.num}</span>
                 <div>
                   <h4>{f.title}</h4>
                   <p>{f.desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="fab-visual">
@@ -158,7 +161,7 @@ function Index() {
         <p className="section-sub">Quality supply of safety, welding, and industrial materials. Fast turnaround with direct sourcing for project teams and major contractors.</p>
         <div className="trade-grid">
           {trading.map((t) => (
-            <article className="trade-card" key={t.title}>
+            <Link to={t.to} className="trade-card" key={t.title}>
               <img className="trade-card-img" src={t.img} alt={t.title} loading="lazy" />
               <div className="trade-card-body">
                 <h3>{t.title}</h3>
@@ -167,7 +170,7 @@ function Index() {
                   {t.items.map((i) => <span className="trade-item" key={i}>{i}</span>)}
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
@@ -179,7 +182,7 @@ function Index() {
           <div>
             <h2>DNV Certified.<br />Zone-2 Ready.</h2>
             <p>Our containers and fabricated units carry full DNV 2.7-1 certification and ATEX Zone-2 approval. Trusted by ADNOC contractors and offshore operators across the Middle East.</p>
-            <a href="#contact" className="btn-dark">Request a Build</a>
+            <Link to="/contact" className="btn-dark">Request a Build</Link>
           </div>
           <div className="dnv-specs">
             <div className="dnv-spec"><span className="dnv-spec-num">DNV 2.7-1</span><span className="dnv-spec-label">Offshore Container Standard</span></div>
@@ -225,7 +228,7 @@ function Index() {
         <p>Tell us what you need. We'll respond with availability, specifications, and a quote — fast.</p>
         <div className="cta-actions">
           <a href="mailto:sales@xshore.ae" className="btn-primary">Email Us</a>
-          <a href="https://wa.me/97122465375" className="btn-outline">WhatsApp</a>
+          <a href="https://wa.me/97122465375" target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp</a>
         </div>
         <div className="contact-strip">
           <div className="contact-item">
@@ -243,17 +246,8 @@ function Index() {
         </div>
       </section>
 
-      <footer className="xs-footer">
-        <span className="footer-logo">X<span>SHORE</span></span>
-        <div className="footer-links">
-          <a href="#rental">Rental</a>
-          <a href="#fabrication">Fabrication</a>
-          <a href="#trading">Trading</a>
-          <a href="#dnv">DNV & Zone-2</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <span className="footer-copy">© 2026 Xshore. All Rights Reserved.</span>
-      </footer>
+      <SiteFooter />
+      <WhatsAppFab />
     </>
   );
 }

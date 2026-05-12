@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 
 const rentalItems: { label: string; to: string }[] = [
+  { label: "All Equipment Rental", to: "/equipment-rental" },
   { label: "Hydro Testing Equipment", to: "/equipment-rental/hydro-testing-equipment" },
   { label: "Air Compressors", to: "/equipment-rental/air-compressors" },
   { label: "Electric Welding Machines", to: "/equipment-rental/electric-welding-machines" },
@@ -10,19 +11,20 @@ const rentalItems: { label: string; to: string }[] = [
   { label: "Pneumatic Equipment", to: "/equipment-rental/pneumatic-equipment" },
   { label: "Electric Equipment & Tools", to: "/equipment-rental/electric-equipment-tools" },
   { label: "Other Equipment", to: "/equipment-rental/other-equipment" },
-  { label: "All Equipment", to: "/equipment-rental" },
 ];
-const fabItems = [
-  "DNV 2.7-1 Offshore Containers",
-  "Zone-2 / ATEX Enclosures",
-  "Workshop Containers",
-  "Accommodation & Office Units",
-  "Custom Fabrication",
+const fabItems: { label: string; to: string }[] = [
+  { label: "Fabrication & Containers", to: "/fabrication" },
+  { label: "DNV 2.7-1 Offshore Containers", to: "/fabrication/dnv-2-7-1-offshore-containers" },
+  { label: "Zone-2 / ATEX Enclosures", to: "/fabrication/zone-2-atex-enclosures" },
+  { label: "Workshop Containers", to: "/fabrication/workshop-containers" },
+  { label: "Accommodation & Office Units", to: "/fabrication/accommodation-office-units" },
+  { label: "Custom Fabrication", to: "/fabrication/custom-fabrication" },
 ];
-const tradeItems = [
-  "PPE & Safety Equipment",
-  "Welding Consumables",
-  "Welding Accessories & Tools",
+const tradeItems: { label: string; to: string }[] = [
+  { label: "Industrial Trading", to: "/trading" },
+  { label: "Welding Consumables", to: "/trading/welding-consumables" },
+  { label: "Welding Accessories & Tools", to: "/trading/welding-accessories-tools" },
+  { label: "PPE & Safety Equipment", to: "/trading/ppe-safety-equipment" },
 ];
 
 export function SiteNav() {
@@ -42,22 +44,22 @@ export function SiteNav() {
             </div>
           </li>
           <li>
-            <a href="/#fabrication">Fabrication <span className="nav-arrow" /></a>
+            <Link to="/fabrication">Fabrication <span className="nav-arrow" /></Link>
             <div className="dropdown">
               <div className="dropdown-header">Fabrication & Containers</div>
-              {fabItems.map((i) => <a key={i} href="/#fabrication">{i}</a>)}
+              {fabItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}
             </div>
           </li>
           <li>
-            <a href="/#trading">Trading <span className="nav-arrow" /></a>
+            <Link to="/trading">Trading <span className="nav-arrow" /></Link>
             <div className="dropdown">
               <div className="dropdown-header">Industrial Trading</div>
-              {tradeItems.map((i) => <a key={i} href="/#trading">{i}</a>)}
+              {tradeItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}
             </div>
           </li>
-          <li><a href="/#dnv">DNV & Zone-2</a></li>
-          <li><a href="/#about">About Us</a></li>
-          <li><a href="/#contact" className="nav-cta">Get a Quote</a></li>
+          <li><Link to="/fabrication/zone-2-atex-enclosures">DNV & Zone-2</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact" className="nav-cta">Get a Quote</Link></li>
         </ul>
         <button
           className="nav-burger"
@@ -80,18 +82,19 @@ export function SiteNav() {
           <details>
             <summary>Fabrication</summary>
             {fabItems.map((i) => (
-              <a key={i} href="/#fabrication" className="m-sub" onClick={close}>{i}</a>
+              <Link key={i.to} to={i.to} className="m-sub" onClick={close}>{i.label}</Link>
             ))}
           </details>
           <details>
             <summary>Trading</summary>
             {tradeItems.map((i) => (
-              <a key={i} href="/#trading" className="m-sub" onClick={close}>{i}</a>
+              <Link key={i.to} to={i.to} className="m-sub" onClick={close}>{i.label}</Link>
             ))}
           </details>
-          <a className="m-link" href="/#dnv" onClick={close}>DNV & Zone-2</a>
-          <a className="m-link" href="/#about" onClick={close}>About Us</a>
-          <a className="m-cta" href="/#contact" onClick={close}>Get a Quote</a>
+          <Link className="m-link" to="/fabrication/zone-2-atex-enclosures" onClick={close}>DNV & Zone-2</Link>
+          <Link className="m-link" to="/about" onClick={close}>About Us</Link>
+          <a className="m-link" href="tel:+97122465375" onClick={close}>Call +971 2 246 5375</a>
+          <Link className="m-cta" to="/contact" onClick={close}>Get a Quote</Link>
         </div>
       )}
     </>

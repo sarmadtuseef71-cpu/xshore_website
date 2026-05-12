@@ -11,6 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as EquipmentRentalRouteImport } from './routes/equipment-rental'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TradingSlugRouteImport } from './routes/trading.$slug'
+import { Route as FabricationSlugRouteImport } from './routes/fabrication.$slug'
+import { Route as EquipmentRentalSlugRouteImport } from './routes/equipment-rental.$slug'
 
 const EquipmentRentalRoute = EquipmentRentalRouteImport.update({
   id: '/equipment-rental',
@@ -22,31 +25,73 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TradingSlugRoute = TradingSlugRouteImport.update({
+  id: '/trading/$slug',
+  path: '/trading/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FabricationSlugRoute = FabricationSlugRouteImport.update({
+  id: '/fabrication/$slug',
+  path: '/fabrication/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipmentRentalSlugRoute = EquipmentRentalSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => EquipmentRentalRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/equipment-rental': typeof EquipmentRentalRoute
+  '/equipment-rental': typeof EquipmentRentalRouteWithChildren
+  '/equipment-rental/$slug': typeof EquipmentRentalSlugRoute
+  '/fabrication/$slug': typeof FabricationSlugRoute
+  '/trading/$slug': typeof TradingSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/equipment-rental': typeof EquipmentRentalRoute
+  '/equipment-rental': typeof EquipmentRentalRouteWithChildren
+  '/equipment-rental/$slug': typeof EquipmentRentalSlugRoute
+  '/fabrication/$slug': typeof FabricationSlugRoute
+  '/trading/$slug': typeof TradingSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/equipment-rental': typeof EquipmentRentalRoute
+  '/equipment-rental': typeof EquipmentRentalRouteWithChildren
+  '/equipment-rental/$slug': typeof EquipmentRentalSlugRoute
+  '/fabrication/$slug': typeof FabricationSlugRoute
+  '/trading/$slug': typeof TradingSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/equipment-rental'
+  fullPaths:
+    | '/'
+    | '/equipment-rental'
+    | '/equipment-rental/$slug'
+    | '/fabrication/$slug'
+    | '/trading/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/equipment-rental'
-  id: '__root__' | '/' | '/equipment-rental'
+  to:
+    | '/'
+    | '/equipment-rental'
+    | '/equipment-rental/$slug'
+    | '/fabrication/$slug'
+    | '/trading/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/equipment-rental'
+    | '/equipment-rental/$slug'
+    | '/fabrication/$slug'
+    | '/trading/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  EquipmentRentalRoute: typeof EquipmentRentalRoute
+  EquipmentRentalRoute: typeof EquipmentRentalRouteWithChildren
+  FabricationSlugRoute: typeof FabricationSlugRoute
+  TradingSlugRoute: typeof TradingSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,13 +110,58 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/trading/$slug': {
+      id: '/trading/$slug'
+      path: '/trading/$slug'
+      fullPath: '/trading/$slug'
+      preLoaderRoute: typeof TradingSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fabrication/$slug': {
+      id: '/fabrication/$slug'
+      path: '/fabrication/$slug'
+      fullPath: '/fabrication/$slug'
+      preLoaderRoute: typeof FabricationSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipment-rental/$slug': {
+      id: '/equipment-rental/$slug'
+      path: '/$slug'
+      fullPath: '/equipment-rental/$slug'
+      preLoaderRoute: typeof EquipmentRentalSlugRouteImport
+      parentRoute: typeof EquipmentRentalRoute
+    }
   }
 }
 
+interface EquipmentRentalRouteChildren {
+  EquipmentRentalSlugRoute: typeof EquipmentRentalSlugRoute
+}
+
+const EquipmentRentalRouteChildren: EquipmentRentalRouteChildren = {
+  EquipmentRentalSlugRoute: EquipmentRentalSlugRoute,
+}
+
+const EquipmentRentalRouteWithChildren = EquipmentRentalRoute._addFileChildren(
+  EquipmentRentalRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  EquipmentRentalRoute: EquipmentRentalRoute,
+  EquipmentRentalRoute: EquipmentRentalRouteWithChildren,
+  FabricationSlugRoute: FabricationSlugRoute,
+  TradingSlugRoute: TradingSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

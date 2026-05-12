@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
+import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { useState } from "react";
 
 export const Route = createFileRoute("/equipment-rental")({
@@ -165,17 +167,8 @@ function EquipmentRentalPage() {
         </div>
       </section>
 
-      <footer className="xs-footer">
-        <Link to="/" className="footer-logo">X<span>SHORE</span></Link>
-        <div className="footer-links">
-          <Link to="/equipment-rental">Rental</Link>
-          <a href="/#fabrication">Fabrication</a>
-          <a href="/#trading">Trading</a>
-          <a href="/#dnv">DNV & Zone-2</a>
-          <a href="/#contact">Contact</a>
-        </div>
-        <span className="footer-copy">© 2026 Xshore. All Rights Reserved.</span>
-      </footer>
+      <SiteFooter />
+      <WhatsAppFab />
     </>
   );
 }

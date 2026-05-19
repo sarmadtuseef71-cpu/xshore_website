@@ -1,13 +1,52 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 30
+    }
+  },
   "rewrites": [
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "/images/:path*"
+    },
+    {
+      "source": "/favicon.png",
+      "destination": "/favicon.png"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.ico"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
     {
       "source": "/api/send-email.php",
       "destination": "/api/send-email.php"
     },
     {
-      "source": "/((?!assets/|images/|favicon.ico|api/config.example.php|api/send-email.php|api/.htaccess).*)" ,
+      "source": "/api/config.example.php",
+      "destination": "/api/config.example.php"
+    },
+    {
+      "source": "/api/.htaccess",
+      "destination": "/api/.htaccess"
+    },
+    {
+      "source": "/:path*",
       "destination": "/api/index"
     }
   ]

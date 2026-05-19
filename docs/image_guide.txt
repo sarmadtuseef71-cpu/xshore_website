@@ -1,0 +1,439 @@
+﻿
+XSHORE EQUIPMENT
+WEBSITE IMAGE GUIDE FOR DEVELOPER
+All images have been renamed with SEO-optimised file names and organised into folders matching the website structure.
+Total: 102 images across 11 categories
+LEGEND:
+  ★ HERO IMAGE  
+— Use this as the main card/section image — highest resolution
+  ⚠ COMPRESS  
+— File is over 1MB — must be compressed before uploading to website
+  (gallery)  
+— Secondary image — use in lightbox/gallery for that category
+FOLDER STRUCTURE — paste this into your website project:
+Xshore_Website_Images/
+├── rental/
+│   ├── air-compressors/
+│   ├── hydro-testing/
+│   ├── lifting-gear/
+│   ├── welding-machines/
+│   ├── pressure-washers/
+│   ├── pneumatic-equipment/
+│   ├── electric-equipment/
+│   └── other-equipment/
+└── fabrication/
+    ├── dnv-containers/
+    ├── zone-2-atex/
+    └── workshop-containers/
+RENTAL EQUIPMENT IMAGES
+1. Air Compressors
+⚠ Only 1 image available. Recommend taking additional photos of the air compressor from different angles.
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-air-compressor-rental-uae-01.jpg
+Equipment Card — Air Compressors
+Industrial air compressor rental UAE diesel electric
+★ HERO (only image)
+2. Hydro Testing Equipment
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-hydro-testing-equipment-rental-uae-04.jpg
+Equipment Card — Hydro Testing (HERO)
+High pressure hydrostatic test equipment rental UAE
+★ HERO — best quality — ⚠ COMPRESS (3.0 MB)
+xshore-hydro-testing-equipment-rental-uae-03.jpg
+Gallery
+Hydrostatic test pump pipeline testing UAE
+⚠ COMPRESS (2.9 MB)
+xshore-hydro-testing-equipment-rental-uae-06.jpg
+Gallery
+Hydro test unit pressure vessel inspection UAE
+(gallery)
+xshore-hydro-testing-equipment-rental-uae-01.jpg
+Gallery
+Xshore hydro testing equipment Abu Dhabi
+(gallery)
+xshore-hydro-testing-equipment-rental-uae-02.jpg
+Gallery
+Pressure test pump UAE rental
+(gallery)
+xshore-hydro-testing-equipment-rental-uae-05.jpg
+Gallery
+Hydrostatic testing equipment UAE
+(gallery)
+xshore-hydro-testing-equipment-rental-uae-07.jpg
+Gallery
+Pipeline pressure testing equipment UAE
+(gallery)
+xshore-hydro-testing-equipment-rental-uae-08.jpg
+Gallery
+Hydro test manifold UAE
+(gallery)
+xshore-hydro-testing-equipment-rental-uae-09.jpg
+Gallery
+Hydrostatic pump rental Abu Dhabi
+(gallery)
+3. Mobile Gantry &amp; Lifting Gear
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-mobile-gantry-lifting-gear-uae-01.jpg
+Equipment Card — Lifting Gear (HERO)
+Mobile gantry crane lifting gear rental UAE
+★ HERO (992 KB — OK)
+xshore-mobile-gantry-lifting-gear-uae-02.jpg
+Gallery
+Chain block lever hoist rental Abu Dhabi
+(gallery)
+xshore-mobile-gantry-lifting-gear-uae-03.jpg
+Gallery
+SWL certified lifting equipment UAE rental
+(gallery)
+xshore-mobile-gantry-lifting-gear-uae-04.jpg
+Gallery
+Rigging accessories slings shackles UAE
+(gallery)
+xshore-mobile-gantry-lifting-gear-uae-05.jpg
+Gallery
+Lifting gear oil gas UAE
+(gallery)
+xshore-mobile-gantry-lifting-gear-uae-06.jpg
+Gallery
+Mobile gantry Abu Dhabi Mussafah
+(gallery)
+xshore-mobile-gantry-lifting-gear-uae-07.jpg
+Gallery
+Industrial lifting equipment UAE
+(gallery)
+4. Electric Welding Machines
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-welding-machine-rental-uae-05.jpg
+Equipment Card — Welding Machines (HERO)
+MIG TIG MMA welding machine rental UAE
+★ HERO (723 KB — OK)
+xshore-welding-machine-rental-uae-02.jpg
+Gallery
+Electric welding machine hire Abu Dhabi
+(gallery)
+xshore-welding-machine-rental-uae-01.jpg
+Gallery
+Industrial welding set rental UAE
+(gallery)
+xshore-welding-machine-rental-uae-03.jpg
+Gallery
+MMA welding equipment UAE oil gas
+(gallery)
+xshore-welding-machine-rental-uae-04.jpg
+Gallery
+Submerged arc welding machine UAE
+(gallery)
+xshore-welding-machine-rental-uae-06.jpg
+Gallery
+TIG welding machine rental UAE
+(gallery)
+xshore-welding-machine-rental-uae-07.jpg
+Gallery
+Welding equipment supplier Mussafah
+(gallery)
+5. High Pressure Washers
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-high-pressure-washer-rental-uae-03.jpg
+Equipment Card — Pressure Washers (HERO)
+Industrial high pressure washer rental UAE cold hot
+★ HERO (414 KB — OK)
+xshore-high-pressure-washer-rental-uae-04.jpg
+Gallery
+Hot water pressure washer industrial UAE
+(gallery)
+xshore-high-pressure-washer-rental-uae-02.jpg
+Gallery
+Cold water pressure washer rental Abu Dhabi
+(gallery)
+xshore-high-pressure-washer-rental-uae-01.jpg
+Gallery
+High pressure cleaning equipment UAE
+(gallery)
+xshore-high-pressure-washer-rental-uae-05.jpg
+Gallery
+Surface prep pressure washer rental UAE
+(gallery)
+6. Pneumatic Equipment
+24 images available — use the top ones for the card and gallery; remaining can be used in a detailed product page.
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-pneumatic-equipment-rental-uae-16.jpg
+Equipment Card — Pneumatic (HERO)
+Pneumatic air powered equipment rental UAE
+★ HERO — ⚠ COMPRESS (1.0 MB)
+xshore-pneumatic-equipment-rental-uae-04.jpg
+Gallery
+Air impact wrench grinder rental UAE
+⚠ COMPRESS (890 KB)
+xshore-pneumatic-equipment-rental-uae-17.jpg
+Gallery
+Pneumatic drill hammer rental Abu Dhabi
+(gallery)
+xshore-pneumatic-equipment-rental-uae-23.jpg
+Gallery
+Air powered tools oil gas UAE
+(gallery)
+xshore-pneumatic-equipment-rental-uae-01.jpg
+Gallery
+Pneumatic grinder chipping tool UAE
+(gallery)
+xshore-pneumatic-equipment-rental-uae-05.jpg
+Gallery
+Air tools industrial rental UAE
+(gallery)
+xshore-pneumatic-equipment-rental-uae-06.jpg
+Gallery
+Pneumatic equipment Mussafah Abu Dhabi
+(gallery)
+xshore-pneumatic-equipment-rental-uae-11.jpg
+Gallery
+Air powered impact tool rental UAE
+(gallery)
+xshore-pneumatic-equipment-rental-uae-15.jpg
+Gallery
+Pneumatic scaling tool UAE rental
+(gallery)
+xshore-pneumatic-equipment-rental-uae-20.jpg
+Gallery
+Industrial air tool UAE oil field
+(gallery)
+xshore-pneumatic-equipment-rental-uae-10.jpg
+(extra gallery)
+Pneumatic equipment hire UAE
+(gallery)
+xshore-pneumatic-equipment-rental-uae-07.jpg
+(extra gallery)
+Air driven tool rental UAE
+(gallery)
+7. Electric Equipment &amp; Tools
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-electric-equipment-rental-uae-10.jpg
+Equipment Card — Electric Equipment (HERO)
+Electric power tools equipment rental UAE 110V 220V
+★ HERO — ⚠ COMPRESS (785 KB)
+xshore-electric-equipment-rental-uae-05.jpg
+Gallery
+Angle grinder drill rental UAE industrial
+⚠ COMPRESS (767 KB)
+xshore-electric-equipment-rental-uae-04.jpg
+Gallery
+Portable electric tools UAE oil gas
+(gallery)
+xshore-electric-equipment-rental-uae-09.jpg
+Gallery
+Electric equipment hire Abu Dhabi
+(gallery)
+xshore-electric-equipment-rental-uae-02.jpg
+Gallery
+Power tools rental UAE construction
+(gallery)
+xshore-electric-equipment-rental-uae-08.jpg
+Gallery
+110V 220V tools rental UAE
+(gallery)
+xshore-electric-equipment-rental-uae-03.jpg
+Gallery
+Industrial electric tools Mussafah UAE
+(gallery)
+xshore-electric-equipment-rental-uae-01.jpg
+Gallery
+Electric equipment rental Abu Dhabi
+(gallery)
+8. Other Equipment
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-other-equipment-rental-uae-03.jpg
+Equipment Card — Other Equipment (HERO)
+Gas cutting machine multi gas detector rental UAE
+★ HERO (741 KB — OK)
+xshore-other-equipment-rental-uae-02.jpg
+Gallery
+Industrial gas cutting equipment UAE
+(gallery)
+xshore-other-equipment-rental-uae-01.jpg
+Gallery
+Multi gas detector rental Abu Dhabi UAE
+(gallery)
+⚠ Only gas cutting machine and gas detector visible. If you have generators, dehumidifiers, or lighting towers — add photos to this folder.
+FABRICATION &amp; CONTAINER IMAGES
+9. DNV 2.7-1 Offshore Containers (CCUs)
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-dnv-offshore-container-uae-07.jpg
+Fabrication Section — DNV Containers (HERO)
+DNV 2.7-1 certified offshore container fabrication UAE
+★ HERO (494 KB — OK)
+xshore-dnv-offshore-container-uae-09.jpg
+Gallery / DNV Section background
+DNV offshore CCU container Abu Dhabi
+(gallery)
+xshore-dnv-offshore-container-uae-11.jpg
+Gallery
+DNV certified cargo container UAE
+(gallery)
+xshore-dnv-offshore-container-uae-08.jpg
+Gallery
+Offshore container fabricator UAE Abu Dhabi
+(gallery)
+xshore-dnv-offshore-container-uae-04.jpg
+Gallery
+20ft DNV container UAE Mussafah
+(gallery)
+xshore-dnv-offshore-container-uae-03.jpg
+Gallery
+DNV 2.7-1 EN12079 container UAE
+(gallery)
+xshore-dnv-offshore-container-uae-10.jpg
+Gallery
+Certified offshore lifting container UAE
+(gallery)
+xshore-dnv-offshore-container-uae-01.jpg
+Gallery
+DNV container manufacturer Abu Dhabi
+(gallery)
+xshore-dnv-offshore-container-uae-02.jpg
+Gallery
+Xshore DNV container fabrication
+(gallery)
+xshore-dnv-offshore-container-uae-06.jpg
+Gallery
+Offshore cargo unit UAE
+(gallery)
+xshore-dnv-offshore-container-uae-05.jpg
+Gallery
+DNV container Mussafah UAE
+(gallery)
+10. Zone-2 / ATEX Containers
+18 images — strong gallery. Use top quality for hero and section, rest for gallery/lightbox.
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-zone2-atex-container-uae-05.jpg
+Fabrication Section — ATEX Card (HERO)
+ATEX Zone-2 explosion proof container UAE
+★ HERO (563 KB — OK)
+xshore-zone2-atex-container-uae-11.jpg
+Gallery
+Zone-2 certified enclosure UAE offshore
+(gallery)
+xshore-zone2-atex-container-uae-03.jpg
+Gallery
+ATEX IECEx container Abu Dhabi fabrication
+(gallery)
+xshore-zone2-atex-container-uae-04.jpg
+Gallery
+Zone-2 hazardous area container UAE
+(gallery)
+xshore-zone2-atex-container-uae-06.jpg
+Gallery
+Explosion proof enclosure UAE oil gas
+(gallery)
+xshore-zone2-atex-container-uae-10.jpg
+Gallery
+ATEX Zone-2 container Mussafah UAE
+(gallery)
+xshore-zone2-atex-container-uae-07.jpg
+Gallery
+Zone 2 certified container UAE
+(gallery)
+xshore-zone2-atex-container-uae-08.jpg
+Gallery
+Hazardous area container fabrication UAE
+(gallery)
+11. Workshop Containers
+FILE NAME
+WEBSITE SECTION
+ALT TEXT (SEO)
+NOTES
+xshore-workshop-container-uae-01.jpg
+Fabrication Section — Workshop Card (HERO)
+Custom workshop container offshore UAE
+★ HERO (232 KB — OK)
+xshore-workshop-container-uae-03.jpg
+Gallery
+Workshop container remote site UAE
+(gallery)
+xshore-workshop-container-uae-02.jpg
+Gallery
+Fitted workshop unit Abu Dhabi fabrication
+(gallery)
+xshore-workshop-container-uae-04.jpg
+Gallery — may be low res
+Workshop tool store container UAE
+⚠ Low res (45 KB) — check quality
+xshore-workshop-container-uae-05.jpg
+Gallery — may be low res
+Offshore workshop container Mussafah
+⚠ Low res (43 KB) — check quality
+IMAGE COMPRESSION GUIDE
+Images over 500 KB will slow down your website and hurt your Google ranking. Compress all images before uploading.
+Images That Must Be Compressed Before Upload:
+FILE NAME
+CURRENT SIZE
+ACTION
+xshore-hydro-testing-equipment-rental-uae-04.jpg
+3,000 KB
+Compress to under 200 KB
+xshore-hydro-testing-equipment-rental-uae-03.jpg
+2,915 KB
+Compress to under 200 KB
+xshore-pneumatic-equipment-rental-uae-16.jpg
+1,036 KB
+Compress to under 200 KB
+xshore-mobile-gantry-lifting-gear-uae-01.jpg
+992 KB
+Compress to under 200 KB
+xshore-mobile-gantry-lifting-gear-uae-02.jpg
+791 KB
+Compress to under 200 KB
+xshore-electric-equipment-rental-uae-10.jpg
+785 KB
+Compress to under 200 KB
+xshore-mobile-gantry-lifting-gear-uae-03.jpg
+755 KB
+Compress to under 200 KB
+xshore-other-equipment-rental-uae-03.jpg
+741 KB
+Compress to under 200 KB
+xshore-welding-machine-rental-uae-05.jpg
+723 KB
+Compress to under 200 KB
+xshore-hydro-testing-equipment-rental-uae-06.jpg
+745 KB
+Compress to under 200 KB
+Free compression tools:
+squoosh.app (Google) — free, best quality
+tinyjpg.com — simple drag and drop
+imagecompressor.com — batch compression
+Convert all images to WebP format if the website platform supports it — WebP is 30% smaller than JPG with same quality.
+Missing Images — Recommend Photographing:
+Air Compressors — only 1 photo. Take 2–3 more from different angles
+Generators / Lighting towers / Dehumidifiers — if you have these in yard, photograph them for "Other Equipment" section
+Equipment yard wide shot — good for hero background image
+Team / technicians at work — builds trust with buyers
+

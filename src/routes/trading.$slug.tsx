@@ -10,14 +10,18 @@ export const Route = createFileRoute("/trading/$slug")({
     return { cat };
   },
   head: ({ loaderData }) => {
-    const title = loaderData?.cat?.title ?? "Trading";
+    const cat = loaderData?.cat;
+    const title = cat?.seoTitle ?? `${cat?.title ?? "Trading"} UAE | Xshore Equipment`;
+    const description = cat?.seoDescription ?? `${cat?.title ?? "Trading"} from Xshore Equipment in Abu Dhabi, UAE. Contact us for supply, availability, and quote details.`;
+
     return {
       meta: [
-        { title: `${title} UAE | Xshore Equipment` },
-        { name: "description", content: `${title} from Xshore Equipment in Abu Dhabi, UAE. Contact us for supply, availability, and quote details.` },
-        { property: "og:title", content: `${title} UAE | Xshore Equipment` },
-        { property: "og:description", content: `${title} from Xshore Equipment in Abu Dhabi, UAE.` },
+        { title: title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
         { property: "og:type", content: "website" },
+        ...(cat?.hero ? [{ property: "og:image", content: cat.hero }] : []),
       ],
     };
   },
@@ -42,10 +46,18 @@ export const Route = createFileRoute("/trading/$slug")({
 
 function TradingDetail() {
   const { cat } = Route.useLoaderData();
-  const related = tradingCategories
-    .filter((c) => c.slug !== cat.slug)
-    .slice(0, 4)
-    .map((c) => ({ title: c.title, to: `/trading/${c.slug}`, img: c.hero, alt: c.heroAlt }));
+  
+  const related = cat.relatedPages 
+    ? cat.relatedPages.map(slug => {
+        // Trading might relate to trading, but also potentially others.
+        // For simplicity and following current pattern, we search tradingCategories first.
+        const rCat = findTrading(slug);
+        return rCat ? { title: rCat.title, to: `/trading/${rCat.slug}`, img: rCat.hero, alt: rCat.heroAlt } : null;
+      }).filter(Boolean) as any[]
+    : tradingCategories
+        .filter((c) => c.slug !== cat.slug)
+        .slice(0, 4)
+        .map((c) => ({ title: c.title, to: `/trading/${c.slug}`, img: c.hero, alt: c.heroAlt }));
 
   return (
     <DetailPage

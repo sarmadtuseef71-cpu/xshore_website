@@ -10,15 +10,18 @@ export const Route = createFileRoute("/equipment-rental/$slug")({
     return { cat };
   },
   head: ({ loaderData }) => {
-    const title = loaderData?.cat?.title ?? "Equipment Rental";
+    const cat = loaderData?.cat;
+    const title = cat?.seoTitle ?? `${cat?.title ?? "Equipment Rental"} UAE | Xshore Equipment`;
+    const description = cat?.seoDescription ?? `${cat?.title ?? "Equipment Rental"} available from Xshore Equipment in Abu Dhabi, UAE. Contact us for rental, supply, availability, and quote details.`;
+
     return {
       meta: [
-        { title: `${title} UAE | Xshore Equipment` },
-        { name: "description", content: `${title} available from Xshore Equipment in Abu Dhabi, UAE. Contact us for rental, supply, availability, and quote details.` },
-        { property: "og:title", content: `${title} UAE | Xshore Equipment` },
-        { property: "og:description", content: `${title} available from Xshore Equipment in Abu Dhabi, UAE.` },
+        { title: title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
         { property: "og:type", content: "website" },
-        ...(loaderData?.cat?.hero ? [{ property: "og:image", content: loaderData.cat.hero }] : []),
+        ...(cat?.hero ? [{ property: "og:image", content: cat.hero }] : []),
       ],
     };
   },
@@ -43,10 +46,16 @@ export const Route = createFileRoute("/equipment-rental/$slug")({
 
 function RentalDetail() {
   const { cat } = Route.useLoaderData();
-  const related = rentalCategories
-    .filter((c) => c.slug !== cat.slug)
-    .slice(0, 4)
-    .map((c) => ({ title: c.title, to: `/equipment-rental/${c.slug}`, img: c.hero, alt: c.heroAlt }));
+  
+  const related = cat.relatedPages 
+    ? cat.relatedPages.map(slug => {
+        const rCat = findRental(slug);
+        return rCat ? { title: rCat.title, to: `/equipment-rental/${rCat.slug}`, img: rCat.hero, alt: rCat.heroAlt } : null;
+      }).filter(Boolean) as any[]
+    : rentalCategories
+        .filter((c) => c.slug !== cat.slug)
+        .slice(0, 4)
+        .map((c) => ({ title: c.title, to: `/equipment-rental/${c.slug}`, img: c.hero, alt: c.heroAlt }));
 
   return (
     <DetailPage

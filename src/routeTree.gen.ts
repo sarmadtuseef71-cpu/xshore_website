@@ -9,20 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TradingRouteImport } from './routes/trading'
+import { Route as RentalTermsRouteImport } from './routes/rental-terms'
 import { Route as RentalRouteImport } from './routes/rental'
-import { Route as FabricationRouteImport } from './routes/fabrication'
-import { Route as EquipmentRentalRouteImport } from './routes/equipment-rental'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TradingIndexRouteImport } from './routes/trading.index'
+import { Route as FabricationIndexRouteImport } from './routes/fabrication.index'
+import { Route as EquipmentRentalIndexRouteImport } from './routes/equipment-rental.index'
 import { Route as TradingSlugRouteImport } from './routes/trading.$slug'
 import { Route as FabricationSlugRouteImport } from './routes/fabrication.$slug'
 import { Route as EquipmentRentalSlugRouteImport } from './routes/equipment-rental.$slug'
 
-const TradingRoute = TradingRouteImport.update({
-  id: '/trading',
-  path: '/trading',
+const RentalTermsRoute = RentalTermsRouteImport.update({
+  id: '/rental-terms',
+  path: '/rental-terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RentalRoute = RentalRouteImport.update({
@@ -30,14 +32,9 @@ const RentalRoute = RentalRouteImport.update({
   path: '/rental',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FabricationRoute = FabricationRouteImport.update({
-  id: '/fabrication',
-  path: '/fabrication',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EquipmentRentalRoute = EquipmentRentalRouteImport.update({
-  id: '/equipment-rental',
-  path: '/equipment-rental',
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -55,58 +52,79 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TradingIndexRoute = TradingIndexRouteImport.update({
+  id: '/trading/',
+  path: '/trading/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FabricationIndexRoute = FabricationIndexRouteImport.update({
+  id: '/fabrication/',
+  path: '/fabrication/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipmentRentalIndexRoute = EquipmentRentalIndexRouteImport.update({
+  id: '/equipment-rental/',
+  path: '/equipment-rental/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TradingSlugRoute = TradingSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => TradingRoute,
+  id: '/trading/$slug',
+  path: '/trading/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const FabricationSlugRoute = FabricationSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => FabricationRoute,
+  id: '/fabrication/$slug',
+  path: '/fabrication/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EquipmentRentalSlugRoute = EquipmentRentalSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => EquipmentRentalRoute,
+  id: '/equipment-rental/$slug',
+  path: '/equipment-rental/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/equipment-rental': typeof EquipmentRentalRouteWithChildren
-  '/fabrication': typeof FabricationRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/rental': typeof RentalRoute
-  '/trading': typeof TradingRouteWithChildren
+  '/rental-terms': typeof RentalTermsRoute
   '/equipment-rental/$slug': typeof EquipmentRentalSlugRoute
   '/fabrication/$slug': typeof FabricationSlugRoute
   '/trading/$slug': typeof TradingSlugRoute
+  '/equipment-rental/': typeof EquipmentRentalIndexRoute
+  '/fabrication/': typeof FabricationIndexRoute
+  '/trading/': typeof TradingIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/equipment-rental': typeof EquipmentRentalRouteWithChildren
-  '/fabrication': typeof FabricationRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/rental': typeof RentalRoute
-  '/trading': typeof TradingRouteWithChildren
+  '/rental-terms': typeof RentalTermsRoute
   '/equipment-rental/$slug': typeof EquipmentRentalSlugRoute
   '/fabrication/$slug': typeof FabricationSlugRoute
   '/trading/$slug': typeof TradingSlugRoute
+  '/equipment-rental': typeof EquipmentRentalIndexRoute
+  '/fabrication': typeof FabricationIndexRoute
+  '/trading': typeof TradingIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/equipment-rental': typeof EquipmentRentalRouteWithChildren
-  '/fabrication': typeof FabricationRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/rental': typeof RentalRoute
-  '/trading': typeof TradingRouteWithChildren
+  '/rental-terms': typeof RentalTermsRoute
   '/equipment-rental/$slug': typeof EquipmentRentalSlugRoute
   '/fabrication/$slug': typeof FabricationSlugRoute
   '/trading/$slug': typeof TradingSlugRoute
+  '/equipment-rental/': typeof EquipmentRentalIndexRoute
+  '/fabrication/': typeof FabricationIndexRoute
+  '/trading/': typeof TradingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -114,56 +132,67 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/equipment-rental'
-    | '/fabrication'
+    | '/privacy-policy'
     | '/rental'
-    | '/trading'
+    | '/rental-terms'
     | '/equipment-rental/$slug'
     | '/fabrication/$slug'
     | '/trading/$slug'
+    | '/equipment-rental/'
+    | '/fabrication/'
+    | '/trading/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
-    | '/equipment-rental'
-    | '/fabrication'
+    | '/privacy-policy'
     | '/rental'
-    | '/trading'
+    | '/rental-terms'
     | '/equipment-rental/$slug'
     | '/fabrication/$slug'
     | '/trading/$slug'
+    | '/equipment-rental'
+    | '/fabrication'
+    | '/trading'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
-    | '/equipment-rental'
-    | '/fabrication'
+    | '/privacy-policy'
     | '/rental'
-    | '/trading'
+    | '/rental-terms'
     | '/equipment-rental/$slug'
     | '/fabrication/$slug'
     | '/trading/$slug'
+    | '/equipment-rental/'
+    | '/fabrication/'
+    | '/trading/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  EquipmentRentalRoute: typeof EquipmentRentalRouteWithChildren
-  FabricationRoute: typeof FabricationRouteWithChildren
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RentalRoute: typeof RentalRoute
-  TradingRoute: typeof TradingRouteWithChildren
+  RentalTermsRoute: typeof RentalTermsRoute
+  EquipmentRentalSlugRoute: typeof EquipmentRentalSlugRoute
+  FabricationSlugRoute: typeof FabricationSlugRoute
+  TradingSlugRoute: typeof TradingSlugRoute
+  EquipmentRentalIndexRoute: typeof EquipmentRentalIndexRoute
+  FabricationIndexRoute: typeof FabricationIndexRoute
+  TradingIndexRoute: typeof TradingIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/trading': {
-      id: '/trading'
-      path: '/trading'
-      fullPath: '/trading'
-      preLoaderRoute: typeof TradingRouteImport
+    '/rental-terms': {
+      id: '/rental-terms'
+      path: '/rental-terms'
+      fullPath: '/rental-terms'
+      preLoaderRoute: typeof RentalTermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rental': {
@@ -173,18 +202,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RentalRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/fabrication': {
-      id: '/fabrication'
-      path: '/fabrication'
-      fullPath: '/fabrication'
-      preLoaderRoute: typeof FabricationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/equipment-rental': {
-      id: '/equipment-rental'
-      path: '/equipment-rental'
-      fullPath: '/equipment-rental'
-      preLoaderRoute: typeof EquipmentRentalRouteImport
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -208,74 +230,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/trading/': {
+      id: '/trading/'
+      path: '/trading'
+      fullPath: '/trading/'
+      preLoaderRoute: typeof TradingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fabrication/': {
+      id: '/fabrication/'
+      path: '/fabrication'
+      fullPath: '/fabrication/'
+      preLoaderRoute: typeof FabricationIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipment-rental/': {
+      id: '/equipment-rental/'
+      path: '/equipment-rental'
+      fullPath: '/equipment-rental/'
+      preLoaderRoute: typeof EquipmentRentalIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/trading/$slug': {
       id: '/trading/$slug'
-      path: '/$slug'
+      path: '/trading/$slug'
       fullPath: '/trading/$slug'
       preLoaderRoute: typeof TradingSlugRouteImport
-      parentRoute: typeof TradingRoute
+      parentRoute: typeof rootRouteImport
     }
     '/fabrication/$slug': {
       id: '/fabrication/$slug'
-      path: '/$slug'
+      path: '/fabrication/$slug'
       fullPath: '/fabrication/$slug'
       preLoaderRoute: typeof FabricationSlugRouteImport
-      parentRoute: typeof FabricationRoute
+      parentRoute: typeof rootRouteImport
     }
     '/equipment-rental/$slug': {
       id: '/equipment-rental/$slug'
-      path: '/$slug'
+      path: '/equipment-rental/$slug'
       fullPath: '/equipment-rental/$slug'
       preLoaderRoute: typeof EquipmentRentalSlugRouteImport
-      parentRoute: typeof EquipmentRentalRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface EquipmentRentalRouteChildren {
-  EquipmentRentalSlugRoute: typeof EquipmentRentalSlugRoute
-}
-
-const EquipmentRentalRouteChildren: EquipmentRentalRouteChildren = {
-  EquipmentRentalSlugRoute: EquipmentRentalSlugRoute,
-}
-
-const EquipmentRentalRouteWithChildren = EquipmentRentalRoute._addFileChildren(
-  EquipmentRentalRouteChildren,
-)
-
-interface FabricationRouteChildren {
-  FabricationSlugRoute: typeof FabricationSlugRoute
-}
-
-const FabricationRouteChildren: FabricationRouteChildren = {
-  FabricationSlugRoute: FabricationSlugRoute,
-}
-
-const FabricationRouteWithChildren = FabricationRoute._addFileChildren(
-  FabricationRouteChildren,
-)
-
-interface TradingRouteChildren {
-  TradingSlugRoute: typeof TradingSlugRoute
-}
-
-const TradingRouteChildren: TradingRouteChildren = {
-  TradingSlugRoute: TradingSlugRoute,
-}
-
-const TradingRouteWithChildren =
-  TradingRoute._addFileChildren(TradingRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  EquipmentRentalRoute: EquipmentRentalRouteWithChildren,
-  FabricationRoute: FabricationRouteWithChildren,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   RentalRoute: RentalRoute,
-  TradingRoute: TradingRouteWithChildren,
+  RentalTermsRoute: RentalTermsRoute,
+  EquipmentRentalSlugRoute: EquipmentRentalSlugRoute,
+  FabricationSlugRoute: FabricationSlugRoute,
+  TradingSlugRoute: TradingSlugRoute,
+  EquipmentRentalIndexRoute: EquipmentRentalIndexRoute,
+  FabricationIndexRoute: FabricationIndexRoute,
+  TradingIndexRoute: TradingIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

@@ -10,15 +10,18 @@ export const Route = createFileRoute("/fabrication/$slug")({
     return { cat };
   },
   head: ({ loaderData }) => {
-    const title = loaderData?.cat?.title ?? "Fabrication";
+    const cat = loaderData?.cat;
+    const title = cat?.seoTitle ?? `${cat?.title ?? "Fabrication"} UAE | Xshore Equipment`;
+    const description = cat?.seoDescription ?? `${cat?.title ?? "Fabrication"} from Xshore Equipment in Abu Dhabi, UAE. Contact us for fabrication, certification, availability, and quote details.`;
+
     return {
       meta: [
-        { title: `${title} UAE | Xshore Equipment` },
-        { name: "description", content: `${title} from Xshore Equipment in Abu Dhabi, UAE. Contact us for fabrication, certification, availability, and quote details.` },
-        { property: "og:title", content: `${title} UAE | Xshore Equipment` },
-        { property: "og:description", content: `${title} from Xshore Equipment in Abu Dhabi, UAE.` },
+        { title: title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
         { property: "og:type", content: "website" },
-        ...(loaderData?.cat?.hero ? [{ property: "og:image", content: loaderData.cat.hero }] : []),
+        ...(cat?.hero ? [{ property: "og:image", content: cat.hero }] : []),
       ],
     };
   },
@@ -43,10 +46,16 @@ export const Route = createFileRoute("/fabrication/$slug")({
 
 function FabricationDetail() {
   const { cat } = Route.useLoaderData();
-  const related = fabricationCategories
-    .filter((c) => c.slug !== cat.slug)
-    .slice(0, 4)
-    .map((c) => ({ title: c.title, to: `/fabrication/${c.slug}`, img: c.hero, alt: c.heroAlt }));
+  
+  const related = cat.relatedPages 
+    ? cat.relatedPages.map(slug => {
+        const rCat = findFabrication(slug);
+        return rCat ? { title: rCat.title, to: `/fabrication/${rCat.slug}`, img: rCat.hero, alt: rCat.heroAlt } : null;
+      }).filter(Boolean) as any[]
+    : fabricationCategories
+        .filter((c) => c.slug !== cat.slug)
+        .slice(0, 4)
+        .map((c) => ({ title: c.title, to: `/fabrication/${c.slug}`, img: c.hero, alt: c.heroAlt }));
 
   return (
     <DetailPage

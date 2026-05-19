@@ -2,7 +2,6 @@
   "version": 2,
   "cleanUrls": true,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
   "functions": {
     "api/index.js": {
       "maxDuration": 30
@@ -11,27 +10,27 @@
   "rewrites": [
     {
       "source": "/assets/:path*",
-      "destination": "/assets/:path*"
+      "destination": "/dist/client/assets/:path*"
     },
     {
       "source": "/images/:path*",
-      "destination": "/images/:path*"
+      "destination": "/dist/client/images/:path*"
     },
     {
       "source": "/favicon.png",
-      "destination": "/favicon.png"
+      "destination": "/dist/client/favicon.png"
     },
     {
       "source": "/favicon.ico",
-      "destination": "/favicon.ico"
+      "destination": "/dist/client/favicon.ico"
     },
     {
       "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "destination": "/dist/client/robots.txt"
     },
     {
       "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
+      "destination": "/dist/client/sitemap.xml"
     },
     {
       "source": "/api/send-email.php",

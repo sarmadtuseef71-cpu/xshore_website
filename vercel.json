@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/send-email.php",
+      "destination": "/api/send-email.php"
+    },
+    {
+      "source": "/((?!assets/|images/|favicon.ico|api/config.example.php|api/send-email.php|api/.htaccess).*)" ,
+      "destination": "/api/index"
+    }
+  ]
+}

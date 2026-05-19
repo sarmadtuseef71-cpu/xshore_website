@@ -1,18 +1,52 @@
 import server from "../dist/server/server.js";
 
+function getHeader(headers, name) {
+  if (!headers) return undefined;
+
+  if (typeof headers.get === "function") {
+    return headers.get(name);
+  }
+
+  const lowerName = name.toLowerCase();
+  const key = Object.keys(headers).find(
+    (k) => k.toLowerCase() === lowerName
+  );
+
+  const value = key ? headers[key] : undefined;
+
+  if (Array.isArray(value)) return value[0];
+  return value;
+}
+
+function makeAbsoluteUrl(request) {
+  const rawUrl = request.url || "/";
+
+  if (rawUrl.startsWith("http://") || rawUrl.startsWith("https://")) {
+    return rawUrl;
+  }
+
+  const proto = getHeader(request.headers, "x-forwarded-proto") || "https";
+  const host =
+    getHeader(request.headers, "x-forwarded-host") ||
+    getHeader(request.headers, "host");
+
+  if (!host) {
+    throw new Error("Missing host header for Vercel request URL normalization");
+  }
+
+  return `${proto}://${host}${rawUrl.startsWith("/") ? rawUrl : `/${rawUrl}`}`;
+}
+
 function normalizeRequestUrl(request) {
   try {
-    new URL(request.url);
-    return request;
-  } catch {
-    const protocol = request.headers.get("x-forwarded-proto") || "https";
-    const host = request.headers.get("host");
-    if (!host) {
+    const absoluteUrl = makeAbsoluteUrl(request);
+    if (absoluteUrl === request.url) {
       return request;
     }
-
-    const absoluteUrl = `${protocol}://${host}${request.url}`;
     return new Request(absoluteUrl, request);
+  } catch (error) {
+    console.error("Error during request URL normalization:", error);
+    return request;
   }
 }
 

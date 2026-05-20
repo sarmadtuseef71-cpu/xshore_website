@@ -126,7 +126,7 @@
 .div-link::after { content: '→'; }
 
 /* ── RENTAL ── */
-.rental { background: var(--bg); padding: 100px 60px; }
+.rental { background: var(--bg); padding: 100px 60px 20px; }
 .eq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
 .eq-card { background: var(--bg3); overflow: hidden; transition: background 0.2s; cursor: pointer; }
 .eq-card:hover { background: #1C1D26; }
@@ -197,7 +197,7 @@
 .client-logo:hover { background: var(--bg3); color: var(--text); }
 
 /* ── WHY ── */
-.why { background: var(--bg); padding: 100px 60px; }
+.why { background: var(--bg); padding: 20px 60px 100px; }
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
 .why-card { background: var(--bg3); padding: 36px 32px; }
 .why-card-num { font-family: 'Oswald', sans-serif; font-size: 44px; font-weight: 700; color: var(--gold); display: block; margin-bottom: 8px; }
@@ -247,8 +247,8 @@
 }
 @media (max-width: 640px) {
   .hero { justify-content: center; }
-  .hero-content { padding: 32px 20px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-  .hero-tag { margin-left: auto; margin-right: auto; }
+  .hero-content { padding: 32px 20px 40px; text-align: left; display: flex; flex-direction: column; align-items: flex-start; }
+  .hero-tag { margin-left: 0; margin-right: auto; }
   .rental, .fabrication, .trading, .why, .clients, .cta-section { padding: 64px 20px; }
   .xs-footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
   .eq-grid { grid-template-columns: 1fr; }
@@ -264,6 +264,7 @@
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
+    align-self: center;
   }
   .cta-actions {
     margin-left: auto;
@@ -641,7 +642,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 320px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     padding-bottom: 72px;
   }
@@ -649,8 +650,8 @@
     font-size: 11px;
     padding: 10px 12px;
     width: 100%;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     white-space: normal;
   }
   .hydro-spot {

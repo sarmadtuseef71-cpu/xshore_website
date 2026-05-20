@@ -34,3 +34,7 @@ dist-ssr
 # Hostinger API config
 public/api/config.php
 
+# Build-generated asset copies (recreated by sync-vercel-assets.mjs on each build)
+public/assets
+
+

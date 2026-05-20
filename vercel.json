@@ -4,46 +4,11 @@
   "buildCommand": "npm run build",
   "functions": {
     "api/index.js": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "includeFiles": "dist/server/**"
     }
   },
   "rewrites": [
-    {
-      "source": "/assets/:path*",
-      "destination": "/dist/client/assets/:path*"
-    },
-    {
-      "source": "/images/:path*",
-      "destination": "/dist/client/images/:path*"
-    },
-    {
-      "source": "/favicon.png",
-      "destination": "/dist/client/favicon.png"
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/dist/client/favicon.ico"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/dist/client/robots.txt"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/dist/client/sitemap.xml"
-    },
-    {
-      "source": "/api/send-email.php",
-      "destination": "/api/send-email.php"
-    },
-    {
-      "source": "/api/config.example.php",
-      "destination": "/api/config.example.php"
-    },
-    {
-      "source": "/api/.htaccess",
-      "destination": "/api/.htaccess"
-    },
     {
       "source": "/:path*",
       "destination": "/api/index"

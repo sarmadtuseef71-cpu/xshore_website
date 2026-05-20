@@ -273,7 +273,11 @@
   .hero-actions .btn-primary,
   .hero-actions .btn-outline,
   .cta-actions .btn-primary,
-  .cta-actions .btn-outline {
+  .cta-actions .btn-outline,
+  .section-cta .btn-primary,
+  .path-cta,
+  .qf-submit,
+  .btn-dark {
     width: 100%;
     min-height: 56px;
     display: flex;

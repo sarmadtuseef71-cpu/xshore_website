@@ -172,9 +172,9 @@ function FabricationIndex() {
           <h2 style={{ fontFamily: "'Oswald', sans-serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, textTransform: "uppercase", color: "var(--text)", marginBottom: "16px" }}>Start a Conversation</h2>
           <p className="section-sub" style={{ margin: "0 auto 40px", maxWidth: "600px" }}>Ready to discuss your DNV container or Zone-2 enclosure project? Connect with our team today.</p>
           
-          <div style={{ display: "flex", justifyContent: "center", gap: "24px", flexWrap: "wrap", marginBottom: "48px" }}>
-            <Link to="/contact" className="btn-primary" style={{ minWidth: "220px", display: "inline-flex", justifyContent: "center", alignItems: "center" }}>Request a Build</Link>
-            <a href="https://wa.me/97122465375" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ minWidth: "220px", display: "inline-flex", justifyContent: "center", alignItems: "center" }}>WhatsApp</a>
+          <div className="cta-actions" style={{ marginBottom: "48px" }}>
+            <Link to="/contact" className="btn-primary">Request a Build</Link>
+            <a href="https://wa.me/97122465375" target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp</a>
           </div>
 
           <div className="contact-strip" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>

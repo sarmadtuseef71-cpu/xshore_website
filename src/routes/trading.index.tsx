@@ -156,9 +156,9 @@ function TradingIndex() {
           <h2 style={{ fontFamily: "'Oswald', sans-serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, textTransform: "uppercase", color: "var(--text)", marginBottom: "16px" }}>Ready to Order?</h2>
           <p className="section-sub" style={{ margin: "0 auto 40px", maxWidth: "600px" }}>Email your material list or WhatsApp us directly. We respond the same day.</p>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "24px", flexWrap: "wrap", marginBottom: "48px" }}>
-            <a href="mailto:sales@xshore.ae" className="btn-primary" style={{ minWidth: "220px", display: "inline-flex", justifyContent: "center", alignItems: "center" }}>Email your list: sales@xshore.ae</a>
-            <a href="https://wa.me/97122465375" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ minWidth: "220px", display: "inline-flex", justifyContent: "center", alignItems: "center" }}>WhatsApp: +971 2 246 5375</a>
+          <div className="cta-actions" style={{ marginBottom: "48px" }}>
+            <a href="mailto:sales@xshore.ae" className="btn-primary">Email your list: sales@xshore.ae</a>
+            <a href="https://wa.me/97122465375" target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp: +971 2 246 5375</a>
           </div>
 
           <div className="contact-strip" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>

@@ -246,7 +246,9 @@
   .clients-note { text-align: left; }
 }
 @media (max-width: 640px) {
-  .hero-content { padding: 64px 20px 64px; }
+  .hero { justify-content: center; }
+  .hero-content { padding: 32px 20px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .hero-tag { margin-left: auto; margin-right: auto; }
   .rental, .fabrication, .trading, .why, .clients, .cta-section { padding: 64px 20px; }
   .xs-footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
   .eq-grid { grid-template-columns: 1fr; }
@@ -260,6 +262,8 @@
     align-items: stretch;
     width: 100%;
     max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .cta-actions {
     margin-left: auto;
@@ -634,12 +638,20 @@
   .hero-trust {
     gap: 8px;
     margin-top: 28px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 72px;
   }
   .trust-badge {
     font-size: 11px;
-    padding: 6px 12px;
+    padding: 10px 12px;
     width: 100%;
     justify-content: center;
+    text-align: center;
+    white-space: normal;
   }
   .hydro-spot {
     padding: 64px 20px;
@@ -769,5 +781,16 @@
   }
   .legal-toc {
     display: none;
+  }
+}
+@media (max-width: 640px) {
+  .legal-layout {
+    gap: 24px;
+  }
+  .legal-layout > div > div {
+    padding: 24px 16px !important;
+  }
+  .legal-layout > div {
+    width: 100% !important;
   }
 }

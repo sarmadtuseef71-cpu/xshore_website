@@ -216,7 +216,8 @@
 .contact-item-icon { width: 40px; height: 40px; border: 1px solid var(--border-gold); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .contact-item-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
 .contact-item-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
-.contact-item-val { font-size: 14px; color: var(--text); font-weight: 400; }
+.contact-item > div { min-width: 0; }
+.contact-item-val { font-size: 14px; color: var(--text); font-weight: 400; word-break: break-word; }
 
 /* ── FOOTER ── */
 .xs-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 48px 60px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }

@@ -51,7 +51,7 @@ function PrivacyPolicyPage() {
 
       {/* Content + Sidebar */}
       <section style={{ background: "var(--bg)", padding: "60px 5vw 100px" }}>
-        <div style={{ maxWidth: "1300px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 280px", gap: "60px", alignItems: "start" }} className="legal-layout">
+        <div style={{ maxWidth: "1300px", margin: "0 auto" }} className="legal-layout">
 
           {/* Main Content */}
           <div>

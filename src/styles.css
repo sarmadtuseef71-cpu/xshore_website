@@ -758,13 +758,18 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
 }
+.about-process-grid-polished.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
 @media (max-width: 960px) {
-  .about-process-grid-polished {
+  .about-process-grid-polished,
+  .about-process-grid-polished.cols-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 640px) {
-  .about-process-grid-polished {
+  .about-process-grid-polished,
+  .about-process-grid-polished.cols-3 {
     grid-template-columns: 1fr;
   }
 }

@@ -133,7 +133,7 @@ function TradingIndex() {
           <h2 className="section-title">How to Order</h2>
           <p className="section-sub" style={{ marginBottom: "60px" }}>No minimum order quantity for established project clients. Contact us to discuss terms.</p>
 
-          <div className="about-process-grid-polished" style={{ gridTemplateColumns: "repeat(3, 1fr)", marginBottom: "60px" }}>
+          <div className="about-process-grid-polished cols-3" style={{ marginBottom: "60px" }}>
             <div style={{ background: "var(--bg)", border: "1px solid var(--border)", borderTop: "3px solid var(--gold)", padding: "32px 24px", borderRadius: "2px" }}>
               <div style={{ fontSize: "14px", fontWeight: 600, color: "var(--gold)", marginBottom: "16px" }}>01</div>
               <h4 style={{ fontSize: "16px", color: "var(--text)", fontWeight: 500, lineHeight: "1.4", margin: 0 }}>Send us your material list or requirements</h4>

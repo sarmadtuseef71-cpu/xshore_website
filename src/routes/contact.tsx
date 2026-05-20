@@ -65,7 +65,7 @@ function ContactPage() {
         <div className="er-hero-overlay" />
         <div className="er-hero-content">
           <span className="hero-tag">Contact</span>
-          <h1>Get in Touch, <em>We Respond Fast</em></h1>
+          <h1>Get in Touch - <em>We Respond Fast</em></h1>
           <p className="er-hero-sub">Send us a quote request or just describe what you need. We'll come back to you the same day - usually faster. Prefer to call or WhatsApp? Even better.</p>
         </div>
       </section>

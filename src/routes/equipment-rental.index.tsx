@@ -30,11 +30,57 @@ const categories = [
 
 function EquipmentRentalPage() {
   const [rentalType, setRentalType] = useState<"short" | "long">("short");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const scrollToQuote = (type: "short" | "long") => {
     setRentalType(type);
     document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setIsError(false);
+
+    const formData = new FormData(e.currentTarget);
+    const fromDate = formData.get("from") as string;
+    const endDate = formData.get("end") as string;
+    const userNotes = formData.get("notes") as string;
+    
+    let combinedNotes = "";
+    if (fromDate) combinedNotes += `Required From: ${fromDate}\n`;
+    if (endDate) combinedNotes += `Duration/End Date: ${endDate}\n`;
+    if (userNotes) combinedNotes += `Notes: ${userNotes}`;
+
+    const data = {
+      name: formData.get("name"),
+      company: formData.get("company"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      need: formData.get("need"),
+      type: formData.get("type") === "short" ? "Short-term Rental" : "Long-Term Rental",
+      location: formData.get("location"),
+      notes: combinedNotes.trim(),
+      company_website: formData.get("company_website"),
+      page: window.location.href,
+    };
+
+    try {
+      const res = await fetch("/api/send-email.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      setIsSuccess(true);
+    } catch (err) {
+      setIsError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <>
@@ -117,56 +163,74 @@ function EquipmentRentalPage() {
             </div>
           </div>
 
-          <form className="quote-form" onSubmit={(e) => { e.preventDefault(); alert("Thanks - we'll be in touch shortly."); }}>
-            <div className="qf-field full">
-              <label className="qf-label" htmlFor="qf-equipment">Equipment Needed</label>
-              <input id="qf-equipment" className="qf-input" required placeholder="e.g. 750 CFM compressor + hydro test unit" />
+          {isSuccess ? (
+            <div style={{ padding: "40px 32px", background: "var(--bg3)", border: "1px solid var(--border)", borderTop: "2px solid var(--gold)", borderRadius: 3, textAlign: "center" }}>
+              <h3 style={{ fontSize: 24, color: "var(--gold)", marginBottom: 12 }}>Thank you.</h3>
+              <p style={{ color: "var(--text-dim)", lineHeight: 1.6, margin: 0 }}>Your quote request has been sent to our team. We will contact you shortly.</p>
             </div>
-            <div className="qf-field full">
-              <label className="qf-label" htmlFor="qf-type">Rental Type</label>
-              <select id="qf-type" className="qf-select" value={rentalType} onChange={(e) => setRentalType(e.target.value as "short" | "long")}>
-                <option value="short">Short-term (1 week - months)</option>
-                <option value="long">Long-term (months - years)</option>
-              </select>
-            </div>
-            <div className="qf-field">
-              <label className="qf-label" htmlFor="qf-from">Required From</label>
-              <input id="qf-from" type="date" className="qf-input" required />
-            </div>
-            <div className="qf-field">
-              <label className="qf-label" htmlFor="qf-end">Duration / End Date</label>
-              <input id="qf-end" className="qf-input" placeholder="e.g. 3 months or end date" />
-            </div>
-            <div className="qf-field full">
-              <label className="qf-label" htmlFor="qf-site">Site Location / Emirate</label>
-              <input id="qf-site" className="qf-input" required placeholder="e.g. Ruwais, Abu Dhabi" />
-            </div>
-            <div className="qf-field">
-              <label className="qf-label" htmlFor="qf-name">Your Name</label>
-              <input id="qf-name" className="qf-input" required />
-            </div>
-            <div className="qf-field">
-              <label className="qf-label" htmlFor="qf-company">Company Name</label>
-              <input id="qf-company" className="qf-input" required />
-            </div>
-            <div className="qf-field">
-              <label className="qf-label" htmlFor="qf-phone">Phone / WhatsApp</label>
-              <input id="qf-phone" type="tel" className="qf-input" required />
-            </div>
-            <div className="qf-field">
-              <label className="qf-label" htmlFor="qf-email">Email</label>
-              <input id="qf-email" type="email" className="qf-input" required />
-            </div>
-            <div className="qf-field full">
-              <label className="qf-label" htmlFor="qf-notes">Notes</label>
-              <textarea id="qf-notes" className="qf-textarea" placeholder="Specifications, accessories, delivery notes…" />
-            </div>
-            <button className="qf-submit" type="submit">Send Quote Request</button>
-            <p className="qf-note" style={{ marginTop: "12px", fontSize: "11px", opacity: 0.7, textAlign: "center" }}>
-              All hires are subject to our <Link to="/rental-terms" style={{ color: "var(--gold)", textDecoration: "underline" }}>Equipment Rental Terms &amp; Conditions</Link>.
-            </p>
-            <p className="qf-note">Or WhatsApp us directly: <a href="https://wa.me/97122465375">+971 2 246 5375</a> - we respond instantly.</p>
-          </form>
+          ) : (
+            <form className="quote-form" onSubmit={handleSubmit}>
+              <input type="text" name="company_website" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
+              <div className="qf-field full">
+                <label className="qf-label" htmlFor="qf-equipment">Equipment Needed</label>
+                <input id="qf-equipment" name="need" className="qf-input" required placeholder="e.g. 750 CFM compressor + hydro test unit" />
+              </div>
+              <div className="qf-field full">
+                <label className="qf-label" htmlFor="qf-type">Rental Type</label>
+                <select id="qf-type" name="type" className="qf-select" value={rentalType} onChange={(e) => setRentalType(e.target.value as "short" | "long")}>
+                  <option value="short">Short-term (1 week - months)</option>
+                  <option value="long">Long-term (months - years)</option>
+                </select>
+              </div>
+              <div className="qf-field">
+                <label className="qf-label" htmlFor="qf-from">Required From</label>
+                <input id="qf-from" name="from" type="date" className="qf-input" required />
+              </div>
+              <div className="qf-field">
+                <label className="qf-label" htmlFor="qf-end">Duration / End Date</label>
+                <input id="qf-end" name="end" className="qf-input" placeholder="e.g. 3 months or end date" />
+              </div>
+              <div className="qf-field full">
+                <label className="qf-label" htmlFor="qf-site">Site Location / Emirate</label>
+                <input id="qf-site" name="location" className="qf-input" required placeholder="e.g. Ruwais, Abu Dhabi" />
+              </div>
+              <div className="qf-field">
+                <label className="qf-label" htmlFor="qf-name">Your Name</label>
+                <input id="qf-name" name="name" className="qf-input" required />
+              </div>
+              <div className="qf-field">
+                <label className="qf-label" htmlFor="qf-company">Company Name</label>
+                <input id="qf-company" name="company" className="qf-input" required />
+              </div>
+              <div className="qf-field">
+                <label className="qf-label" htmlFor="qf-phone">Phone / WhatsApp</label>
+                <input id="qf-phone" name="phone" type="tel" className="qf-input" required />
+              </div>
+              <div className="qf-field">
+                <label className="qf-label" htmlFor="qf-email">Email</label>
+                <input id="qf-email" name="email" type="email" className="qf-input" required />
+              </div>
+              <div className="qf-field full">
+                <label className="qf-label" htmlFor="qf-notes">Notes</label>
+                <textarea id="qf-notes" name="notes" className="qf-textarea" placeholder="Specifications, accessories, delivery notes…" />
+              </div>
+              
+              {isError && (
+                <div className="qf-field full" style={{ color: "#ff4444", fontSize: 13, background: "rgba(255,0,0,0.1)", padding: "12px 16px", borderRadius: 2 }}>
+                  There was an error sending your request. Please try again or contact us directly via WhatsApp.
+                </div>
+              )}
+              
+              <button className="qf-submit" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Quote Request"}
+              </button>
+              <p className="qf-note" style={{ marginTop: "12px", fontSize: "11px", opacity: 0.7, textAlign: "center" }}>
+                All hires are subject to our <Link to="/rental-terms" style={{ color: "var(--gold)", textDecoration: "underline" }}>Equipment Rental Terms &amp; Conditions</Link>.
+              </p>
+              <p className="qf-note">Or WhatsApp us directly: <a href="https://wa.me/97122465375">+971 2 246 5375</a> - we respond instantly.</p>
+            </form>
+          )}
         </div>
       </section>
 

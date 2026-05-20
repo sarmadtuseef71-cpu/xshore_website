@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { CookieBanner } from "@/components/CookieBanner";
 
 function NotFoundComponent() {
   return (
@@ -72,14 +73,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Xshore Equipment | Industrial Rental, Containers & Welding Supply - UAE" },
+      { name: "description", content: "Equipment rental, DNV and ATEX container supply, and welding consumables across the UAE. Based in Mussafah, Abu Dhabi." },
+      { name: "author", content: "Xshore Equipment" },
+      { property: "og:title", content: "Xshore Equipment | Industrial Rental, Containers & Welding Supply - UAE" },
+      { property: "og:description", content: "Equipment rental, certified containers, and welding supply from one company in Abu Dhabi, UAE." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
@@ -121,6 +121,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <CookieBanner />
     </QueryClientProvider>
   );
 }

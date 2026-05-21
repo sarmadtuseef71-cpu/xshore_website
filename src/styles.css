@@ -751,11 +751,14 @@
 }
 @media (min-width: 961px) {
   .about-split-grid.commitment-grid {
-    align-items: center;
+    align-items: stretch;
+  }
+  .about-split-grid.commitment-grid > div {
+    justify-content: flex-start;
   }
   .about-split-img-wrap.commitment-img {
-    height: 300px;
-    min-height: 300px;
+    height: 100%;
+    min-height: 0;
   }
 }
 .about-split-img-wrap img {

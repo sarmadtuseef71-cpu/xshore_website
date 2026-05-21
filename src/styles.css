@@ -794,6 +794,12 @@
   position: relative;
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
+.about-location-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 /* keep the old class working for any other usages */
 .about-location-img {
   width: 100%;
@@ -801,6 +807,21 @@
   min-height: 420px;
   object-fit: cover;
   display: block;
+}
+
+@media (min-width: 961px) {
+  .about-location-grid {
+    align-items: stretch;
+  }
+  .about-location-grid > .about-location-img-wrap {
+    position: relative;
+    display: block;
+    min-height: 0;
+  }
+  .about-location-img-wrap img {
+    position: absolute;
+    inset: 0;
+  }
 }
 @media (max-width: 960px) {
   .about-split-grid {

@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@/components/Analytics";
 
 function NotFoundComponent() {
   return (
@@ -120,6 +121,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <Analytics />
       <Outlet />
       <CookieBanner />
     </QueryClientProvider>

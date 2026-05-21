@@ -15,6 +15,9 @@ export function CookieBanner() {
   const acceptCookies = () => {
     localStorage.setItem("cookie_consent", "true");
     setIsVisible(false);
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new Event("cookie_consent_given"));
+    }
   };
 
   if (!isVisible) return null;

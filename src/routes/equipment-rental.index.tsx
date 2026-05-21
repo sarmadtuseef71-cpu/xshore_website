@@ -147,7 +147,7 @@ function EquipmentRentalPage() {
             <span className="section-tag">Get a Quote</span>
             <h2 className="section-title" style={{ marginBottom: 16 }}>Send Us Your Requirements</h2>
             <p className="section-sub" style={{ marginBottom: 28 }}>Tell us what you need - equipment, dates, and site location. We respond same day with availability and pricing.</p>
-            <div className="contact-strip" style={{ marginTop: 24, gridTemplateColumns: "1fr" }}>
+            <div className="contact-strip">
               <div className="contact-item">
                 <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
                 <div><div className="contact-item-label">Email</div><div className="contact-item-val">sales@xshore.ae</div></div>

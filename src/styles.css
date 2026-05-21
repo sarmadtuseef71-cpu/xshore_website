@@ -218,6 +218,8 @@
 .contact-item-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
 .contact-item > div { min-width: 0; }
 .contact-item-val { font-size: 14px; color: var(--text); font-weight: 400; word-break: break-word; }
+/* contact-strip inside a quote sidebar is always single-column */
+.quote-wrap .contact-strip { grid-template-columns: 1fr; margin-top: 0; }
 
 /* ── FOOTER ── */
 .xs-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 48px 60px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }

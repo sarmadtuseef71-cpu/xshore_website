@@ -4,6 +4,42 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { Link } from "@tanstack/react-router";
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Xshore Equipment",
+  url: "https://xshore.ae",
+  email: "sales@xshore.ae",
+  telephone: "+97122465375",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Mussafah Industrial Area",
+    addressLocality: "Abu Dhabi",
+    addressCountry: "AE",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United Arab Emirates",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Equipment Rental" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "DNV Container Supply" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Welding Consumables" } },
+    ],
+  },
+};
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -13,6 +49,12 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Xshore Equipment | Industrial Rental, Containers & Welding Supply | UAE" },
       { property: "og:description", content: "Equipment rental (weekly to multi-year), DNV & ATEX container supply, and welding consumables across the UAE. Brand new equipment for long-term projects. Mussafah, Abu Dhabi. Call: +971 2 246 5375" },
       { property: "og:type", content: "website" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema),
+      },
     ],
   }),
 });

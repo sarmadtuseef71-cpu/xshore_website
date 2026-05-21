@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /privacy-policy
-Disallow: /rental-terms
-
 Sitemap: https://xshore.ae/sitemap.xml

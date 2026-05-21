@@ -9,9 +9,9 @@ export const Route = createFileRoute("/equipment-rental/")({
   head: () => ({
     meta: [
       { title: "Equipment Rental UAE | Weekly & Long-Term Industrial Hire | Xshore" },
-      { name: "description", content: "Industrial equipment rental across the UAE. Short-term hire from 1 week or long-term project supply | brand new equipment for multi-year contracts. Hydro testing, compressors, welding machines & more. Abu Dhabi." },
+      { name: "description", content: "Industrial equipment and tools rental across the UAE. Short-term hire from 1 week or long-term project supply - brand new equipment for multi-year contracts. Hydro testing, compressors, welding machines, power tools & more. Abu Dhabi." },
       { property: "og:title", content: "Equipment Rental UAE | Weekly & Long-Term Industrial Hire | Xshore" },
-      { property: "og:description", content: "Industrial equipment rental across the UAE. Short-term hire from 1 week or long-term project supply | brand new equipment for multi-year contracts. Hydro testing, compressors, welding machines & more. Abu Dhabi." },
+      { property: "og:description", content: "Industrial equipment and tools rental across the UAE. Short-term hire from 1 week or long-term project supply - brand new equipment for multi-year contracts. Hydro testing, compressors, welding machines, power tools & more. Abu Dhabi." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -91,8 +91,8 @@ function EquipmentRentalPage() {
         <div className="er-hero-overlay" />
         <div className="er-hero-content">
           <span className="hero-tag">Division 01 · Equipment Rental</span>
-          <h1>Equipment Rental, Weekly Hire to <em>Multi-Year</em> Project Supply</h1>
-          <p className="er-hero-sub">Need equipment for a week or for three years? We handle both. All equipment is certified and field-ready. Long-term project clients receive brand new units commissioned specifically for their project.</p>
+          <h1>Equipment &amp; Tools Rental - Weekly Hire to <em>Multi-Year</em> Project Supply</h1>
+          <p className="er-hero-sub">Need equipment or tools for a week or for three years? We handle both. All units are certified and field-ready. Long-term project clients receive brand new equipment commissioned specifically for their project.</p>
         </div>
       </section>
 

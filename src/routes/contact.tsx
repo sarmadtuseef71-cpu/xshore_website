@@ -173,10 +173,10 @@ function ContactPage() {
           <div style={{ width: "100%", height: 400, backgroundColor: "var(--bg3)", border: "1px solid var(--border)" }}>
             <iframe 
               title="Xshore Equipment Location - Mussafah, Abu Dhabi"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115939.92476595535!2d54.43630654877233!3d24.329864275069796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4125b2d56a31%3A0x38e2d4d8fc2245b0!2sMussafah%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+              src="https://maps.google.com/maps?q=Xshore%20Equipment,%20Mussafah,%20Abu%20Dhabi&t=&z=14&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
-              style={{ border: 0, filter: "grayscale(90%) invert(10%) contrast(1.1)" }} 
+              style={{ border: 0 }} 
               allowFullScreen={false} 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"

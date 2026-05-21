@@ -61,5 +61,39 @@ export function Analytics() {
     });
   }, [consentGiven, location.pathname]);
 
+  // Global click tracker for standard CTA events
+  useEffect(() => {
+    if (!consentGiven || typeof window === "undefined" || !window.gtag) return;
+
+    const handleClick = (e: MouseEvent) => {
+      const target = (e.target as Element).closest("a, button") as HTMLAnchorElement | HTMLButtonElement | null;
+      if (!target) return;
+
+      const href = target.getAttribute("href") || "";
+      const text = (target.textContent || "").trim().toLowerCase();
+
+      if (href.startsWith("tel:")) {
+        window.gtag("event", "click_call");
+      } else if (href.startsWith("mailto:")) {
+        window.gtag("event", "click_email");
+      } else if (href.includes("wa.me")) {
+        window.gtag("event", "click_whatsapp");
+      } else if (text === "get a quote") {
+        window.gtag("event", "click_get_quote");
+      } else if (text === "view equipment") {
+        window.gtag("event", "click_view_equipment");
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+  }, [consentGiven]);
+
   return null;
+}
+
+export function trackEvent(eventName: string, params?: Record<string, any>) {
+  if (typeof window !== "undefined" && window.gtag && localStorage.getItem("cookie_consent") === "true") {
+    window.gtag("event", eventName, params);
+  }
 }

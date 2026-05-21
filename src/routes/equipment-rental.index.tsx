@@ -3,6 +3,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { useState } from "react";
+import { trackEvent } from "@/components/Analytics";
 
 export const Route = createFileRoute("/equipment-rental/")({
   component: EquipmentRentalPage,
@@ -75,6 +76,7 @@ function EquipmentRentalPage() {
       });
       if (!res.ok) throw new Error("Failed to send");
       setIsSuccess(true);
+      trackEvent("submit_rental_quote_form");
     } catch (err) {
       setIsError(true);
     } finally {

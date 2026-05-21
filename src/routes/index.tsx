@@ -90,7 +90,6 @@ const why = [
   { n: "05", t: "One Supplier. Less Admin.", p: "Equipment rental, certified containers, and welding consumables - all from Xshore. Fewer vendors, fewer purchase orders, one point of contact. For procurement teams managing complex projects, that matters." },
 ];
 
-const clients = ["ADNOC","DIPS","Coxabengoa","Al Raha Group","Arabian Industries","Mubarraz Oil Field","Hebu Tech"];
 
 function Index() {
   return (

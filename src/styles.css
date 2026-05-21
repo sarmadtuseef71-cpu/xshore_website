@@ -750,13 +750,19 @@
   object-position: center 40%;
 }
 @media (min-width: 961px) {
+  /* commitment grid: right text column drives the row height */
   .about-split-grid.commitment-grid {
-    align-items: stretch;
+    align-items: start;
   }
-  .about-split-grid.commitment-grid > div {
-    justify-content: flex-start;
+  /* left image column stretches to match the right column height */
+  .about-split-grid.commitment-grid > div:first-child {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
   }
+  /* image wrapper fills the stretched left column exactly */
   .about-split-img-wrap.commitment-img {
+    flex: 1;
     height: 100%;
     min-height: 0;
   }

@@ -746,8 +746,17 @@
   position: relative;
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
-.about-split-img-wrap.commitment-img {
-  min-height: 320px;
+.about-split-img-wrap.commitment-img img {
+  object-position: center 40%;
+}
+@media (min-width: 961px) {
+  .about-split-grid.commitment-grid {
+    align-items: center;
+  }
+  .about-split-img-wrap.commitment-img {
+    height: 300px;
+    min-height: 300px;
+  }
 }
 .about-split-img-wrap img {
   width: 100%;

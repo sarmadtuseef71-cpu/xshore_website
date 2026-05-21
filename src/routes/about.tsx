@@ -143,7 +143,7 @@ function AboutPage() {
       {/* Section: Our Commitment */}
       <section style={{ background: "var(--bg)", padding: "100px 5vw", borderBottom: "1px solid var(--border)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <div className="about-split-grid" style={{ gap: "60px" }}>
+          <div className="about-split-grid commitment-grid" style={{ gap: "60px" }}>
             <div className="order-2 md:order-1">
               <div className="about-split-img-wrap commitment-img">
                 <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: "3px", background: "var(--gold)", zIndex: 1 }} />

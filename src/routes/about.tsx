@@ -101,7 +101,7 @@ function AboutPage() {
       {/* Section: How We Work */}
       <section style={{ background: "var(--bg2)", padding: "100px 5vw", borderBottom: "1px solid var(--border)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <div className="about-split-grid" style={{ alignItems: "center", gap: "60px" }}>
+          <div className="about-split-grid" style={{ gap: "60px" }}>
             <div>
               <div className="gold-line" />
               <h2 className="section-title">How We Work</h2>
@@ -127,27 +127,11 @@ function AboutPage() {
               </div>
             </div>
             <div>
-              <div 
-                style={{
-                  border: "1px solid var(--border)",
-                  borderRadius: "3px",
-                  overflow: "hidden",
-                  position: "relative",
-                  aspectRatio: "16 / 10",
-                  width: "100%",
-                  boxShadow: "0 10px 40px rgba(0,0,0,0.4)"
-                }}
-              >
+              <div className="about-split-img-wrap">
                 <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, width: "3px", background: "var(--gold)", zIndex: 1 }} />
                 <img 
                   src="/images/Office%20Pictures%20Enhanced/xshore-office-interior-uae-01.webp" 
                   alt="Modern industrial design office interior of Xshore Equipment in Abu Dhabi"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block"
-                  }}
                   loading="lazy"
                 />
               </div>
@@ -159,29 +143,13 @@ function AboutPage() {
       {/* Section: Our Commitment */}
       <section style={{ background: "var(--bg)", padding: "100px 5vw", borderBottom: "1px solid var(--border)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <div className="about-split-grid" style={{ alignItems: "center", gap: "60px" }}>
+          <div className="about-split-grid" style={{ gap: "60px" }}>
             <div className="order-2 md:order-1">
-              <div 
-                style={{
-                  border: "1px solid var(--border)",
-                  borderRadius: "3px",
-                  overflow: "hidden",
-                  position: "relative",
-                  aspectRatio: "16 / 10",
-                  width: "100%",
-                  boxShadow: "0 10px 40px rgba(0,0,0,0.4)"
-                }}
-              >
+              <div className="about-split-img-wrap">
                 <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: "3px", background: "var(--gold)", zIndex: 1 }} />
                 <img 
                   src="/images/Office%20Pictures%20Enhanced/xshore-office-interior-uae-02.webp" 
                   alt="Professional project manager workspace at Xshore Equipment office in Mussafah"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block"
-                  }}
                   loading="lazy"
                 />
               </div>
@@ -257,12 +225,11 @@ function AboutPage() {
               </div>
             </div>
             
-            <div style={{ position: "relative", border: "1px solid var(--border)", borderRadius: "3px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.4)" }}>
+            <div className="about-location-img-wrap">
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "var(--gold)", zIndex: 1 }} />
               <img 
                 src="/images/Office%20Pictures%20Enhanced/xshore-office-front-entrance-uae-01.webp" 
                 alt="Front entrance of Xshore Equipment office in Mussafah Industrial Area, Abu Dhabi"
-                className="about-location-img"
                 loading="lazy"
               />
             </div>

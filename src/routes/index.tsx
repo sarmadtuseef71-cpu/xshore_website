@@ -45,9 +45,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Xshore Equipment | Industrial Rental, Containers & Welding Supply | UAE" },
-      { name: "description", content: "Equipment rental (weekly to multi-year), DNV & ATEX container supply, and welding consumables across the UAE. Brand new equipment for long-term projects. Mussafah, Abu Dhabi. Call: +971 2 246 5375" },
+      { name: "description", content: "Industrial equipment and tools rental across the UAE - weekly hire to multi-year project supply. DNV & ATEX containers. Welding consumables. Brand new equipment on long-term contracts. Mussafah, Abu Dhabi. Call: +971 2 246 5375" },
       { property: "og:title", content: "Xshore Equipment | Industrial Rental, Containers & Welding Supply | UAE" },
-      { property: "og:description", content: "Equipment rental (weekly to multi-year), DNV & ATEX container supply, and welding consumables across the UAE. Brand new equipment for long-term projects. Mussafah, Abu Dhabi. Call: +971 2 246 5375" },
+      { property: "og:description", content: "Industrial equipment and tools rental across the UAE - weekly hire to multi-year project supply. DNV & ATEX containers. Welding consumables. Brand new equipment on long-term contracts. Mussafah, Abu Dhabi. Call: +971 2 246 5375" },
       { property: "og:type", content: "website" },
     ],
     scripts: [
@@ -107,7 +107,7 @@ function Index() {
             and Welding Supplies<br />
             <em>All From One Company.</em>
           </h1>
-          <p className="hero-sub">Short-term hire. Long-term project supply. DNV and ATEX containers. Welding consumables. Call us any time - someone always picks up.</p>
+          <p className="hero-sub">Equipment and tools rental - weekly hire or multi-year project supply. DNV and ATEX containers. Welding consumables. Call us any time - someone always picks up.</p>
           <div className="hero-actions">
             <Link to="/contact" className="btn-primary">Get a Quote</Link>
             <Link to="/equipment-rental" className="btn-outline">View Equipment</Link>

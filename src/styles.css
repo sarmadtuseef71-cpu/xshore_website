@@ -746,6 +746,9 @@
   position: relative;
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
+.about-split-img-wrap.commitment-img {
+  min-height: 320px;
+}
 .about-split-img-wrap img {
   width: 100%;
   height: 100%;

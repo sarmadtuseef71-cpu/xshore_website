@@ -13,6 +13,7 @@ const MIME_TYPES = {
   ".ico": "image/x-icon",
   ".txt": "text/plain; charset=utf-8",
   ".xml": "application/xml; charset=utf-8",
+  ".woff2": "font/woff2",
 };
 
 function getHeader(req, name) {
@@ -68,6 +69,7 @@ export default async function handler(req, res) {
     if (
       pathname.startsWith("/assets/") ||
       pathname.startsWith("/images/") ||
+      pathname.startsWith("/fonts/") ||
       pathname === "/favicon.png" ||
       pathname === "/favicon.ico" ||
       pathname === "/robots.txt" ||

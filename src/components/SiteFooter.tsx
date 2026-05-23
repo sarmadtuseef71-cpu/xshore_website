@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="xs-footer">
       <Link to="/" className="footer-logo">
         <img 
-          src="/images/logo/xshore_new_logo.svg" 
+          src="/images/logo/xshore_logo.svg" 
           alt="Xshore Equipment logo" 
           className="footer-logo-img" 
         />

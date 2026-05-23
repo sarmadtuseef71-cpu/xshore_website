@@ -16,7 +16,7 @@ export function SiteNav() {
       <nav className="xs-nav">
         <Link to="/" className="nav-logo" aria-label="Xshore home">
           <img 
-            src="/images/logo/xshore_new_logo.svg" 
+            src="/images/logo/xshore_logo.svg" 
             alt="Xshore Equipment logo" 
             className="nav-logo-img" 
           />

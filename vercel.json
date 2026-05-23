@@ -5,7 +5,10 @@
   "functions": {
     "api/index.js": {
       "maxDuration": 30,
-      "includeFiles": "dist/server/**"
+      "includeFiles": [
+        "dist/server/**",
+        "dist/client/**"
+      ]
     }
   },
   "routes": [

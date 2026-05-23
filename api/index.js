@@ -1,4 +1,19 @@
+import fs from "node:fs";
+import path from "node:path";
 import server from "../dist/server/server.js";
+
+const MIME_TYPES = {
+  ".css": "text/css; charset=utf-8",
+  ".js": "application/javascript; charset=utf-8",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp",
+  ".svg": "image/svg+xml",
+  ".ico": "image/x-icon",
+  ".txt": "text/plain; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
+};
 
 function getHeader(req, name) {
   const headers = req.headers || {};
@@ -47,6 +62,49 @@ function createFetchHeaders(nodeHeaders) {
 
 export default async function handler(req, res) {
   try {
+    const rawUrl = req.url || "/";
+    const pathname = rawUrl.split('?')[0];
+
+    if (
+      pathname.startsWith("/assets/") ||
+      pathname.startsWith("/images/") ||
+      pathname === "/favicon.png" ||
+      pathname === "/favicon.ico" ||
+      pathname === "/robots.txt" ||
+      pathname === "/sitemap.xml"
+    ) {
+      console.log("Serving static file:", pathname);
+      const distClientDir = path.resolve(process.cwd(), "dist/client");
+      const requestedPath = path.normalize(path.join(distClientDir, decodeURIComponent(pathname)));
+      
+      if (!requestedPath.startsWith(distClientDir)) {
+        res.statusCode = 403;
+        res.end("Forbidden");
+        return;
+      }
+
+      try {
+        const stat = fs.statSync(requestedPath);
+        if (stat.isFile()) {
+          const ext = path.extname(requestedPath).toLowerCase();
+          const contentType = MIME_TYPES[ext] || "application/octet-stream";
+          
+          res.setHeader("Content-Type", contentType);
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+          
+          const fileContent = fs.readFileSync(requestedPath);
+          res.statusCode = 200;
+          res.end(fileContent);
+          return;
+        }
+      } catch (err) {
+        console.log("Static file not found:", requestedPath);
+        res.statusCode = 404;
+        res.end("Not Found");
+        return;
+      }
+    }
+
     console.log("Vercel SSR request received:", req.method, req.url);
 
     const absoluteUrl = createAbsoluteUrl(req);

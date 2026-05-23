@@ -80,7 +80,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Xshore Equipment | Industrial Rental, Containers & Welding Supply - UAE" },
       { property: "og:description", content: "Equipment rental, certified containers, and welding supply from one company in Abu Dhabi, UAE." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://xshore.ae/images/og/xshore-og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:image", content: "https://xshore.ae/images/og/xshore-og-image.png" },
     ],
     links: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

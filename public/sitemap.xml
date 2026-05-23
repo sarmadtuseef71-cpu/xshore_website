@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Parent / Core Pages -->
   <url>
     <loc>https://xshore.ae/</loc>
     <changefreq>weekly</changefreq>
@@ -27,6 +28,92 @@
   </url>
   <url>
     <loc>https://xshore.ae/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Equipment Rental Category Pages -->
+  <url>
+    <loc>https://xshore.ae/equipment-rental/hydro-testing-equipment</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/air-compressors</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/electric-welding-machines</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/high-pressure-washers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/mobile-gantry-lifting-gear</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/pneumatic-equipment</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/electric-equipment-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/equipment-rental/other-equipment</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fabrication Category Pages -->
+  <url>
+    <loc>https://xshore.ae/fabrication/dnv-2-7-1-offshore-containers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/fabrication/zone-2-atex-enclosures</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/fabrication/workshop-containers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/fabrication/accommodation-office-units</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/fabrication/custom-fabrication</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Trading Category Pages -->
+  <url>
+    <loc>https://xshore.ae/trading/welding-consumables</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/trading/welding-accessories-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xshore.ae/trading/ppe-safety-equipment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

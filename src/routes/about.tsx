@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
@@ -248,9 +248,9 @@ function AboutPage() {
           </p>
 
           <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
-            <a href="mailto:sales@xshore.ae" className="btn-primary" style={{ flex: "1 1 200px", maxWidth: "250px", display: "inline-flex", justifyContent: "center", alignItems: "center", padding: "16px 24px", fontSize: "16px", textDecoration: "none" }}>
+            <Link to="/contact" className="btn-primary" style={{ flex: "1 1 200px", maxWidth: "250px", display: "inline-flex", justifyContent: "center", alignItems: "center", padding: "16px 24px", fontSize: "16px", textDecoration: "none" }}>
               Get a Quote
-            </a>
+            </Link>
             <a 
               href="https://wa.me/97122465375" 
               target="_blank" 

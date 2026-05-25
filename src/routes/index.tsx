@@ -185,7 +185,13 @@ function Index() {
             <span className="hydro-spot-label">Most Requested</span>
             <h2>Hydro Testing Equipment,<br />Our Most-Requested Product</h2>
             <p>Pipeline integrity, pressure vessel inspection, structural testing - if it needs a hydrostatic test, we have the unit for it. Available for weekly hire or long-term project rental. Our hydro testing equipment is maintained, calibrated, and ready to mobilise across the UAE.</p>
-            <Link to="/equipment-rental/hydro-testing-equipment" className="btn-primary">Request a Unit</Link>
+            <Link
+              to="/equipment-rental/$slug"
+              params={{ slug: "hydro-testing-equipment" }}
+              className="btn-primary"
+            >
+              Request a Unit
+            </Link>
           </div>
           <div className="hydro-spot-img">
             <img src="/images/rental/hydro-testing/xshore-hydro-testing-equipment-rental-uae-01.webp" alt="Hydro testing equipment rental UAE - hydrostatic test pump pipeline" loading="lazy" />

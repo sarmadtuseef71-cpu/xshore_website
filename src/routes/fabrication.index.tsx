@@ -50,7 +50,7 @@ const localFabricationCategories = [
     slug: "accommodation-office-units",
     title: "Accommodation & Office Units",
     body: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
-    hero: f_dnv("xshore-dnv-offshore-container-uae-07.webp"),
+    hero: f_workshop("xshore-workshop-container-uae-02.webp"),
     heroAlt: "Accommodation office container unit UAE remote site",
     badge: "Modular Build"
   },
@@ -58,7 +58,7 @@ const localFabricationCategories = [
     slug: "custom-fabrication",
     title: "Custom Fabrication",
     body: "Bespoke structural steel fabrication, skid units, equipment frames, and custom builds to client drawings. We manage the full fabrication and certification process from concept to delivery.",
-    hero: f_dnv("xshore-dnv-offshore-container-uae-03.webp"),
+    hero: f_workshop("xshore-workshop-container-uae-05.webp"),
     heroAlt: "Custom steel fabrication container skid unit UAE",
     badge: "To Spec"
   }

@@ -42,7 +42,7 @@ const localFabricationCategories = [
     slug: "workshop-containers",
     title: "Workshop Containers",
     body: "Custom-fitted workshop units with workbenches, tool storage, ventilation, and lighting - built for remote site and offshore deployment. Designed to your layout and operational requirements.",
-    hero: "/images/fabrication/stock/xshore-workshop-container-tools-uae.webp",
+    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-02.webp",
     heroAlt: "Workshop container offshore remote site UAE fabrication",
     badge: "Custom Fitted"
   },
@@ -50,7 +50,7 @@ const localFabricationCategories = [
     slug: "accommodation-office-units",
     title: "Accommodation & Office Units",
     body: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
-    hero: "/images/fabrication/stock/xshore-accommodation-office-container-units-uae.webp",
+    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
     heroAlt: "Accommodation office container unit UAE remote site",
     badge: "Modular Build"
   },

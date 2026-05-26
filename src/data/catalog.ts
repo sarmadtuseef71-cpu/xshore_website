@@ -505,7 +505,7 @@ export const fabricationCategories: Category[] = [
     shortTitle: "Workshop Containers",
     badge: "Custom Fitted",
     body: "Custom-fitted workshop units with workbenches, storage, tooling, and ventilation for remote site deployment. Built to client specification for offshore and onshore projects.",
-    hero: "/images/fabrication/stock/xshore-workshop-container-tools-uae.webp",
+    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-02.webp",
     heroAlt: "Custom workshop container offshore UAE",
     gallery: [
       "xshore-workshop-container-uae-01.webp",
@@ -535,7 +535,7 @@ export const fabricationCategories: Category[] = [
     shortTitle: "Accommodation & Office",
     badge: "Modular Build",
     body: "Modular containerised accommodation and site office units built for rapid deployment in remote project locations. Fitted to client requirements.",
-    hero: "/images/fabrication/stock/xshore-accommodation-office-container-units-uae.webp",
+    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
     heroAlt: "Containerised accommodation and site office unit UAE",
     gallery: [],
     imageNote: "Project images for accommodation and office units coming soon. Reference images shown.",

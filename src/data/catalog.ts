@@ -615,7 +615,7 @@ export const tradingCategories: Category[] = [
     shortTitle: "Welding Accessories & Tools",
     badge: "Project Supply",
     body: "All the supporting accessories and tools needed for welding operations, surface preparation, and quality control - from grinders and cutting discs to clamps, jigs, and inspection tools.",
-    hero: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&h=900&fit=crop&q=80",
+    hero: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop&q=80",
     heroAlt: "Welding accessories and tools supply UAE",
     gallery: [],
     imageNote: "Welding accessories product images coming soon.",

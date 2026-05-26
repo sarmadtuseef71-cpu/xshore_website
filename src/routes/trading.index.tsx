@@ -48,7 +48,7 @@ const localTradingCategories = [
       "Anti-spatter products",
       "NDT accessories & inspection tools",
     ],
-    hero: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&h=900&fit=crop&q=80",
+    hero: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop&q=80",
     heroAlt: "Welding accessories and tools supply UAE",
     isPPE: false,
   },

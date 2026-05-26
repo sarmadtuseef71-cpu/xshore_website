@@ -42,7 +42,7 @@ const localFabricationCategories = [
     slug: "workshop-containers",
     title: "Workshop Containers",
     body: "Custom-fitted workshop units with workbenches, tool storage, ventilation, and lighting - built for remote site and offshore deployment. Designed to your layout and operational requirements.",
-    hero: f_workshop("xshore-workshop-container-uae-01.webp"),
+    hero: "/images/fabrication/stock/xshore-workshop-container-tools-uae.webp",
     heroAlt: "Workshop container offshore remote site UAE fabrication",
     badge: "Custom Fitted"
   },
@@ -50,7 +50,7 @@ const localFabricationCategories = [
     slug: "accommodation-office-units",
     title: "Accommodation & Office Units",
     body: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
-    hero: f_workshop("xshore-workshop-container-uae-02.webp"),
+    hero: "/images/fabrication/stock/xshore-accommodation-office-container-units-uae.webp",
     heroAlt: "Accommodation office container unit UAE remote site",
     badge: "Modular Build"
   },
@@ -58,7 +58,7 @@ const localFabricationCategories = [
     slug: "custom-fabrication",
     title: "Custom Fabrication",
     body: "Bespoke structural steel fabrication, skid units, equipment frames, and custom builds to client drawings. We manage the full fabrication and certification process from concept to delivery.",
-    hero: f_workshop("xshore-workshop-container-uae-05.webp"),
+    hero: "/images/fabrication/stock/xshore-custom-steel-fabrication-uae.webp",
     heroAlt: "Custom steel fabrication container skid unit UAE",
     badge: "To Spec"
   }

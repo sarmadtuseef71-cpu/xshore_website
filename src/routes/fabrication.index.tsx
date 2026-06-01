@@ -42,7 +42,7 @@ const localFabricationCategories = [
     slug: "workshop-containers",
     title: "Workshop Containers",
     body: "Custom-fitted workshop units with workbenches, tool storage, ventilation, and lighting - built for remote site and offshore deployment. Designed to your layout and operational requirements.",
-    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-02.webp",
+    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
     heroAlt: "Workshop container offshore remote site UAE fabrication",
     badge: "Custom Fitted"
   },

@@ -3,7 +3,7 @@ import path from 'path';
 import sharp from 'sharp';
 
 // Path configuration
-const SVG_PATH = 'public/images/logo/xshore_logo.svg';
+const SVG_PATH = 'public/images/logo/xshore_logo_without_text.svg';
 const OUTPUT_ICO = 'public/favicon.ico';
 const OUTPUT_PNG = 'public/favicon.png';
 

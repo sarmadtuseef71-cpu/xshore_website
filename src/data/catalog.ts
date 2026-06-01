@@ -505,7 +505,7 @@ export const fabricationCategories: Category[] = [
     shortTitle: "Workshop Containers",
     badge: "Custom Fitted",
     body: "Custom-fitted workshop units with workbenches, storage, tooling, and ventilation for remote site deployment. Built to client specification for offshore and onshore projects.",
-    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-02.webp",
+    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
     heroAlt: "Custom workshop container offshore UAE",
     gallery: [
       "xshore-workshop-container-uae-01.webp",

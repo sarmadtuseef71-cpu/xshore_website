@@ -121,6 +121,9 @@ export const imageAltText: Record<string, string> = {
   "xshore-workshop-container-uae-02.webp": "Fitted workshop unit Abu Dhabi fabrication",
   "xshore-workshop-container-uae-04.webp": "Workshop tool store container UAE",
   "xshore-workshop-container-uae-05.webp": "Offshore workshop container Mussafah",
+
+  // Fabrication - Accommodation & Office Units
+  "xshore-accommodation-office-units-uae-01.webp": "Accommodation and office container units UAE - Xshore modular site office",
 };
 
 export const getAlt = (file: string, fallback: string) => {
@@ -535,8 +538,8 @@ export const fabricationCategories: Category[] = [
     shortTitle: "Accommodation & Office",
     badge: "Modular Build",
     body: "Modular containerised accommodation and site office units built for rapid deployment in remote project locations. Fitted to client requirements.",
-    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
-    heroAlt: "Containerised accommodation and site office unit UAE",
+    hero: "/images/fabrication/accommodation-office-units/xshore-accommodation-office-units-uae-01.webp",
+    heroAlt: "Accommodation and office container units UAE - Xshore modular site office",
     gallery: [],
     imageNote: "Project images for accommodation and office units coming soon. Reference images shown.",
     detailH1: "Containerised Accommodation & Office Units UAE",

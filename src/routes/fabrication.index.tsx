@@ -50,8 +50,8 @@ const localFabricationCategories = [
     slug: "accommodation-office-units",
     title: "Accommodation & Office Units",
     body: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
-    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
-    heroAlt: "Accommodation office container unit UAE remote site",
+    hero: "/images/fabrication/accommodation-office-units/xshore-accommodation-office-units-uae-01.webp",
+    heroAlt: "Accommodation and office container units UAE - Xshore modular site office",
     badge: "Modular Build"
   },
   {

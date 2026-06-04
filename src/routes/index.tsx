@@ -109,7 +109,7 @@ function Index() {
           </h1>
           <p className="hero-sub">Equipment and tools rental - weekly hire or multi-year project supply. DNV and ATEX containers. Welding consumables. Call us any time - someone always picks up.</p>
           <div className="hero-actions">
-            <Link to="/contact" className="btn-primary">Contact Us</Link>
+            <Link to="/contact" className="btn-primary">Get a Quote</Link>
             <Link to="/equipment-rental" className="btn-outline">View Equipment</Link>
           </div>
           <div className="hero-trust">

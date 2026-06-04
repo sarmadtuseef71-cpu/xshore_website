@@ -32,7 +32,7 @@ export function SiteNav() {
           <li><Link to="/fabrication">Fabrication</Link></li>
           <li><Link to="/trading">Trading</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact" className="nav-cta">Get a Quote</Link></li>
+          <li><Link to="/contact" className="nav-cta">Contact Us</Link></li>
         </ul>
         <button
           className="nav-burger"

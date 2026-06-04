@@ -170,7 +170,7 @@ function ContactPage() {
 
       <section style={{ padding: "0 5% 100px", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
         <div style={{ padding: "24px", background: "var(--bg2)", border: "1px solid var(--border)", borderTop: "2px solid var(--gold)", borderRadius: 3 }}>
-          <h2 style={{ fontSize: 20, marginBottom: 8, color: "#fff" }}>Visit Our Yard</h2>
+          <h2 style={{ fontSize: 20, marginBottom: 8, color: "#fff" }}>Visit Our Office</h2>
           <p style={{ color: "var(--text-dim)", marginBottom: 20, fontSize: 14 }}>Mussafah Industrial Area, Abu Dhabi, UAE</p>
           <div style={{ width: "100%", height: 400, backgroundColor: "var(--bg3)", border: "1px solid var(--border)" }}>
             <iframe 

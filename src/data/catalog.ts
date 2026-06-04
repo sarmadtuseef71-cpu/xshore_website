@@ -123,7 +123,7 @@ export const imageAltText: Record<string, string> = {
   "xshore-workshop-container-uae-05.webp": "Offshore workshop container Mussafah",
 
   // Fabrication - Accommodation & Office Units
-  "xshore-accommodation-office-units-uae-01.webp": "Accommodation and office container units UAE - Xshore modular site office",
+  "xshore-accommodation-office-units-uae-01.webp": "Accommodation and office container units by Xshore Equipment UAE",
 };
 
 export const getAlt = (file: string, fallback: string) => {
@@ -592,8 +592,8 @@ export const tradingCategories: Category[] = [
     shortTitle: "Welding Consumables",
     badge: "All Processes",
     body: "Full range of welding consumables for all welding processes. Stocked for fast delivery to project sites across the UAE - from MMA electrodes and MIG wires to TIG rods and exotic alloys.",
-    hero: "https://images.unsplash.com/photo-1730584476141-232435a40c32?w=1600&h=900&fit=crop&q=80",
-    heroAlt: "Welding consumables supply UAE - electrodes wire rods",
+    hero: "/images/trading/xshore-welding-consumables-uae.webp",
+    heroAlt: "High-quality welding electrodes, wires, and flux consumables supplied by XShore UAE",
     gallery: [],
     imageNote: "Welding consumables product images coming soon.",
     detailH1: "Welding Consumables Supply MMA, MIG, TIG",
@@ -618,8 +618,8 @@ export const tradingCategories: Category[] = [
     shortTitle: "Welding Accessories & Tools",
     badge: "Project Supply",
     body: "All the supporting accessories and tools needed for welding operations, surface preparation, and quality control - from grinders and cutting discs to clamps, jigs, and inspection tools.",
-    hero: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop&q=80",
-    heroAlt: "Welding accessories and tools supply UAE",
+    hero: "/images/trading/xshore-welding-accessories-tools-uae.webp",
+    heroAlt: "Professional welding accessories, grinding tools, and hand tools at XShore UAE",
     gallery: [],
     imageNote: "Welding accessories product images coming soon.",
     detailH1: "Welding Accessories & Industrial Tools Supply UAE",
@@ -644,8 +644,8 @@ export const tradingCategories: Category[] = [
     shortTitle: "PPE & Safety Equipment",
     badge: "Available on Request",
     body: "Personal protective equipment for oil & gas, construction, and industrial environments - available on request. Helmets, harnesses, breathing apparatus, footwear, and gas detection.",
-    hero: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&h=900&fit=crop&q=80",
-    heroAlt: "PPE and safety equipment supply UAE",
+    hero: "/images/trading/xshore-ppe-safety-equipment-uae.webp",
+    heroAlt: "Industrial personal protective equipment including helmets, gloves, and safety vests at XShore UAE",
     gallery: [],
     imageNote: "PPE product images coming soon.",
     detailH1: "PPE & Industrial Safety Equipment Available on Request",

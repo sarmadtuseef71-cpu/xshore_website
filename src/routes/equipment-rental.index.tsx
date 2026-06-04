@@ -89,7 +89,7 @@ function EquipmentRentalPage() {
       <SiteNav />
 
       <section className="er-hero">
-        <div className="er-hero-bg" aria-label="Industrial air compressor and equipment on site" role="img" />
+        <div className="er-hero-bg" style={{ backgroundImage: "url('/images/hero/xshore-industrial-equipment-rental-yard-uae.webp')" }} aria-label="XShore Industrial equipment rental yard with heavy machinery and tools in the UAE" role="img" />
         <div className="er-hero-overlay" />
         <div className="er-hero-content">
           <span className="hero-tag">Division 01 · Equipment Rental</span>

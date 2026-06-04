@@ -31,8 +31,8 @@ const localTradingCategories = [
       "Stainless, duplex & exotic alloys",
       "Shielding gas & welding fluxes",
     ],
-    hero: "https://images.unsplash.com/photo-1730584476141-232435a40c32?w=1600&h=900&fit=crop&q=80",
-    heroAlt: "Welding consumables supply UAE - electrodes wire rods",
+    hero: "/images/trading/xshore-welding-consumables-uae.webp",
+    heroAlt: "High-quality welding electrodes, wires, and flux consumables supplied by XShore UAE",
     isPPE: false,
   },
   {
@@ -48,8 +48,8 @@ const localTradingCategories = [
       "Anti-spatter products",
       "NDT accessories & inspection tools",
     ],
-    hero: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop&q=80",
-    heroAlt: "Welding accessories and tools supply UAE",
+    hero: "/images/trading/xshore-welding-accessories-tools-uae.webp",
+    heroAlt: "Professional welding accessories, grinding tools, and hand tools at XShore UAE",
     isPPE: false,
   },
   {
@@ -64,8 +64,8 @@ const localTradingCategories = [
       "Safety footwear",
       "Gas detection",
     ],
-    hero: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&h=900&fit=crop&q=80",
-    heroAlt: "PPE and safety equipment supply UAE",
+    hero: "/images/trading/xshore-ppe-safety-equipment-uae.webp",
+    heroAlt: "Industrial personal protective equipment including helmets, gloves, and safety vests at XShore UAE",
     isPPE: true,
   },
 ];
@@ -79,8 +79,8 @@ function TradingIndex() {
       <section className="er-hero">
         <div
           className="er-hero-bg"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1730584476141-232435a40c32?w=1800&h=1000&fit=crop&q=80')" }}
-          aria-label="Welding consumables and industrial supplies"
+          style={{ backgroundImage: "url('/images/hero/xshore-welding-industrial-supplies-uae.webp')" }}
+          aria-label="XShore industrial trading store showcasing premium welding equipment and machinery in the UAE"
           role="img"
         />
         <div className="er-hero-overlay" />

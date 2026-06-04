@@ -63,7 +63,7 @@ function ContactPage() {
       <SiteNav />
 
       <section className="er-hero">
-        <div className="er-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1800&h=1000&fit=crop&q=80')" }} />
+        <div className="er-hero-bg" style={{ backgroundImage: "url('/images/hero/xshore-contact-support-office-uae.webp')" }} aria-label="Modern office setting representing XShore customer support and sales service in the UAE" role="img" />
         <div className="er-hero-overlay" />
         <div className="er-hero-content">
           <span className="hero-tag">Contact</span>

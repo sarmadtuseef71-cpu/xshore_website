@@ -51,7 +51,7 @@ const localFabricationCategories = [
     title: "Accommodation & Office Units",
     body: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
     hero: "/images/fabrication/accommodation-office-units/xshore-accommodation-office-units-uae-01.webp",
-    heroAlt: "Accommodation and office container units UAE - Xshore modular site office",
+    heroAlt: "Accommodation and office container units by Xshore Equipment UAE",
     badge: "Modular Build"
   },
   {
@@ -71,7 +71,7 @@ function FabricationIndex() {
 
       {/* Page Hero */}
       <section className="er-hero">
-        <div className="er-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1564182998979-9dcf42ff37fa?w=1800&h=1000&fit=crop&q=80')" }} aria-label="Offshore container fabrication workshop" role="img" />
+        <div className="er-hero-bg" style={{ backgroundImage: "url('/images/hero/xshore-container-fabrication-yard-uae.webp')" }} aria-label="XShore customized container fabrication facility and workshop yard in the UAE" role="img" />
         <div className="er-hero-overlay" />
         <div className="er-hero-content">
           <span className="hero-tag">Division 02 · Fabrication &amp; Containers</span>
@@ -104,7 +104,7 @@ function FabricationIndex() {
 
       {/* Certifications Panel */}
       <section className="dnv-section">
-        <div className="dnv-bg" aria-label="DNV 2.7-1 certified offshore container" role="img" />
+        <div className="dnv-bg" aria-label="DNV 2.7-1 certified offshore cargo container UAE" role="img" />
         <div className="dnv-overlay" />
         <div className="dnv-inner">
           <div>

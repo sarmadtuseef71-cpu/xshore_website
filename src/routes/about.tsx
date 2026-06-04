@@ -26,8 +26,8 @@ function AboutPage() {
       <section className="er-hero" style={{ minHeight: "80vh", display: "flex", alignItems: "center" }}>
         <div 
           className="er-hero-bg" 
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1800&h=1000&fit=crop&q=80')" }} 
-          aria-label="Xshore industrial logistics yard in Abu Dhabi" 
+          style={{ backgroundImage: "url('/images/hero/xshore-industrial-facility-yard-uae.webp')" }} 
+          aria-label="XShore corporate industrial facility and main operations yard in the UAE" 
           role="img" 
         />
         <div className="about-hero-overlay" style={{ background: "linear-gradient(90deg, rgba(9,9,12,0.95) 0%, rgba(9,9,12,0.5) 100%)" }} />

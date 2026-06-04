@@ -231,7 +231,7 @@
 
 /* ── DNV ── */
 .dnv-section { position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: center; }
-.dnv-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1730584476141-232435a40c32?w=1600&h=700&fit=crop&q=80'); background-size: cover; background-position: center; filter: grayscale(50%) brightness(0.6); }
+.dnv-bg { position: absolute; inset: 0; background-image: url('/images/fabrication/dnv-containers/xshore-dnv-offshore-container-uae-07.webp'); background-size: cover; background-position: center; filter: grayscale(50%) brightness(0.6); }
 .dnv-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(160, 110, 34, 0.96) 0%, rgba(200, 137, 42, 0.9) 100%); }
 .dnv-inner { position: relative; z-index: 2; padding: 100px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; width: 100%; }
 .dnv-section::before { content: 'ZONE 2'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Oswald', sans-serif; font-size: 200px; font-weight: 700; color: rgba(0,0,0,0.08); line-height: 1; user-select: none; z-index: 1; }
@@ -350,7 +350,7 @@
 
 /* ── EQUIPMENT RENTAL PAGE ── */
 .er-hero { position: relative; min-height: 78vh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; padding-top: 72px; }
-.er-hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1800&h=1000&fit=crop&q=80'); background-size: cover; background-position: center; filter: grayscale(40%); }
+.er-hero-bg { position: absolute; inset: 0; background-image: url('/images/rental/air-compressors/xshore-air-compressor-rental-uae-01.webp'); background-size: cover; background-position: center; filter: grayscale(40%); }
 .er-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(9,9,12,0.94) 45%, rgba(9,9,12,0.55) 100%), linear-gradient(to top, rgba(9,9,12,0.85) 15%, transparent 65%); }
 .er-hero-content { position: relative; z-index: 2; padding: 80px 60px 90px; max-width: 880px; }
 .er-hero h1 { font-size: clamp(28px, 3.8vw, 52px); font-weight: 700; line-height: 1.08; margin-bottom: 20px; color: var(--text); text-transform: none; }

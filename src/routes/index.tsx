@@ -109,7 +109,7 @@ function Index() {
           </h1>
           <p className="hero-sub">Equipment and tools rental - weekly hire or multi-year project supply. DNV and ATEX containers. Welding consumables. Call us any time - someone always picks up.</p>
           <div className="hero-actions">
-            <Link to="/contact" className="btn-primary">Get a Quote</Link>
+            <Link to="/contact" className="btn-primary">Contact Us</Link>
             <Link to="/equipment-rental" className="btn-outline">View Equipment</Link>
           </div>
           <div className="hero-trust">
@@ -123,9 +123,9 @@ function Index() {
       <section className="divisions" id="divisions" aria-label="Our divisions">
         <div className="div-grid">
           {[
-            { n: "01 - Rental", t: "Equipment Rental", p: "Weekly hire or multi-year project supply. Short-term customers get fast turnaround. Long-term clients get brand new equipment commissioned for their project - not stock coming off another site.", l: "View Rental Options", h: "/equipment-rental", img: "/images/rental/air-compressors/xshore-air-compressor-rental-uae-01.webp", alt: "Industrial air compressor rental by Xshore Equipment in Abu Dhabi UAE" },
-            { n: "02 - Fabrication", t: "Containers & Fabrication", p: "10+ DNV 2.7-1 and ATEX Zone-2 certified containers delivered to offshore and industrial clients across the UAE and Middle East. We manage the full process from spec to certification.", l: "View Containers", h: "/fabrication", img: "/images/fabrication/dnv-containers/xshore-dnv-offshore-container-uae-07.webp", alt: "DNV certified offshore container fabrication by Xshore Equipment UAE" },
-            { n: "03 - Trading", t: "Welding Supply", p: "Welding consumables, electrodes, MIG/TIG wires, and accessories sourced and delivered to your project site. Fast turnaround for contractors who need materials without the procurement headache.", l: "View Products", h: "/trading", img: "/images/trading/xshore-welding-supply-consumables-uae.webp", alt: "Welding consumables and industrial supplies trading in Abu Dhabi UAE" },
+            { n: "01 - Rental", t: "Equipment Rental", p: "Weekly hire or multi-year project supply. Short-term customers get fast turnaround. Long-term clients get brand new equipment commissioned for their project - not stock coming off another site.", l: "View Rental Options", h: "/equipment-rental", img: "/images/hero/xshore-industrial-equipment-rental-yard-uae.webp", alt: "Industrial equipment rental yard with compressors, generators, and tools in the UAE" },
+            { n: "02 - Fabrication", t: "Containers & Fabrication", p: "10+ DNV 2.7-1 and ATEX Zone-2 certified containers delivered to offshore and industrial clients across the UAE and Middle East. We manage the full process from spec to certification.", l: "View Containers", h: "/fabrication", img: "/images/hero/xshore-container-fabrication-yard-uae.webp", alt: "Container fabrication yard and workshop facility in the UAE" },
+            { n: "03 - Trading", t: "Welding Supply", p: "Welding consumables, electrodes, MIG/TIG wires, and accessories sourced and delivered to your project site. Fast turnaround for contractors who need materials without the procurement headache.", l: "View Products", h: "/trading", img: "/images/hero/xshore-welding-industrial-supplies-uae.webp", alt: "Welding consumables and industrial supplies for UAE project sites" },
           ].map((c) => (
             <Link to={c.h} className="div-card" key={c.n}>
               <div className="div-card-img" style={{ backgroundImage: `url('${c.img}')` }} aria-label={c.alt} role="img" />

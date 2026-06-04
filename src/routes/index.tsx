@@ -60,11 +60,11 @@ export const Route = createFileRoute("/")({
 });
 
 const equipment = [
-  { title: "Hydro Testing Equipment", to: "/equipment-rental/hydro-testing-equipment", desc: "High-pressure hydrostatic test units for pipelines, vessels, and structural testing.", badge: "High Pressure", img: "/images/rental/hydro-testing/xshore-hydro-testing-equipment-rental-uae-04.webp", alt: "High pressure hydrostatic test equipment rental UAE" },
+  { title: "Hydro Testing Equipment", to: "/equipment-rental/hydro-testing-equipment", desc: "High-pressure hydrostatic test units for pipelines, vessels, and structural testing.", badge: "High Pressure", img: "/images/rental/hydro-testing/xshore-hydro-testing-equipment-rental-uae-02.webp", alt: "Hydro testing equipment rental for industrial and pipeline pressure testing in the UAE" },
   { title: "Air Compressors", to: "/equipment-rental/air-compressors", desc: "185 to 1600 CFM. Diesel and electric variants for all site conditions.", badge: "Diesel / Electric", img: "/images/rental/air-compressors/xshore-air-compressor-rental-uae-01.webp", alt: "Industrial air compressor rental UAE diesel electric" },
   { title: "Welding Machines", to: "/equipment-rental/electric-welding-machines", desc: "MMA, MIG, TIG and submerged arc welding machines for industrial works.", badge: "MMA / MIG / TIG", img: "/images/rental/welding-machines/xshore-welding-machine-rental-uae-05.webp", alt: "MIG TIG MMA welding machine rental UAE" },
-  { title: "Lifting Gear", to: "/equipment-rental/mobile-gantry-lifting-gear", desc: "Gantry cranes, chain blocks, lever hoists, slings, and rigging accessories. SWL certified.", badge: "SWL Certified", img: "/images/rental/lifting-gear/xshore-mobile-gantry-lifting-gear-uae-01.webp", alt: "Mobile gantry crane lifting gear rental UAE" },
-  { title: "Pneumatic Equipment", to: "/equipment-rental/pneumatic-equipment", desc: "Air-powered tools for drilling, grinding, scaling, and impact applications.", badge: "Air-Powered", img: "/images/rental/pneumatic-equipment/xshore-pneumatic-equipment-rental-uae-16.webp", alt: "Pneumatic air powered equipment rental UAE" },
+  { title: "Lifting Gear", to: "/equipment-rental/mobile-gantry-lifting-gear", desc: "Gantry cranes, chain blocks, lever hoists, slings, and rigging accessories. SWL certified.", badge: "SWL Certified", img: "/images/rental/lifting-gear/xshore-mobile-gantry-lifting-gear-uae-05.webp", alt: "Mobile gantry lifting gear rental for industrial projects in the UAE" },
+  { title: "Pneumatic Equipment", to: "/equipment-rental/pneumatic-equipment", desc: "Air-powered tools for drilling, grinding, scaling, and impact applications.", badge: "Air-Powered", img: "/images/rental/pneumatic-equipment/xshore-pneumatic-equipment-rental-uae-03.webp", alt: "Pneumatic equipment rental for industrial site work in the UAE" },
   { title: "High Pressure Washers", to: "/equipment-rental/high-pressure-washers", desc: "Cold and hot water pressure washers for industrial cleaning and surface prep.", badge: "Cold & Hot Water", img: "/images/rental/pressure-washers/xshore-high-pressure-washer-rental-uae-03.webp", alt: "Industrial high pressure washer rental UAE cold hot" },
 ];
 
@@ -194,7 +194,7 @@ function Index() {
             </Link>
           </div>
           <div className="hydro-spot-img">
-            <img src="/images/rental/hydro-testing/xshore-hydro-testing-equipment-rental-uae-01.webp" alt="Hydro testing equipment rental UAE - hydrostatic test pump pipeline" loading="lazy" />
+            <img src="/images/rental/hydro-testing/xshore-hydro-testing-equipment-rental-uae-02.webp" alt="Hydro testing equipment rental for industrial and pipeline pressure testing in the UAE" loading="lazy" />
           </div>
         </div>
       </section>

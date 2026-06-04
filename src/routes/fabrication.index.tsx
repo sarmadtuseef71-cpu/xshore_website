@@ -34,8 +34,8 @@ const localFabricationCategories = [
     slug: "zone-2-atex-enclosures",
     title: "Zone-2 / ATEX Enclosures",
     body: "Explosion-protected containers and enclosures certified for Zone-2 hazardous areas under ATEX and IECEx standards. Designed for offshore platforms, petrochemical plants, and oil & gas facilities where standard equipment cannot be used.",
-    hero: f_zone2("xshore-zone2-atex-container-uae-05.webp"),
-    heroAlt: "ATEX Zone-2 explosion proof container enclosure UAE",
+    hero: f_zone2("xshore-zone2-atex-container-uae-17.webp"),
+    heroAlt: "Zone 2 ATEX container enclosure for hazardous area industrial projects in the UAE",
     badge: "ATEX Zone-2"
   },
   {
@@ -58,8 +58,8 @@ const localFabricationCategories = [
     slug: "custom-fabrication",
     title: "Custom Fabrication",
     body: "Bespoke structural steel fabrication, skid units, equipment frames, and custom builds to client drawings. We manage the full fabrication and certification process from concept to delivery.",
-    hero: "/images/fabrication/stock/xshore-custom-steel-fabrication-uae.webp",
-    heroAlt: "Custom steel fabrication container skid unit UAE",
+    hero: "/images/hero/xshore-container-fabrication-yard-uae.webp",
+    heroAlt: "Custom container fabrication yard and industrial workshop facility in the UAE",
     badge: "To Spec"
   }
 ];

@@ -302,10 +302,10 @@ export const rentalCategories: Category[] = [
     shortTitle: "Pneumatic Equipment",
     badge: "Air-Powered",
     body: "Air-powered tools for drilling, grinding, scaling, chipping, and impact work. Suitable for offshore and onshore industrial applications.",
-    hero: r("pneumatic-equipment/xshore-pneumatic-equipment-rental-uae-03.webp"),
+    hero: r("pneumatic-equipment/xshore-pneumatic-equipment-rental-uae-05.webp"),
     heroAlt: "Pneumatic equipment rental for industrial site work in the UAE",
     gallery: [
-      "xshore-pneumatic-equipment-rental-uae-16.webp",
+
       "xshore-pneumatic-equipment-rental-uae-04.webp",
       "xshore-pneumatic-equipment-rental-uae-17.webp",
       "xshore-pneumatic-equipment-rental-uae-23.webp",

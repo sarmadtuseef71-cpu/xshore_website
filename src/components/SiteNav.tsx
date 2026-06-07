@@ -55,7 +55,7 @@ export function SiteNav() {
           <Link className="m-link" to="/fabrication" onClick={close}>Fabrication</Link>
           <Link className="m-link" to="/trading" onClick={close}>Trading</Link>
           <Link className="m-link" to="/about" onClick={close}>About</Link>
-          <Link className="m-cta" to="/contact" onClick={close}>Get a Quote</Link>
+          <Link className="m-cta" to="/contact" onClick={close}>Contact Us</Link>
         </div>
       )}
     </>

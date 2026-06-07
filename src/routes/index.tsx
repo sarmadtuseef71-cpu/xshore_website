@@ -77,9 +77,9 @@ const fabrication = [
 ];
 
 const trading = [
-  { title: "Welding Consumables", to: "/trading/welding-consumables", img: "/images/trading/xshore-welding-consumables-uae.webp", p: "Full range of welding consumables for all processes. Stocked for fast delivery to project sites across UAE.", items: ["Electrodes | MMA / SMAW","MIG / MAG wires & flux-cored wire","TIG rods & filler metals","Stainless, duplex & exotic alloys","Shielding gas & welding fluxes"], alt: "High-quality welding electrodes, wires, and flux consumables supplied by XShore UAE" },
-  { title: "Welding Accessories & Tools", to: "/trading/welding-accessories-tools", img: "/images/trading/xshore-welding-accessories-tools-uae.webp", p: "All the supporting accessories and tools needed for welding operations, surface prep, and quality control.", items: ["Grinders, brushes & cutting discs","Welding helmets & gloves","Clamps, jigs & positioners","Anti-spatter & cleaning products","NDT accessories & inspection tools"], alt: "Professional welding accessories, grinding tools, and hand tools at XShore UAE" },
-  { title: "PPE & Safety Equipment", to: "/trading/ppe-safety-equipment", img: "/images/trading/xshore-ppe-safety-equipment-uae.webp", p: "Personal protective equipment for oil & gas, construction, and industrial environments | available on request.", items: ["Safety helmets & head protection","Harnesses & fall arrest systems","Breathing apparatus & respiratory PPE","Safety footwear & body protection","Gas detection equipment"], alt: "Industrial personal protective equipment including helmets, gloves, and safety vests at XShore UAE" },
+  { title: "Welding Consumables", to: "/trading/welding-consumables", img: "/images/trading/xshore-welding-consumables-uae.webp", p: "Full range of welding consumables for all processes. Stocked for fast delivery to project sites across UAE.", items: ["Electrodes | MMA / SMAW", "MIG / MAG wires & flux-cored wire", "TIG rods & filler metals", "Stainless, duplex & exotic alloys", "Shielding gas & welding fluxes"], alt: "High-quality welding electrodes, wires, and flux consumables supplied by XShore UAE" },
+  { title: "Welding Accessories & Tools", to: "/trading/welding-accessories-tools", img: "/images/trading/xshore-welding-accessories-tools-uae.webp", p: "All the supporting accessories and tools needed for welding operations, surface prep, and quality control.", items: ["Grinders, brushes & cutting discs", "Welding helmets & gloves", "Clamps, jigs & positioners", "Anti-spatter & cleaning products", "NDT accessories & inspection tools"], alt: "Professional welding accessories, grinding tools, and hand tools at XShore UAE" },
+  { title: "PPE & Safety Equipment", to: "/trading/ppe-safety-equipment", img: "/images/trading/xshore-ppe-safety-equipment-uae.webp", p: "Personal protective equipment for oil & gas, construction, and industrial environments | available on request.", items: ["Safety helmets & head protection", "Harnesses & fall arrest systems", "Breathing apparatus & respiratory PPE", "Safety footwear & body protection", "Gas detection equipment"], alt: "Industrial personal protective equipment including helmets, gloves, and safety vests at XShore UAE" },
 ];
 
 const why = [
@@ -114,7 +114,7 @@ function Index() {
           </div>
           <div className="hero-trust">
             <span className="trust-badge">★ Brand New Equipment on Long-Term Projects</span>
-            <span className="trust-badge">10+ DNV &amp; ATEX Containers Delivered</span>
+            <span className="trust-badge">DNV &amp; ATEX Containers Delivered</span>
             <span className="trust-badge">Available After Hours</span>
           </div>
         </div>
@@ -221,15 +221,15 @@ function Index() {
         </div>
         <div className="contact-strip">
           <a href="mailto:sales@xshore.ae" className="contact-item" style={{ textDecoration: "none", color: "inherit" }}>
-            <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg></div>
             <div><div className="contact-item-label">Email</div><div className="contact-item-val">sales@xshore.ae</div></div>
           </a>
           <a href="tel:+97122465375" className="contact-item" style={{ textDecoration: "none", color: "inherit" }}>
-            <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg></div>
             <div><div className="contact-item-label">Phone / WhatsApp</div><div className="contact-item-val">+971 2 246 5375</div></div>
           </a>
           <div className="contact-item">
-            <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div className="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg></div>
             <div><div className="contact-item-label">Location</div><div className="contact-item-val">Mussafah Industrial Area, Abu Dhabi, UAE</div></div>
           </div>
         </div>

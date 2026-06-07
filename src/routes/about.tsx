@@ -81,7 +81,7 @@ function AboutPage() {
                 Container Fabrication
               </h3>
               <p style={{ fontSize: "16px", color: "var(--text-dim)", lineHeight: "1.8", margin: 0 }}>
-                Container Fabrication covers DNV 2.7-1 certified offshore containers, ATEX Zone-2 explosion-protected enclosures, workshop containers, and custom structural fabrication. We have delivered 10+ certified units to offshore operators and ADNOC-contracted projects across the UAE and Middle East, managing the full process from specification to certified delivery.
+                Container Fabrication covers DNV 2.7-1 certified offshore containers, ATEX Zone-2 explosion-protected enclosures, workshop containers, and custom structural fabrication. We have delivered DNV 2.7-1 & ATEX Zone-2 Certified Containers to offshore operators and ADNOC-contracted projects across the UAE and Middle East, managing the full process from specification to certified delivery.
               </p>
             </div>
 

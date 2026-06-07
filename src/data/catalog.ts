@@ -444,7 +444,7 @@ export const fabricationCategories: Category[] = [
     ].map((file) => ({ src: f_dnv(file), alt: getAlt(file, "DNV 2.7-1 offshore container fabrication UAE - certified offshore lifting unit") })),
     detailH1: "DNV 2.7-1 Offshore Container Fabrication UAE",
     seoTitle: "DNV Container Fabrication UAE | DNV 2.7-1 certified Abu Dhabi - Xshore",
-    seoDescription: "DNV 2.7-1 and EN12079 certified offshore container fabrication in the UAE. 10+ units delivered. Full certification managed end-to-end. Based in Abu Dhabi.",
+    seoDescription: "DNV 2.7-1 and EN12079 certified offshore container fabrication in the UAE. DNV 2.7-1 & ATEX Zone-2 Certified Containers delivered. Full certification managed end-to-end. Based in Abu Dhabi.",
     heroSubtitle: "Cargo-carrying units designed and certified to DNV 2.7-1 / EN12079 standards for offshore crane lifting. Built to your specification with full independent third-party certification.",
     overviewCopy: "Xshore is a trusted supplier of DNV-certified offshore containers. We understand the stringent requirements of ADNOC-contracted projects and offshore operators. Every unit is built for durability and compliance in the harshest marine environments.",
     bulletSectionTitle: "Fabrication Specs",
@@ -453,7 +453,7 @@ export const fabricationCategories: Category[] = [
       "Third-party independent certification",
       "Custom internal fit-outs available",
       "Heavy-duty structural steel build",
-      "10+ units successfully delivered"
+      "DNV 2.7-1 & ATEX Zone-2 Certified Containers"
     ],
     ctaText: "Request a Build →",
     relatedPages: ["zone-2-atex-enclosures", "workshop-containers", "custom-fabrication"]

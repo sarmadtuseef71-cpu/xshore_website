@@ -8,9 +8,9 @@ export const Route = createFileRoute("/fabrication/")({
   head: () => ({
     meta: [
       { title: "DNV Container Fabrication UAE | ATEX Zone-2 Enclosures | Xshore Equipment" },
-      { name: "description", content: "DNV 2.7-1 certified offshore containers and ATEX Zone-2 enclosures. 10+ units delivered to UAE and Middle East operators. Full certification managed end-to-end. Based in Abu Dhabi." },
+      { name: "description", content: "DNV 2.7-1 certified offshore containers and ATEX Zone-2 enclosures. Certified units delivered to UAE and Middle East operators. Full certification managed end-to-end. Based in Abu Dhabi." },
       { property: "og:title", content: "DNV Container Fabrication UAE | ATEX Zone-2 Enclosures | Xshore Equipment" },
-      { property: "og:description", content: "DNV 2.7-1 certified offshore containers and ATEX Zone-2 enclosures. 10+ units delivered to UAE and Middle East operators. Full certification managed end-to-end. Based in Abu Dhabi." },
+      { property: "og:description", content: "DNV 2.7-1 certified offshore containers and ATEX Zone-2 enclosures. Certified units delivered to UAE and Middle East operators. Full certification managed end-to-end. Based in Abu Dhabi." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -76,7 +76,7 @@ function FabricationIndex() {
         <div className="er-hero-content">
           <span className="hero-tag">Division 02 · Fabrication &amp; Containers</span>
           <h1>DNV Certified Containers &amp; ATEX Zone-2 Enclosures - UAE</h1>
-          <p className="er-hero-sub">10+ certified units delivered to offshore operators and ADNOC contractors across the UAE and Middle East. We manage the full process - from your specification to certified delivery.</p>
+          <p className="er-hero-sub">DNV 2.7-1 & ATEX Zone-2 Certified Containers delivered to offshore operators and ADNOC contractors across the UAE and Middle East. We manage the full process - from your specification to certified delivery.</p>
           <Link to="/contact" className="btn-primary" style={{ display: "inline-flex", marginTop: "28px" }}>Request a Build →</Link>
         </div>
       </section>
@@ -126,8 +126,8 @@ function FabricationIndex() {
               <span className="dnv-spec-label">Lifting &amp; Design Standard</span>
             </div>
             <div className="dnv-spec">
-              <span className="dnv-spec-num">10+</span>
-              <span className="dnv-spec-label">Certified Units Delivered</span>
+              <span className="dnv-spec-num">DNV & ATEX</span>
+              <span className="dnv-spec-label">Certified Solutions</span>
             </div>
           </div>
         </div>

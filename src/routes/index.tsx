@@ -114,7 +114,7 @@ function Index() {
           </div>
           <div className="hero-trust">
             <span className="trust-badge">★ Brand New Equipment on Long-Term Projects</span>
-            <span className="trust-badge">DNV &amp; ATEX Containers Delivered</span>
+            <span className="trust-badge">DNV &amp; ATEX Containers</span>
             <span className="trust-badge">Available After Hours</span>
           </div>
         </div>
@@ -123,7 +123,7 @@ function Index() {
       <section className="divisions" id="divisions" aria-label="Our divisions">
         <div className="div-grid">
           {[
-            { n: "01 - Rental", t: "Equipment Rental", p: "Weekly hire or multi-year project supply. Short-term customers get fast turnaround. Long-term clients get brand new equipment commissioned for their project - not stock coming off another site.", l: "View Rental Options", h: "/equipment-rental", img: "/images/hero/xshore-industrial-equipment-rental-yard-uae.webp", alt: "Industrial equipment rental yard with compressors, generators, and tools in the UAE" },
+            { n: "01 - Rental", t: "Equipment & Tools Rental", p: "Weekly hire or multi-year project supply. Short-term customers get fast turnaround. Long-term clients get brand new equipment commissioned for their project - not stock coming off another site.", l: "View Rental Options", h: "/equipment-rental", img: "/images/hero/xshore-industrial-equipment-rental-yard-uae.webp", alt: "Industrial equipment rental yard with compressors, generators, and tools in the UAE" },
             { n: "02 - Fabrication", t: "Containers & Fabrication", p: "DNV 2.7-1 and ATEX Zone-2 certified containers delivered to offshore and industrial clients across the UAE and Middle East. We manage the full process from spec to certification.", l: "View Containers", h: "/fabrication", img: "/images/hero/xshore-container-fabrication-yard-uae.webp", alt: "Container fabrication yard and workshop facility in the UAE" },
             { n: "03 - Trading", t: "Welding Supply", p: "Welding consumables, electrodes, MIG/TIG wires, and accessories sourced and delivered to your project site. Fast turnaround for contractors who need materials without the procurement headache.", l: "View Products", h: "/trading", img: "/images/hero/xshore-welding-industrial-supplies-uae.webp", alt: "Welding consumables and industrial supplies for UAE project sites" },
           ].map((c) => (

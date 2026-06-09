@@ -119,10 +119,12 @@ function ContactPage() {
               <div className="qf-field full">
                 <label className="qf-label" htmlFor="c-type">Type</label>
                 <select id="c-type" name="type" className="qf-select" required>
-                  <option value="Short-term Rental">Short-term Rental</option>
+                  <option value="Short-Term Rental">Short-Term Rental</option>
                   <option value="Long-Term Rental">Long-Term Rental</option>
-                  <option value="Container">Container</option>
                   <option value="Welding Supply">Welding Supply</option>
+                  <option value="Containers">Containers</option>
+                  <option value="DNV Cargo Baskets">DNV Cargo Baskets</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div className="qf-field">

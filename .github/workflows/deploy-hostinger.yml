@@ -1,0 +1,80 @@
+name: Deploy to Hostinger Live Branch
+
+on:
+  push:
+    branches:
+      - main
+
+# Grant write permission to the GITHUB_TOKEN so it can push to the hostinger-live branch
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Build
+        run: npm run build
+
+      - name: Prepare Clean Deployment Folder
+        run: |
+          # Create clean deployment temp directory
+          mkdir -p deploy_temp
+          
+          # Copy dist/client contents (including assets, api, fonts, etc.)
+          cp -r dist/client/. deploy_temp/
+          
+          # Force remove any config.php if it was somehow copied
+          rm -f deploy_temp/api/config.php
+          
+          # Verification steps
+          echo "=== Verifying Deploy Folder Structure ==="
+          ls -la deploy_temp
+          
+          echo "=== Verifying API Folder ==="
+          ls -la deploy_temp/api
+          
+          # Ensure required PHP files and htaccess exist
+          if [ ! -f deploy_temp/api/send-email.php ]; then
+            echo "Error: deploy_temp/api/send-email.php not found!"
+            exit 1
+          fi
+          
+          if [ ! -f deploy_temp/api/config.example.php ]; then
+            echo "Error: deploy_temp/api/config.example.php not found!"
+            exit 1
+          fi
+          
+          if [ -f deploy_temp/api/config.php ]; then
+            echo "Error: config.php with secrets was leaked into deployment folder!"
+            exit 1
+          fi
+          
+          # Ensure root .htaccess exists
+          if [ ! -f deploy_temp/.htaccess ]; then
+            echo "Error: Root .htaccess for SPA routing not found!"
+            exit 1
+          fi
+          
+          echo "Verification passed. Deployment folder is clean and ready."
+
+      - name: Deploy to hostinger-live Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: deploy_temp
+          branch: hostinger-live
+          token: ${{ secrets.GITHUB_TOKEN }}
+          clean: true

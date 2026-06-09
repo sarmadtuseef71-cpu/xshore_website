@@ -1,0 +1,16 @@
+# Enable URL rewriting
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Do not rewrite if requested path is an existing file or directory
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Exclude the api folder so send-email.php and other API files work properly
+  RewriteRule ^api/ - [L]
+
+  # Rewrite all other requests to index.html for SPA routing
+  RewriteRule ^ index.html [L]
+</IfModule>

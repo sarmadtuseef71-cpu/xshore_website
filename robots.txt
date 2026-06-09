@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xshore.ae/sitemap.xml

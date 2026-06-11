@@ -142,8 +142,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Hydro Testing Equipment",
     badge: "High Pressure",
     body: "High-pressure hydrostatic test units for pipeline testing, pressure vessel inspection, and structural integrity verification. Our most-requested product - available for short and long-term hire across the UAE.",
-    hero: r("hydro-testing/xshore-hydro-testing-equipment-rental-uae-02.webp"),
-    heroAlt: "Hydro testing equipment rental for industrial and pipeline pressure testing in the UAE",
+    hero: "/images/card-titles/xshore-hydro-testing-equipment-rental-uae-card-title.webp",
+    heroAlt: "Hydro testing equipment rental units for industrial pressure testing",
     gallery: [
       "xshore-hydro-testing-equipment-rental-uae-01.webp",
       "xshore-hydro-testing-equipment-rental-uae-02.webp",
@@ -177,8 +177,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Air Compressors",
     badge: "Diesel / Electric",
     body: "185 to 1600 CFM diesel and electric air compressors for all site conditions. Available in multiple configurations for offshore, construction, and industrial applications.",
-    hero: r("air-compressors/xshore-air-compressor-rental-uae-01.webp"),
-    heroAlt: "Industrial air compressor rental UAE diesel electric",
+    hero: "/images/card-titles/xshore-air-compressors-equipment-rental-uae-card-title.webp",
+    heroAlt: "Industrial air compressor rental equipment",
     gallery: [
       "xshore-air-compressor-rental-uae-01.webp",
     ].map((file) => ({ src: r(`air-compressors/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - air compressor") })),
@@ -205,8 +205,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Electric Welding Machines",
     badge: "MMA / MIG / TIG",
     body: "MMA, MIG, TIG, and submerged arc welding machines for all industrial welding requirements. Available for weekly hire or long-term project deployment.",
-    hero: r("welding-machines/xshore-welding-machine-rental-uae-05.webp"),
-    heroAlt: "MIG TIG MMA welding machine rental UAE",
+    hero: "/images/card-titles/xshore-welding-equipment-rental-uae-card-title.webp",
+    heroAlt: "Welding machine rental equipment",
     gallery: [
       "xshore-welding-machine-rental-uae-01.webp",
       "xshore-welding-machine-rental-uae-02.webp",
@@ -238,8 +238,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "High Pressure Washers",
     badge: "Cold & Hot Water",
     body: "Cold and hot water industrial pressure washers for surface preparation, cleaning, and maintenance. Suitable for offshore, construction, and plant environments.",
-    hero: r("pressure-washers/xshore-high-pressure-washer-rental-uae-03.webp"),
-    heroAlt: "Industrial high pressure washer rental UAE cold hot",
+    hero: "/images/card-titles/xshore-high-pressure-washers-equipment-rental-uae-card-title.webp",
+    heroAlt: "High pressure washer rental equipment",
     gallery: [
       "xshore-high-pressure-washer-rental-uae-01.webp",
       "xshore-high-pressure-washer-rental-uae-02.webp",
@@ -269,8 +269,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Mobile Gantry & Lifting Gear",
     badge: "SWL Certified",
     body: "Gantry cranes, chain blocks, lever hoists, wire rope slings, and rigging accessories - all SWL certified and inspection-ready for safe lifting operations.",
-    hero: r("lifting-gear/xshore-mobile-gantry-lifting-gear-uae-05.webp"),
-    heroAlt: "Mobile gantry lifting gear rental for industrial projects in the UAE",
+    hero: "/images/card-titles/xshore-lifting-gear-equipment-rental-uae-card-title.webp",
+    heroAlt: "Mobile gantry lifting gear and chain hoist equipment",
     gallery: [
       "xshore-mobile-gantry-lifting-gear-uae-01.webp",
       "xshore-mobile-gantry-lifting-gear-uae-02.webp",
@@ -302,8 +302,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Pneumatic Equipment",
     badge: "Air-Powered",
     body: "Air-powered tools for drilling, grinding, scaling, chipping, and impact work. Suitable for offshore and onshore industrial applications.",
-    hero: r("pneumatic-equipment/xshore-pneumatic-equipment-rental-uae-05.webp"),
-    heroAlt: "Pneumatic equipment rental for industrial site work in the UAE",
+    hero: "/images/card-titles/xshore-pneumatic-equipment-rental-uae-card-title.webp",
+    heroAlt: "Pneumatic equipment rental tools and air powered machines",
     gallery: [
 
       "xshore-pneumatic-equipment-rental-uae-04.webp",
@@ -352,8 +352,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Electric Equipment & Tools",
     badge: "110V / 220V",
     body: "Angle grinders, core drills, portable power tools, and electrical equipment in 110V and 220V configurations for site use.",
-    hero: r("electric-equipment/xshore-electric-equipment-rental-uae-10.webp"),
-    heroAlt: "Electric power tools equipment rental UAE 110V 220V",
+    hero: "/images/card-titles/xshore-electric-equipment-rental-uae-card-title.webp",
+    heroAlt: "Electric equipment rental tools and machines",
     gallery: [
       "xshore-electric-equipment-rental-uae-10.webp",
       "xshore-electric-equipment-rental-uae-05.webp",
@@ -390,8 +390,8 @@ export const rentalCategories: Category[] = [
     shortTitle: "Other Equipment",
     badge: "On Request",
     body: "Gas cutting sets, gas detectors, generators, dehumidifiers, lighting towers, and specialist equipment. Contact us with specific requirements.",
-    hero: r("other-equipment/xshore-other-equipment-rental-uae-03.webp"),
-    heroAlt: "Gas cutting machine multi gas detector rental UAE",
+    hero: "/images/card-titles/xshore-other-equipment-rental-uae-card-title.webp",
+    heroAlt: "Other industrial rental equipment and testing tools",
     gallery: [
       "xshore-other-equipment-rental-uae-01.webp",
       "xshore-other-equipment-rental-uae-02.webp",

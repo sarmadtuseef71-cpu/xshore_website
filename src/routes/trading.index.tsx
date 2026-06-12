@@ -31,8 +31,8 @@ const localTradingCategories = [
       "Stainless, duplex & exotic alloys",
       "Shielding gas & welding fluxes",
     ],
-    hero: "/images/trading/xshore-welding-consumables-uae.webp",
-    heroAlt: "High-quality welding electrodes, wires, and flux consumables supplied by XShore UAE",
+    hero: "/images/card-titles/xshore-welding-consumables-uae-card-title.webp",
+    heroAlt: "Welding consumables including electrodes wires and filler metals for UAE projects",
     isPPE: false,
   },
   {
@@ -48,8 +48,8 @@ const localTradingCategories = [
       "Anti-spatter products",
       "NDT accessories & inspection tools",
     ],
-    hero: "/images/trading/xshore-welding-accessories-tools-uae.webp",
-    heroAlt: "Professional welding accessories, grinding tools, and hand tools at XShore UAE",
+    hero: "/images/card-titles/xshore-welding-accessories-tools-uae-card-title.webp",
+    heroAlt: "Welding accessories grinding tools clamps and inspection tools for industrial work",
     isPPE: false,
   },
   {
@@ -64,8 +64,8 @@ const localTradingCategories = [
       "Safety footwear",
       "Gas detection",
     ],
-    hero: "/images/trading/xshore-ppe-safety-equipment-uae.webp",
-    heroAlt: "Industrial personal protective equipment including helmets, gloves, and safety vests at XShore UAE",
+    hero: "/images/card-titles/xshore-ppe-safety-equipment-uae-card-title.webp",
+    heroAlt: "Industrial PPE and safety equipment including helmets gloves boots and harnesses",
     isPPE: true,
   },
 ];

@@ -26,40 +26,40 @@ const localFabricationCategories = [
     slug: "dnv-2-7-1-offshore-containers",
     title: "DNV 2.7-1 Offshore Containers",
     body: "Cargo-carrying units designed and certified to DNV 2.7-1 / EN12079 standards for offshore crane lifting. Built to your specification with full independent third-party certification - meeting the requirements of offshore operators and ADNOC-contracted projects.",
-    hero: f_dnv("xshore-dnv-offshore-container-uae-07.webp"),
-    heroAlt: "DNV 2.7-1 certified offshore container fabrication UAE Abu Dhabi",
+    hero: "/images/card-titles/xshore-dnv-2-7-1-offshore-container-uae-card-title.webp",
+    heroAlt: "DNV 2.7-1 offshore container with fitted shelving for UAE industrial projects",
     badge: "DNV 2.7-1 / EN12079"
   },
   {
     slug: "zone-2-atex-enclosures",
     title: "Zone-2 / ATEX Enclosures",
     body: "Explosion-protected containers and enclosures certified for Zone-2 hazardous areas under ATEX and IECEx standards. Designed for offshore platforms, petrochemical plants, and oil & gas facilities where standard equipment cannot be used.",
-    hero: f_zone2("xshore-zone2-atex-container-uae-17.webp"),
-    heroAlt: "Zone 2 ATEX container enclosure for hazardous area industrial projects in the UAE",
+    hero: "/images/card-titles/xshore-zone-2-atex-container-enclosure-uae-card-title.webp",
+    heroAlt: "Zone 2 ATEX container enclosure with explosion protected electrical equipment",
     badge: "ATEX Zone-2"
   },
   {
     slug: "workshop-containers",
     title: "Workshop Containers",
     body: "Custom-fitted workshop units with workbenches, tool storage, ventilation, and lighting - built for remote site and offshore deployment. Designed to your layout and operational requirements.",
-    hero: "/images/fabrication/workshop-containers/xshore-workshop-container-uae-03.webp",
-    heroAlt: "Workshop container offshore remote site UAE fabrication",
+    hero: "/images/card-titles/xshore-workshop-container-fabrication-uae-card-title.webp",
+    heroAlt: "Workshop container with workbench tool storage ventilation and lighting",
     badge: "Custom Fitted"
   },
   {
     slug: "accommodation-office-units",
     title: "Accommodation & Office Units",
     body: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
-    hero: "/images/fabrication/accommodation-office-units/xshore-accommodation-office-units-uae-01.webp",
-    heroAlt: "Accommodation and office container units by Xshore Equipment UAE",
+    hero: "/images/card-titles/xshore-accommodation-office-container-unit-uae-card-title.webp",
+    heroAlt: "Modular accommodation and site office container unit for remote project locations",
     badge: "Modular Build"
   },
   {
     slug: "custom-fabrication",
     title: "Custom Fabrication",
     body: "Bespoke structural steel fabrication, skid units, equipment frames, and custom builds to client drawings. We manage the full fabrication and certification process from concept to delivery.",
-    hero: "/images/hero/xshore-container-fabrication-yard-uae.webp",
-    heroAlt: "Custom container fabrication yard and industrial workshop facility in the UAE",
+    hero: "/images/card-titles/xshore-custom-container-fabrication-uae-card-title.webp",
+    heroAlt: "Custom container fabrication and structural steel module build",
     badge: "To Spec"
   }
 ];

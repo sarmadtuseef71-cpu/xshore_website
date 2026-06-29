@@ -25,12 +25,15 @@ export type Category = {
 
 export const imageAltText: Record<string, string> = {
   // Rental - Air Compressors
-  "xshore-air-compressor-rental-uae-01.webp": "Industrial air compressor rental UAE diesel electric",
-  
+  "xshore-air-compressor-rental-uae-01.webp":
+    "Industrial air compressor rental UAE diesel electric",
+
   // Rental - Hydro Testing
-  "xshore-hydro-testing-equipment-rental-uae-04.webp": "High pressure hydrostatic test equipment rental UAE",
+  "xshore-hydro-testing-equipment-rental-uae-04.webp":
+    "High pressure hydrostatic test equipment rental UAE",
   "xshore-hydro-testing-equipment-rental-uae-03.webp": "Hydrostatic test pump pipeline testing UAE",
-  "xshore-hydro-testing-equipment-rental-uae-06.webp": "Hydro test unit pressure vessel inspection UAE",
+  "xshore-hydro-testing-equipment-rental-uae-06.webp":
+    "Hydro test unit pressure vessel inspection UAE",
   "xshore-hydro-testing-equipment-rental-uae-01.webp": "Xshore hydro testing equipment Abu Dhabi",
   "xshore-hydro-testing-equipment-rental-uae-02.webp": "Pressure test pump UAE rental",
   "xshore-hydro-testing-equipment-rental-uae-05.webp": "Hydrostatic testing equipment UAE",
@@ -57,7 +60,8 @@ export const imageAltText: Record<string, string> = {
   "xshore-welding-machine-rental-uae-07.webp": "Welding equipment supplier Mussafah",
 
   // Rental - Pressure Washers
-  "xshore-high-pressure-washer-rental-uae-03.webp": "Industrial high pressure washer rental UAE cold hot",
+  "xshore-high-pressure-washer-rental-uae-03.webp":
+    "Industrial high pressure washer rental UAE cold hot",
   "xshore-high-pressure-washer-rental-uae-04.webp": "Hot water pressure washer industrial UAE",
   "xshore-high-pressure-washer-rental-uae-02.webp": "Cold water pressure washer rental Abu Dhabi",
   "xshore-high-pressure-washer-rental-uae-01.webp": "High pressure cleaning equipment UAE",
@@ -78,7 +82,8 @@ export const imageAltText: Record<string, string> = {
   "xshore-pneumatic-equipment-rental-uae-07.webp": "Air driven tool rental UAE",
 
   // Rental - Electric Tools
-  "xshore-electric-equipment-rental-uae-10.webp": "Electric power tools equipment rental UAE 110V 220V",
+  "xshore-electric-equipment-rental-uae-10.webp":
+    "Electric power tools equipment rental UAE 110V 220V",
   "xshore-electric-equipment-rental-uae-05.webp": "Angle grinder drill rental UAE industrial",
   "xshore-electric-equipment-rental-uae-04.webp": "Portable electric tools UAE oil gas",
   "xshore-electric-equipment-rental-uae-09.webp": "Electric equipment hire Abu Dhabi",
@@ -92,8 +97,17 @@ export const imageAltText: Record<string, string> = {
   "xshore-other-equipment-rental-uae-02.webp": "Industrial gas cutting equipment UAE",
   "xshore-other-equipment-rental-uae-01.webp": "Multi gas detector rental Abu Dhabi UAE",
 
+  // Rental - Pipe Cutting
+  "xshore-pipe-cutting-equipment-rental-uae-01.webp": "Cold cutting pipe saw rental UAE",
+  "xshore-pipe-cutting-equipment-rental-uae-02.webp": "Industrial pipe cutter rental Abu Dhabi",
+  "xshore-pipe-cutting-equipment-rental-uae-03.webp": "Spark-free cold cutting equipment UAE",
+
+  // Rental - Chart Recorders
+  "xshore-chart-recorder-rental-uae-01.webp": "Dual pen circular chart recorder pressure temperature UAE",
+
   // Fabrication - DNV Containers
-  "xshore-dnv-offshore-container-uae-07.webp": "DNV 2.7-1 certified offshore container fabrication UAE",
+  "xshore-dnv-offshore-container-uae-07.webp":
+    "DNV 2.7-1 certified offshore container fabrication UAE",
   "xshore-dnv-offshore-container-uae-09.webp": "DNV offshore CCU container Abu Dhabi",
   "xshore-dnv-offshore-container-uae-11.webp": "DNV certified cargo container UAE",
   "xshore-dnv-offshore-container-uae-08.webp": "Offshore container fabricator UAE Abu Dhabi",
@@ -123,12 +137,13 @@ export const imageAltText: Record<string, string> = {
   "xshore-workshop-container-uae-05.webp": "Offshore workshop container Mussafah",
 
   // Fabrication - Accommodation & Office Units
-  "xshore-accommodation-office-units-uae-01.webp": "Accommodation and office container units by Xshore Equipment UAE",
+  "xshore-accommodation-office-units-uae-01.webp":
+    "Accommodation and office container units by Xshore Equipment UAE",
 };
 
 export const getAlt = (file: string, fallback: string) => {
-  const filename = file.split('/').pop() || "";
-  const jpgKey = filename.replace(/\.(webp|jpeg)$/i, '.jpg');
+  const filename = file.split("/").pop() || "";
+  const jpgKey = filename.replace(/\.(webp|jpeg)$/i, ".jpg");
   return imageAltText[filename] || imageAltText[jpgKey] || fallback;
 };
 
@@ -154,22 +169,34 @@ export const rentalCategories: Category[] = [
       "xshore-hydro-testing-equipment-rental-uae-07.webp",
       "xshore-hydro-testing-equipment-rental-uae-08.webp",
       "xshore-hydro-testing-equipment-rental-uae-09.webp",
-    ].map((file) => ({ src: r(`hydro-testing/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - hydro testing equipment") })),
+    ].map((file) => ({
+      src: r(`hydro-testing/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - hydro testing equipment",
+      ),
+    })),
     detailH1: "Hydro Testing Equipment Rental & Supply UAE",
     seoTitle: "Hydro Testing Equipment Rental UAE | Hydrostatic Test Pumps - Xshore",
-    seoDescription: "Pipeline integrity, pressure vessel inspection, and structural testing units available for weekly hire or long-term project rental across the UAE. Abu Dhabi.",
-    heroSubtitle: "Pipeline integrity, pressure vessel inspection, structural testing | if it needs a hydrostatic test, we have the unit for it. Available for weekly hire or long-term project rental.",
-    overviewCopy: "Hydro testing is our most-requested equipment service. Our units are designed for high-pressure hydrostatic testing of pipelines, vessels, and structural components. Maintained, calibrated, and ready for mobilization across the UAE.",
+    seoDescription:
+      "Pipeline integrity, pressure vessel inspection, and structural testing units available for weekly hire or long-term project rental across the UAE. Abu Dhabi.",
+    heroSubtitle:
+      "Pipeline integrity, pressure vessel inspection, structural testing | if it needs a hydrostatic test, we have the unit for it. Available for weekly hire or long-term project rental.",
+    overviewCopy:
+      "Hydro testing is our most-requested equipment service. Our units are designed for high-pressure hydrostatic testing of pipelines, vessels, and structural components. Maintained, calibrated, and ready for mobilization across the UAE.",
     bulletSectionTitle: "Key Capabilities",
     bulletItems: [
       "High-pressure hydrostatic test units",
       "Pipeline integrity and leak testing",
       "Pressure vessel inspection and certification",
       "Structural integrity verification",
-      "Available for weekly or multi-year hire"
+      "Available for weekly or multi-year hire",
     ],
     ctaText: "Request a Unit →",
-    relatedPages: ["air-compressors", "high-pressure-washers", "pneumatic-equipment"]
+    relatedPages: ["air-compressors", "high-pressure-washers", "pneumatic-equipment"],
   },
   {
     slug: "air-compressors",
@@ -179,25 +206,35 @@ export const rentalCategories: Category[] = [
     body: "185 to 1600 CFM diesel and electric air compressors for all site conditions. Available in multiple configurations for offshore, construction, and industrial applications.",
     hero: "/images/card-titles/xshore-air-compressors-equipment-rental-uae-card-title.webp",
     heroAlt: "Industrial air compressor rental equipment",
-    gallery: [
-      "xshore-air-compressor-rental-uae-01.webp",
-    ].map((file) => ({ src: r(`air-compressors/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - air compressor") })),
+    gallery: ["xshore-air-compressor-rental-uae-01.webp"].map((file) => ({
+      src: r(`air-compressors/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - air compressor",
+      ),
+    })),
     imageNote: "Additional air compressor images available on request.",
     detailH1: "Industrial Air Compressor Rental Diesel & Electric",
     seoTitle: "Air Compressor Rental UAE | 185 to 1600 CFM Industrial Hire - Xshore",
-    seoDescription: "Industrial air compressor rental across the UAE. 185 to 1600 CFM diesel and electric units for offshore, construction, and plant environments. Abu Dhabi.",
-    heroSubtitle: "185 to 1600 CFM diesel and electric air compressors for all site conditions. Available in multiple configurations for offshore, construction, and industrial applications.",
-    overviewCopy: "Xshore provides a comprehensive range of air compressors suited for the UAE's demanding industrial environments. From small portable units to high-capacity offshore configurations, we supply the air power needed for your project's timeline.",
+    seoDescription:
+      "Industrial air compressor rental across the UAE. 185 to 1600 CFM diesel and electric units for offshore, construction, and plant environments. Abu Dhabi.",
+    heroSubtitle:
+      "185 to 1600 CFM diesel and electric air compressors for all site conditions. Available in multiple configurations for offshore, construction, and industrial applications.",
+    overviewCopy:
+      "Xshore provides a comprehensive range of air compressors suited for the UAE's demanding industrial environments. From small portable units to high-capacity offshore configurations, we supply the air power needed for your project's timeline.",
     bulletSectionTitle: "Specifications",
     bulletItems: [
       "185 to 1600 CFM capacity",
       "Diesel and electric powered variants",
       "Offshore and construction configurations",
       "Weekly hire to long-term project supply",
-      "Maintenance support available for long-term projects"
+      "Maintenance support available for long-term projects",
     ],
     ctaText: "Request a Quote →",
-    relatedPages: ["pneumatic-equipment", "hydro-testing-equipment", "high-pressure-washers"]
+    relatedPages: ["pneumatic-equipment", "hydro-testing-equipment", "high-pressure-washers"],
   },
   {
     slug: "electric-welding-machines",
@@ -215,22 +252,34 @@ export const rentalCategories: Category[] = [
       "xshore-welding-machine-rental-uae-05.webp",
       "xshore-welding-machine-rental-uae-06.webp",
       "xshore-welding-machine-rental-uae-07.webp",
-    ].map((file) => ({ src: r(`welding-machines/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - welding machine") })),
+    ].map((file) => ({
+      src: r(`welding-machines/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - welding machine",
+      ),
+    })),
     detailH1: "Electric Welding Machine Rental MIG, TIG, MMA",
     seoTitle: "Welding Machine Rental UAE | Industrial MIG, TIG & MMA Hire - Xshore",
-    seoDescription: "Industrial welding machines for hire in the UAE. MMA, MIG, TIG, and submerged arc welding sets for weekly hire or multi-year project deployment. Abu Dhabi.",
-    heroSubtitle: "MMA, MIG, TIG, and submerged arc welding machines for all industrial welding requirements. Available for weekly hire or long-term project deployment.",
-    overviewCopy: "Our welding fleet consists of industrial welding machines capable of handling heavy-duty welding processes. Whether you need a single unit for a week or a fleet for a long-term project, we provide machines with proven reliability for industrial work.",
+    seoDescription:
+      "Industrial welding machines for hire in the UAE. MMA, MIG, TIG, and submerged arc welding sets for weekly hire or multi-year project deployment. Abu Dhabi.",
+    heroSubtitle:
+      "MMA, MIG, TIG, and submerged arc welding machines for all industrial welding requirements. Available for weekly hire or long-term project deployment.",
+    overviewCopy:
+      "Our welding fleet consists of industrial welding machines capable of handling heavy-duty welding processes. Whether you need a single unit for a week or a fleet for a long-term project, we provide machines with proven reliability for industrial work.",
     bulletSectionTitle: "Available Machines",
     bulletItems: [
       "MIG / MAG welding sets",
       "TIG welding machines",
       "MMA / Stick welding units",
       "Submerged arc welding (SAW) systems",
-      "Available for long-term project supply"
+      "Available for long-term project supply",
     ],
     ctaText: "View Rental Options →",
-    relatedPages: ["welding-consumables", "welding-accessories-tools", "electric-equipment-tools"]
+    relatedPages: ["welding-consumables", "welding-accessories-tools", "electric-equipment-tools"],
   },
   {
     slug: "high-pressure-washers",
@@ -246,22 +295,34 @@ export const rentalCategories: Category[] = [
       "xshore-high-pressure-washer-rental-uae-03.webp",
       "xshore-high-pressure-washer-rental-uae-04.webp",
       "xshore-high-pressure-washer-rental-uae-05.webp",
-    ].map((file) => ({ src: r(`pressure-washers/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - pressure washer") })),
+    ].map((file) => ({
+      src: r(`pressure-washers/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - pressure washer",
+      ),
+    })),
     detailH1: "High Pressure Washers Industrial Cold & Hot Water",
     seoTitle: "High Pressure Washer Rental UAE | Industrial Cleaning Equipment - Xshore",
-    seoDescription: "Industrial high-pressure washers for cleaning and surface prep. Cold and hot water units available for rental across the UAE. Offshore and site ready.",
-    heroSubtitle: "Cold and hot water industrial pressure washers for surface preparation, cleaning, and maintenance. Suitable for offshore, construction, and plant environments.",
-    overviewCopy: "Xshore supplies heavy-duty pressure washers designed for the toughest industrial cleaning tasks. Our units are field-proven in offshore environments and industrial plants, providing the reliable pressure needed for surface prep and maintenance.",
+    seoDescription:
+      "Industrial high-pressure washers for cleaning and surface prep. Cold and hot water units available for rental across the UAE. Offshore and site ready.",
+    heroSubtitle:
+      "Cold and hot water industrial pressure washers for surface preparation, cleaning, and maintenance. Suitable for offshore, construction, and plant environments.",
+    overviewCopy:
+      "Xshore supplies heavy-duty pressure washers designed for the toughest industrial cleaning tasks. Our units are field-proven in offshore environments and industrial plants, providing the reliable pressure needed for surface prep and maintenance.",
     bulletSectionTitle: "Unit Specifications",
     bulletItems: [
       "Cold water pressure washers",
       "Hot water / steam cleaners",
       "Industrial surface preparation units",
       "Offshore and plant ready configurations",
-      "Short and long-term hire available"
+      "Short and long-term hire available",
     ],
     ctaText: "Request a Quote →",
-    relatedPages: ["hydro-testing-equipment", "air-compressors", "other-equipment"]
+    relatedPages: ["hydro-testing-equipment", "air-compressors", "other-equipment"],
   },
   {
     slug: "mobile-gantry-lifting-gear",
@@ -279,22 +340,34 @@ export const rentalCategories: Category[] = [
       "xshore-mobile-gantry-lifting-gear-uae-05.webp",
       "xshore-mobile-gantry-lifting-gear-uae-06.webp",
       "xshore-mobile-gantry-lifting-gear-uae-07.webp",
-    ].map((file) => ({ src: r(`lifting-gear/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - lifting gear") })),
+    ].map((file) => ({
+      src: r(`lifting-gear/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - lifting gear",
+      ),
+    })),
     detailH1: "Certified Mobile Gantry & Lifting Gear Rental",
     seoTitle: "Mobile Gantry Crane Rental UAE | Certified Lifting Equipment - Xshore",
-    seoDescription: "Certified mobile gantry cranes and lifting gear rental in the UAE. Chain blocks, hoists, slings, and rigging accessories with full SWL certification.",
-    heroSubtitle: "Gantry cranes, chain blocks, lever hoists, wire rope slings, and rigging accessories | all SWL certified and inspection-ready for safe lifting operations.",
-    overviewCopy: "Safety is the priority in all lifting operations. Every item in our lifting fleet carries valid certification and is rigorously inspected before mobilization. From mobile A-frame gantries to small rigging accessories, we provide the gear that keeps your lift compliant and safe.",
+    seoDescription:
+      "Certified mobile gantry cranes and lifting gear rental in the UAE. Chain blocks, hoists, slings, and rigging accessories with full SWL certification.",
+    heroSubtitle:
+      "Gantry cranes, chain blocks, lever hoists, wire rope slings, and rigging accessories | all SWL certified and inspection-ready for safe lifting operations.",
+    overviewCopy:
+      "Safety is the priority in all lifting operations. Every item in our lifting fleet carries valid certification and is rigorously inspected before mobilization. From mobile A-frame gantries to small rigging accessories, we provide the gear that keeps your lift compliant and safe.",
     bulletSectionTitle: "Equipment List",
     bulletItems: [
       "Mobile A-frame gantry cranes",
       "Chain blocks and lever hoists",
       "Wire rope slings and shackles",
       "Full SWL certification on all items",
-      "Inspection-ready for offshore use"
+      "Inspection-ready for offshore use",
     ],
     ctaText: "Request Quote →",
-    relatedPages: ["other-equipment", "pneumatic-equipment", "electric-equipment-tools"]
+    relatedPages: ["other-equipment", "pneumatic-equipment", "electric-equipment-tools"],
   },
   {
     slug: "pneumatic-equipment",
@@ -305,7 +378,6 @@ export const rentalCategories: Category[] = [
     hero: "/images/card-titles/xshore-pneumatic-equipment-rental-uae-card-title.webp",
     heroAlt: "Pneumatic equipment rental tools and air powered machines",
     gallery: [
-
       "xshore-pneumatic-equipment-rental-uae-04.webp",
       "xshore-pneumatic-equipment-rental-uae-17.webp",
       "xshore-pneumatic-equipment-rental-uae-23.webp",
@@ -329,22 +401,34 @@ export const rentalCategories: Category[] = [
       "xshore-pneumatic-equipment-rental-uae-21.webp",
       "xshore-pneumatic-equipment-rental-uae-22.webp",
       "xshore-pneumatic-equipment-rental-uae-24.webp",
-    ].map((file) => ({ src: r(`pneumatic-equipment/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - offshore industrial") })),
+    ].map((file) => ({
+      src: r(`pneumatic-equipment/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - offshore industrial",
+      ),
+    })),
     detailH1: "Pneumatic Air-Powered Equipment Rental & Supply",
     seoTitle: "Pneumatic Tools & Air Equipment Rental UAE | Abu Dhabi - Xshore",
-    seoDescription: "Pneumatic tool and air equipment rental across the UAE. Air-powered tools for drilling, grinding, scaling, chipping, and impact work - for offshore and onshore industrial sites. Abu Dhabi.",
-    heroSubtitle: "Air-powered tools for drilling, grinding, scaling, chipping, and impact work. Suitable for offshore and onshore industrial applications.",
-    overviewCopy: "Our pneumatic equipment fleet is built for the high-intensity environments of the oil, gas, and construction sectors. Air-powered tools provide the safety and performance required in hazardous or heavy-duty site conditions.",
+    seoDescription:
+      "Pneumatic tool and air equipment rental across the UAE. Air-powered tools for drilling, grinding, scaling, chipping, and impact work - for offshore and onshore industrial sites. Abu Dhabi.",
+    heroSubtitle:
+      "Air-powered tools for drilling, grinding, scaling, chipping, and impact work. Suitable for offshore and onshore industrial applications.",
+    overviewCopy:
+      "Our pneumatic equipment fleet is built for the high-intensity environments of the oil, gas, and construction sectors. Air-powered tools provide the safety and performance required in hazardous or heavy-duty site conditions.",
     bulletSectionTitle: "Product Range",
     bulletItems: [
       "Air impact wrenches and grinders",
       "Pneumatic drills and chipping hammers",
       "Scaling and surface prep tools",
       "Offshore-ready air power solutions",
-      "High-durability industrial builds"
+      "High-durability industrial builds",
     ],
     ctaText: "Request a Quote →",
-    relatedPages: ["air-compressors", "electric-equipment-tools", "high-pressure-washers"]
+    relatedPages: ["air-compressors", "electric-equipment-tools", "high-pressure-washers"],
   },
   {
     slug: "electric-equipment-tools",
@@ -367,22 +451,34 @@ export const rentalCategories: Category[] = [
       "xshore-electric-equipment-rental-uae-07.webp",
       "xshore-electric-equipment-rental-uae-11.webp",
       "xshore-electric-equipment-rental-uae-12.webp",
-    ].map((file) => ({ src: r(`electric-equipment/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - angle grinder core drill site equipment") })),
+    ].map((file) => ({
+      src: r(`electric-equipment/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - angle grinder core drill site equipment",
+      ),
+    })),
     detailH1: "Tools Rental UAE - Electric & Power Tools for Site Use",
     seoTitle: "Tools Rental UAE | Electric & Power Tool Hire Abu Dhabi - Xshore Equipment",
-    seoDescription: "Tools rental across the UAE and Abu Dhabi. Industrial electric and power tools for hire - angle grinders, core drills, and site tools in 110V and 220V. Weekly hire or long-term project supply. Mussafah, Abu Dhabi.",
-    heroSubtitle: "Angle grinders, core drills, portable power tools, and electrical site equipment available for weekly hire or long-term project rental across the UAE. Available in 110V and 220V configurations.",
-    overviewCopy: "Xshore is one of the very few companies in the UAE offering dedicated tools rental alongside full industrial equipment hire. While most suppliers focus on heavy plant, we stock and maintain a complete range of electric and power tools available for weekly hire or long-term project deployment - saving your team the cost of purchasing tools that sit idle between projects.\n\nOur tools are maintained and safety-checked before every deployment. Available for mobilisation across Abu Dhabi, Dubai, Sharjah, and the wider UAE.",
+    seoDescription:
+      "Tools rental across the UAE and Abu Dhabi. Industrial electric and power tools for hire - angle grinders, core drills, and site tools in 110V and 220V. Weekly hire or long-term project supply. Mussafah, Abu Dhabi.",
+    heroSubtitle:
+      "Angle grinders, core drills, portable power tools, and electrical site equipment available for weekly hire or long-term project rental across the UAE. Available in 110V and 220V configurations.",
+    overviewCopy:
+      "Xshore is one of the very few companies in the UAE offering dedicated tools rental alongside full industrial equipment hire. While most suppliers focus on heavy plant, we stock and maintain a complete range of electric and power tools available for weekly hire or long-term project deployment - saving your team the cost of purchasing tools that sit idle between projects.\n\nOur tools are maintained and safety-checked before every deployment. Available for mobilisation across Abu Dhabi, Dubai, Sharjah, and the wider UAE.",
     bulletSectionTitle: "Tool Specifications",
     bulletItems: [
       "Angle grinders and cutting tools",
       "Magnetic and core drills",
       "110V and 220V site configurations",
       "Portable power distribution",
-      "Certified for industrial site use"
+      "Certified for industrial site use",
     ],
     ctaText: "View Details →",
-    relatedPages: ["pneumatic-equipment", "electric-welding-machines", "other-equipment"]
+    relatedPages: ["pneumatic-equipment", "electric-welding-machines", "other-equipment"],
   },
   {
     slug: "other-equipment",
@@ -396,23 +492,121 @@ export const rentalCategories: Category[] = [
       "xshore-other-equipment-rental-uae-01.webp",
       "xshore-other-equipment-rental-uae-02.webp",
       "xshore-other-equipment-rental-uae-03.webp",
-    ].map((file) => ({ src: r(`other-equipment/${file}`), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - specialist equipment") })),
+    ].map((file) => ({
+      src: r(`other-equipment/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - specialist equipment",
+      ),
+    })),
     imageNote: "Generators, dehumidifiers, and lighting towers available on request.",
     detailH1: "Specialist Industrial Equipment Rental UAE",
     seoTitle: "Specialist Industrial Equipment Rental Abu Dhabi | Gas Cutting & More - Xshore",
-    seoDescription: "Specialist industrial equipment for hire in the UAE. Gas cutting sets, gas detectors, generators, and dehumidifiers available on request. Abu Dhabi.",
-    heroSubtitle: "Gas cutting sets, gas detectors, generators, dehumidifiers, lighting towers, and specialist equipment. Contact us with specific requirements.",
-    overviewCopy: "Beyond our core categories, Xshore provides a range of specialist equipment to support complex site operations. If you need a specific tool or unit not listed elsewhere, contact our team for sourcing and availability.",
+    seoDescription:
+      "Specialist industrial equipment for hire in the UAE. Gas cutting sets, gas detectors, generators, and dehumidifiers available on request. Abu Dhabi.",
+    heroSubtitle:
+      "Gas cutting sets, gas detectors, generators, dehumidifiers, lighting towers, and specialist equipment. Contact us with specific requirements.",
+    overviewCopy:
+      "Beyond our core categories, Xshore provides a range of specialist equipment to support complex site operations. If you need a specific tool or unit not listed elsewhere, contact our team for sourcing and availability.",
     bulletSectionTitle: "Available Equipment",
     bulletItems: [
       "Gas cutting sets and accessories",
       "Multi-gas detectors and safety monitors",
       "Portable generators and lighting",
       "Dehumidifiers and climate control",
-      "Custom sourcing on request"
+      "Custom sourcing on request",
     ],
     ctaText: "Request a Quote →",
-    relatedPages: ["high-pressure-washers", "mobile-gantry-lifting-gear", "hydro-testing-equipment"]
+    relatedPages: [
+      "high-pressure-washers",
+      "mobile-gantry-lifting-gear",
+      "hydro-testing-equipment",
+    ],
+  },
+  {
+    slug: "pipe-cutting-equipment",
+    title: "Pipe Cutting Equipment",
+    shortTitle: "Pipe Cutting Equipment",
+    badge: "COLD CUT",
+    body: "Cold cutting pipe saws for spark-free cuts on carbon and stainless steel pipe. Various diameters available.",
+    hero: "/images/card-titles/xshore-pipe-cutting-equipment-rental-uae-card-title.webp",
+    heroAlt: "Cold cutting pipe saw rental equipment for spark free pipe cutting",
+    gallery: [
+      "xshore-pipe-cutting-equipment-rental-uae-01.webp",
+      "xshore-pipe-cutting-equipment-rental-uae-02.webp",
+      "xshore-pipe-cutting-equipment-rental-uae-03.webp",
+    ].map((file) => ({
+      src: r(`pipe-cutters/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - pipe cutting equipment",
+      ),
+    })),
+    detailH1: "Pipe Cutting Equipment Rental UAE",
+    seoTitle: "Pipe Cutting Equipment Rental UAE | Cold Cut Pipe Saws - Xshore",
+    seoDescription:
+      "Cold cutting pipe saws for clean, spark-free cuts on carbon and stainless steel pipe. Various diameter ranges available. Weekly hire or long-term project rental across the UAE.",
+    heroSubtitle:
+      "Cold cutting pipe saws for offshore and onshore pipe works. Spark-free, heat-free cuts on carbon and stainless steel pipe. Available for weekly hire or long-term project supply across the UAE.",
+    overviewCopy:
+      "Cold cutting is the preferred method for pipe cutting on live or sensitive sites where heat and sparks cannot be tolerated, including offshore platforms, petrochemical plants, and confined spaces. Our pipe cutting machines deliver clean, precise cuts without heat-affected zones, eliminating the risk of ignition and reducing post-cut preparation time. Available across a wide range of pipe diameters. Contact us with your requirement and we will confirm availability and specification.",
+    bulletSectionTitle: "Key Capabilities",
+    bulletItems: [
+      "Cold cutting, with no heat, no sparks, and no heat-affected zone",
+      "Wide range of pipe diameters available, to be confirmed on enquiry",
+      "Carbon steel and stainless steel pipe",
+      "Suitable for offshore, onshore, and confined space applications",
+      "Short-term weekly hire or long-term project deployment",
+      "Mobilisation across Abu Dhabi and the UAE",
+    ],
+    ctaText: "Request a Unit",
+    relatedPages: ["air-compressors", "pneumatic-equipment", "hydro-testing-equipment"],
+  },
+  {
+    slug: "chart-recorders",
+    title: "Chart Recorders",
+    shortTitle: "Chart Recorders",
+    badge: "PRESSURE & TEMPERATURE",
+    body: "Dual pen circular chart recorders for simultaneous pressure and temperature monitoring during hydrostatic testing and commissioning. Various ranges available.",
+    hero: "/images/card-titles/xshore-chart-recorders-equipment-rental-uae-card-title.webp",
+    heroAlt: "Dual pen circular chart recorder for pressure and temperature monitoring",
+    gallery: [
+      "xshore-chart-recorder-rental-uae-01.webp",
+    ].map((file) => ({
+      src: r(`chart-recorders/${file}`),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - chart recorder",
+      ),
+    })),
+    detailH1: "Chart Recorder Rental UAE",
+    seoTitle: "Chart Recorder Rental UAE | Pressure & Temperature Recording - Xshore",
+    seoDescription:
+      "Dual pen circular chart recorders for pressure and temperature monitoring during hydrostatic testing and commissioning. Various pressure and temperature ranges available. UAE hire.",
+    heroSubtitle:
+      "Dual pen circular chart recorders for simultaneous pressure and temperature monitoring during hydrostatic testing and commissioning. Various ranges available for weekly hire across the UAE.",
+    overviewCopy:
+      "Chart recorders provide the documented pressure and temperature trace required for hydrostatic test certification and commissioning sign-off. Our units record simultaneously on dual pen (pressure and temperature), giving clients and certifying authorities a complete, tamper-evident test record on a single chart. Available in various pressure and temperature ranges to suit your test requirements. Contact us to confirm the right specification for your job.",
+    bulletSectionTitle: "Key Capabilities",
+    bulletItems: [
+      "Dual pen, for simultaneous pressure and temperature recording",
+      "Various pressure and temperature ranges available to suit test requirements",
+      "Battery operated, with no external power source required on site",
+      "Circular chart format",
+      "Supplied with accessories as required",
+      "Available for weekly hire across the UAE",
+    ],
+    ctaText: "Request a Unit",
+    relatedPages: ["hydro-testing-equipment", "high-pressure-washers", "pneumatic-equipment"],
   },
 ];
 
@@ -441,22 +635,31 @@ export const fabricationCategories: Category[] = [
       "xshore-dnv-offshore-container-uae-02.webp",
       "xshore-dnv-offshore-container-uae-06.webp",
       "xshore-dnv-offshore-container-uae-05.webp",
-    ].map((file) => ({ src: f_dnv(file), alt: getAlt(file, "DNV 2.7-1 offshore container fabrication UAE - certified offshore lifting unit") })),
+    ].map((file) => ({
+      src: f_dnv(file),
+      alt: getAlt(
+        file,
+        "DNV 2.7-1 offshore container fabrication UAE - certified offshore lifting unit",
+      ),
+    })),
     detailH1: "DNV 2.7-1 Offshore Container Fabrication UAE",
     seoTitle: "DNV Container Fabrication UAE | DNV 2.7-1 certified Abu Dhabi - Xshore",
-    seoDescription: "DNV 2.7-1 and EN12079 certified offshore container fabrication in the UAE. DNV 2.7-1 & ATEX Zone-2 Certified Containers delivered. Full certification managed end-to-end. Based in Abu Dhabi.",
-    heroSubtitle: "Cargo-carrying units designed and certified to DNV 2.7-1 / EN12079 standards for offshore crane lifting. Built to your specification with full independent third-party certification.",
-    overviewCopy: "Xshore is a trusted supplier of DNV-certified offshore containers. We understand the stringent requirements of ADNOC-contracted projects and offshore operators. Every unit is built for durability and compliance in the harshest marine environments.",
+    seoDescription:
+      "DNV 2.7-1 and EN12079 certified offshore container fabrication in the UAE. DNV 2.7-1 & ATEX Zone-2 Certified Containers delivered. Full certification managed end-to-end. Based in Abu Dhabi.",
+    heroSubtitle:
+      "Cargo-carrying units designed and certified to DNV 2.7-1 / EN12079 standards for offshore crane lifting. Built to your specification with full independent third-party certification.",
+    overviewCopy:
+      "Xshore is a trusted supplier of DNV-certified offshore containers. We understand the stringent requirements of ADNOC-contracted projects and offshore operators. Every unit is built for durability and compliance in the harshest marine environments.",
     bulletSectionTitle: "Fabrication Specs",
     bulletItems: [
       "DNV 2.7-1 / EN12079 certified",
       "Third-party independent certification",
       "Custom internal fit-outs available",
       "Heavy-duty structural steel build",
-      "DNV 2.7-1 & ATEX Zone-2 Certified Containers"
+      "DNV 2.7-1 & ATEX Zone-2 Certified Containers",
     ],
     ctaText: "Request a Build →",
-    relatedPages: ["zone-2-atex-enclosures", "workshop-containers", "custom-fabrication"]
+    relatedPages: ["zone-2-atex-enclosures", "workshop-containers", "custom-fabrication"],
   },
   {
     slug: "zone-2-atex-enclosures",
@@ -485,22 +688,34 @@ export const fabricationCategories: Category[] = [
       "xshore-zone2-atex-container-uae-16.webp",
       "xshore-zone2-atex-container-uae-17.webp",
       "xshore-zone2-atex-container-uae-18.webp",
-    ].map((file) => ({ src: f_zone2(file), alt: getAlt(file, file.replace('xshore-', '').replace(/\.(jpg|webp)$/i, '').replace(/-/g, ' ') + " - explosion proof enclosure") })),
+    ].map((file) => ({
+      src: f_zone2(file),
+      alt: getAlt(
+        file,
+        file
+          .replace("xshore-", "")
+          .replace(/\.(jpg|webp)$/i, "")
+          .replace(/-/g, " ") + " - explosion proof enclosure",
+      ),
+    })),
     detailH1: "Zone-2 / ATEX Explosion Proof Enclosures UAE",
     seoTitle: "ATEX Zone-2 Container UAE | Explosion Proof Enclosures - Xshore",
-    seoDescription: "Explosion-protected containers certified for Zone-2 hazardous areas under ATEX and IECEx standards. Designed for offshore and petrochemical facilities in the UAE.",
-    heroSubtitle: "Explosion-protected containers and enclosures certified for Zone-2 hazardous areas under ATEX and IECEx standards. Designed for offshore platforms and petrochemical plants.",
-    overviewCopy: "In hazardous areas, standard equipment is not an option. Our Zone-2 and ATEX enclosures are engineered to protect your equipment and your personnel. Certified to international standards for use in refineries, plants, and offshore rigs.",
+    seoDescription:
+      "Explosion-protected containers certified for Zone-2 hazardous areas under ATEX and IECEx standards. Designed for offshore and petrochemical facilities in the UAE.",
+    heroSubtitle:
+      "Explosion-protected containers and enclosures certified for Zone-2 hazardous areas under ATEX and IECEx standards. Designed for offshore platforms and petrochemical plants.",
+    overviewCopy:
+      "In hazardous areas, standard equipment is not an option. Our Zone-2 and ATEX enclosures are engineered to protect your equipment and your personnel. Certified to international standards for use in refineries, plants, and offshore rigs.",
     bulletSectionTitle: "Compliance & Features",
     bulletItems: [
       "ATEX and IECEx certified",
       "Zone-2 hazardous area compliant",
       "Explosion-proof internal components",
       "Custom fit-out options",
-      "Built to hazardous area specifications"
+      "Built to hazardous area specifications",
     ],
     ctaText: "Request a Build →",
-    relatedPages: ["dnv-2-7-1-offshore-containers", "workshop-containers", "custom-fabrication"]
+    relatedPages: ["dnv-2-7-1-offshore-containers", "workshop-containers", "custom-fabrication"],
   },
   {
     slug: "workshop-containers",
@@ -516,21 +731,31 @@ export const fabricationCategories: Category[] = [
       "xshore-workshop-container-uae-02.webp",
       "xshore-workshop-container-uae-04.webp",
       "xshore-workshop-container-uae-05.webp",
-    ].map((file) => ({ src: f_workshop(file), alt: getAlt(file, "Workshop container fabrication UAE - site workshop unit") })),
+    ].map((file) => ({
+      src: f_workshop(file),
+      alt: getAlt(file, "Workshop container fabrication UAE - site workshop unit"),
+    })),
     detailH1: "Custom Workshop Container Fabrication UAE",
     seoTitle: "Workshop Container UAE | Custom Fitted Remote Site Units - Xshore",
-    seoDescription: "Custom-fitted workshop containers for remote site and offshore deployment. Built to your layout with workbenches, storage, and ventilation. Abu Dhabi.",
-    heroSubtitle: "Custom-fitted workshop units with workbenches, tool storage, ventilation, and lighting | built for remote site and offshore deployment.",
-    overviewCopy: "A well-organized site is a productive site. Our workshop containers provide a secure and organized space for maintenance and technical work in remote locations. Built to withstand the environment while supporting your team's operational needs.",
+    seoDescription:
+      "Custom-fitted workshop containers for remote site and offshore deployment. Built to your layout with workbenches, storage, and ventilation. Abu Dhabi.",
+    heroSubtitle:
+      "Custom-fitted workshop units with workbenches, tool storage, ventilation, and lighting | built for remote site and offshore deployment.",
+    overviewCopy:
+      "A well-organized site is a productive site. Our workshop containers provide a secure and organized space for maintenance and technical work in remote locations. Built to withstand the environment while supporting your team's operational needs.",
     bulletSectionTitle: "Standard Features",
     bulletItems: [
       "Custom internal layout and workbenches",
       "Integrated tool storage and cabinets",
       "Site and offshore ready configurations",
-      "Built to specification for remote site use"
+      "Built to specification for remote site use",
     ],
     ctaText: "Request a Build →",
-    relatedPages: ["accommodation-office-units", "custom-fabrication", "dnv-2-7-1-offshore-containers"]
+    relatedPages: [
+      "accommodation-office-units",
+      "custom-fabrication",
+      "dnv-2-7-1-offshore-containers",
+    ],
   },
   {
     slug: "accommodation-office-units",
@@ -541,21 +766,25 @@ export const fabricationCategories: Category[] = [
     hero: "/images/card-titles/xshore-accommodation-office-container-unit-uae-card-title.webp",
     heroAlt: "Modular accommodation and site office container unit for remote project locations",
     gallery: [],
-    imageNote: "Project images for accommodation and office units coming soon. Reference images shown.",
+    imageNote:
+      "Project images for accommodation and office units coming soon. Reference images shown.",
     detailH1: "Containerised Accommodation & Office Units UAE",
     seoTitle: "Accommodation Office Container UAE | Modular Site Units - Xshore",
-    seoDescription: "Modular containerised accommodation and site office units for rapid deployment in the UAE. Built to specification for remote project locations. Abu Dhabi.",
-    heroSubtitle: "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
-    overviewCopy: "For remote project success, your team needs a reliable base. We provide modular office and accommodation units that are durable and ready for site deployment. Designed to your specification for rapid setup in the UAE.",
+    seoDescription:
+      "Modular containerised accommodation and site office units for rapid deployment in the UAE. Built to specification for remote project locations. Abu Dhabi.",
+    heroSubtitle:
+      "Modular containerised accommodation and site office units engineered for remote project locations. Built to specification and ready for rapid deployment.",
+    overviewCopy:
+      "For remote project success, your team needs a reliable base. We provide modular office and accommodation units that are durable and ready for site deployment. Designed to your specification for rapid setup in the UAE.",
     bulletSectionTitle: "Capabilities",
     bulletItems: [
       "Modular rapid-deployment design",
       "Custom office and living layouts",
       "Durable site-ready construction",
-      "(Images coming soon - project imagery pending)"
+      "(Images coming soon - project imagery pending)",
     ],
     ctaText: "Start a Conversation →",
-    relatedPages: ["workshop-containers", "custom-fabrication", "dnv-2-7-1-offshore-containers"]
+    relatedPages: ["workshop-containers", "custom-fabrication", "dnv-2-7-1-offshore-containers"],
   },
   {
     slug: "custom-fabrication",
@@ -569,19 +798,26 @@ export const fabricationCategories: Category[] = [
     imageNote: "Custom fabrication project images coming soon.",
     detailH1: "Custom Industrial Fabrication Structural & Skid Units",
     seoTitle: "Custom Fabrication UAE | Structural Steel & Skid Units - Xshore",
-    seoDescription: "Bespoke structural steel fabrication, skid units, and equipment frames built to client drawings. Certified delivery managed in Abu Dhabi, UAE.",
-    heroSubtitle: "Bespoke structural steel fabrication, skid units, equipment frames, and custom builds to client drawings. Full process managed from concept to delivery.",
-    overviewCopy: "When standard solutions won't work, we build what you need. Our fabrication team handles everything from structural skids to custom equipment frames, ensuring every build meets the project's specific technical and certification requirements.",
+    seoDescription:
+      "Bespoke structural steel fabrication, skid units, and equipment frames built to client drawings. Certified delivery managed in Abu Dhabi, UAE.",
+    heroSubtitle:
+      "Bespoke structural steel fabrication, skid units, equipment frames, and custom builds to client drawings. Full process managed from concept to delivery.",
+    overviewCopy:
+      "When standard solutions won't work, we build what you need. Our fabrication team handles everything from structural skids to custom equipment frames, ensuring every build meets the project's specific technical and certification requirements.",
     bulletSectionTitle: "Fabrication Services",
     bulletItems: [
       "Structural steel fabrication",
       "Custom skid units and equipment frames",
       "Build-to-print from client drawings",
       "Managed fabrication and certification process",
-      "(Images coming soon - project imagery pending)"
+      "(Images coming soon - project imagery pending)",
     ],
     ctaText: "Start a Conversation →",
-    relatedPages: ["dnv-2-7-1-offshore-containers", "zone-2-atex-enclosures", "workshop-containers"]
+    relatedPages: [
+      "dnv-2-7-1-offshore-containers",
+      "zone-2-atex-enclosures",
+      "workshop-containers",
+    ],
   },
 ];
 
@@ -598,19 +834,26 @@ export const tradingCategories: Category[] = [
     imageNote: "Welding consumables product images coming soon.",
     detailH1: "Welding Consumables Supply MMA, MIG, TIG",
     seoTitle: "Welding Consumables Supplier UAE | Electrodes, Wires & Rods - Xshore",
-    seoDescription: "Supplier of welding electrodes, MIG/TIG wires, and exotic alloys in the UAE. Fast delivery to project sites. Abu Dhabi.",
-    heroSubtitle: "Electrodes, MIG and TIG wires, flux-cored wire, and welding accessories sourced and delivered to your site. No procurement headache.",
-    overviewCopy: "We supply the materials that keep your welding operations running. From standard electrodes to exotic alloys, our consumables are sourced for quality and stocked for fast delivery to site. We understand that running out of consumables is not an option.",
+    seoDescription:
+      "Supplier of welding electrodes, MIG/TIG wires, and exotic alloys in the UAE. Fast delivery to project sites. Abu Dhabi.",
+    heroSubtitle:
+      "Electrodes, MIG and TIG wires, flux-cored wire, and welding accessories sourced and delivered to your site. No procurement headache.",
+    overviewCopy:
+      "We supply the materials that keep your welding operations running. From standard electrodes to exotic alloys, our consumables are sourced for quality and stocked for fast delivery to site. We understand that running out of consumables is not an option.",
     bulletSectionTitle: "Available Consumables",
     bulletItems: [
       "Electrodes - MMA / SMAW",
       "MIG / MAG wires & flux-cored",
       "TIG rods and filler metals",
       "Stainless, duplex & exotic alloys",
-      "Fast site delivery across UAE"
+      "Fast site delivery across UAE",
     ],
     ctaText: "Request Supply Quote →",
-    relatedPages: ["welding-accessories-tools", "electric-welding-machines", "ppe-safety-equipment"]
+    relatedPages: [
+      "welding-accessories-tools",
+      "electric-welding-machines",
+      "ppe-safety-equipment",
+    ],
   },
   {
     slug: "welding-accessories-tools",
@@ -624,19 +867,22 @@ export const tradingCategories: Category[] = [
     imageNote: "Welding accessories product images coming soon.",
     detailH1: "Welding Accessories & Industrial Tools Supply UAE",
     seoTitle: "Welding Accessories Supplier UAE | Grinders, Helmets & Tools - Xshore",
-    seoDescription: "Industrial welding accessories and tools supplier in the UAE. Grinding discs, helmets, gloves, and inspection tools delivered to your project site.",
-    heroSubtitle: "All the supporting accessories for welding operations, surface preparation, and quality control | sourced and delivered fast.",
-    overviewCopy: "Every welder needs the right tools to perform. We supply the high-quality accessories and safety gear required for a productive welding shop. Grinders, discs, helmets, and tools - delivered when you need them.",
+    seoDescription:
+      "Industrial welding accessories and tools supplier in the UAE. Grinding discs, helmets, gloves, and inspection tools delivered to your project site.",
+    heroSubtitle:
+      "All the supporting accessories for welding operations, surface preparation, and quality control | sourced and delivered fast.",
+    overviewCopy:
+      "Every welder needs the right tools to perform. We supply the high-quality accessories and safety gear required for a productive welding shop. Grinders, discs, helmets, and tools - delivered when you need them.",
     bulletSectionTitle: "Tools & Accessories",
     bulletItems: [
       "Grinding discs and wire brushes",
       "Welding helmets and protective gloves",
       "Clamps, jigs, and positioners",
       "NDT accessories and inspection tools",
-      "Surface prep and cleaning products"
+      "Surface prep and cleaning products",
     ],
     ctaText: "Request Supply Quote →",
-    relatedPages: ["welding-consumables", "electric-welding-machines", "ppe-safety-equipment"]
+    relatedPages: ["welding-consumables", "electric-welding-machines", "ppe-safety-equipment"],
   },
   {
     slug: "ppe-safety-equipment",
@@ -650,22 +896,31 @@ export const tradingCategories: Category[] = [
     imageNote: "PPE product images coming soon.",
     detailH1: "PPE & Industrial Safety Equipment Available on Request",
     seoTitle: "PPE Supplier UAE | Industrial Safety Equipment Abu Dhabi - Xshore",
-    seoDescription: "Industrial PPE and safety equipment available on request for projects in the UAE. Helmets, harnesses, and safety footwear. Abu Dhabi.",
-    heroSubtitle: "Personal protective equipment for oil & gas, construction, and industrial environments | available on request.",
-    overviewCopy: "Safety is non-negotiable. For our project clients and long-term partners, we provide a reliable channel for essential PPE and safety equipment. Available on request to support your site safety compliance.",
+    seoDescription:
+      "Industrial PPE and safety equipment available on request for projects in the UAE. Helmets, harnesses, and safety footwear. Abu Dhabi.",
+    heroSubtitle:
+      "Personal protective equipment for oil & gas, construction, and industrial environments | available on request.",
+    overviewCopy:
+      "Safety is non-negotiable. For our project clients and long-term partners, we provide a reliable channel for essential PPE and safety equipment. Available on request to support your site safety compliance.",
     bulletSectionTitle: "Safety Gear List",
     bulletItems: [
       "Safety helmets and head protection",
       "Harnesses and fall arrest systems",
       "Safety footwear and body protection",
       "Respiratory PPE and masks",
-      "Available on request for project teams"
+      "Available on request for project teams",
     ],
     ctaText: "Email your list →",
-    relatedPages: ["welding-accessories-tools", "welding-consumables", "other-equipment"]
+    relatedPages: ["welding-accessories-tools", "welding-consumables", "other-equipment"],
   },
 ];
 
-export function findRental(slug: string) { return rentalCategories.find((c) => c.slug === slug); }
-export function findFabrication(slug: string) { return fabricationCategories.find((c) => c.slug === slug); }
-export function findTrading(slug: string) { return tradingCategories.find((c) => c.slug === slug); }
+export function findRental(slug: string) {
+  return rentalCategories.find((c) => c.slug === slug);
+}
+export function findFabrication(slug: string) {
+  return fabricationCategories.find((c) => c.slug === slug);
+}
+export function findTrading(slug: string) {
+  return tradingCategories.find((c) => c.slug === slug);
+}
